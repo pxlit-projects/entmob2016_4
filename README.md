@@ -15,5 +15,5 @@ Deze applicatie stuurt op zijn beurt die data door naar de back-end, die deze in
 Zo wordt het mogelijk om in de applicatie alle data te gaan bekijken. Deze worden visueel voorgesteld met behulp van grafieken.
 Dit is zeer handig voor hardlopers om te kijken wanneer het ideale tijdstip is om te gaan joggen met de meest optimale prestaties.
 
-We kunnen ook meldingen gaan doorgeven aan de gebruiker als blijkt dat de weersomstandigheden optimaal zijn voor hem. Het is mogelijk om persoonlijk goals in te stellen om je zo extra te motiveren bij je hardlopen.
+We kunnen ook meldingen gaan doorgeven aan de gebruiker als blijkt dat de weersomstandigheden optimaal zijn voor hem. Het is mogelijk om persoonlijke goals in te stellen om je zo extra te motiveren bij je hardlopen.
 
