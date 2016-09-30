@@ -1,6 +1,6 @@
 # entmob2016_4
 
-Deze applicatie is bedoeld voor het monitoren van hardlopers bij bepaalde weersomstandigheden.
+Deze applicatie is bedoeld voor het monitoren van hardlopers bij bepaalde weersomstandigheden. Meer specifiek voor sprinters.
 Het is de bedoeling om te gaan kijken hoe de weersomstandigheden de prestaties (bvb de gemiddelde snelheid) van verschillende hardlopers beïnvloeden. 
 
 Bijna iedereen heeft wel een favoriet moment om te hardlopen of net omstandigheden waarin het echt niet lijkt te lukken. Een hittegolf bijvoorbeeld zal slechts voor weinigen aanleiding zijn om lekker te gaan hardlopen.
