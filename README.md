@@ -19,6 +19,6 @@ Dit is zeer handig voor hardlopers om te kijken wanneer het ideale tijdstip is o
 
 We kunnen ook meldingen gaan doorgeven aan de gebruiker als blijkt dat de weersomstandigheden optimaal zijn voor hem. Het is mogelijk om persoonlijke goals in te stellen om je zo extra te motiveren bij je hardlopen.
 
-Architectuur
+# Architectuur
 
 ![](architectuur.png)
