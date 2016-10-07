@@ -78,7 +78,7 @@ public class Session {
         this.humidities = humidities;
     }
 
-    "public List<AcceleroMeter> getAcceleroMeters() {
+    public List<AcceleroMeter> getAcceleroMeters() {
         return acceleroMeters;
     }
 
