@@ -3,8 +3,6 @@ package be.pxl.backend.repositories;
 import be.pxl.backend.dao.TemperatureDao;
 import be.pxl.backend.models.Temperature;
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
-
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
@@ -24,7 +22,8 @@ public class TemperatureRepository implements TemperatureDao {
         this.emf = emf;
     }
 
-    public Temperature addTemperature(Temperature temperature, int sessionId) {
+    @Override
+    public Temperature addTemperature(Temperature temperature) {
         EntityManager em = emf.createEntityManager();
         EntityTransaction et = em.getTransaction();
 
@@ -35,5 +34,4 @@ public class TemperatureRepository implements TemperatureDao {
 
         return temperature;
     }
-
 }

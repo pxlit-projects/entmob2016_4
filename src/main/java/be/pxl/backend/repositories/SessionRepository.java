@@ -3,7 +3,6 @@ package be.pxl.backend.repositories;
 import be.pxl.backend.dao.SessionDao;
 import be.pxl.backend.models.Session;
 import be.pxl.backend.models.User;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.*;
