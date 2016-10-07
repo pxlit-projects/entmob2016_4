@@ -26,7 +26,6 @@ public class UserRepository implements UserDao {
         this.emf = emf;
     }
 
-   //@Transactional
     public User getUserById(int id) {
         EntityManager em = emf.createEntityManager();
         EntityTransaction et = em.getTransaction();
@@ -40,7 +39,6 @@ public class UserRepository implements UserDao {
         return user;
     }
 
-    //@Transactional
     public User addUser(User user) {
         EntityManager em = emf.createEntityManager();
         EntityTransaction et = em.getTransaction();

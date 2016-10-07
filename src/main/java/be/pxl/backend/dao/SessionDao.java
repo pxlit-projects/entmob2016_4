@@ -1,6 +1,8 @@
 package be.pxl.backend.dao;
 
 import be.pxl.backend.models.Session;
+import be.pxl.backend.models.User;
+
 import java.util.*;
 
 /**
@@ -11,6 +13,6 @@ public interface SessionDao {
     Session startSession(Session session);
     Session stopSession(Session session);
 
-    List<Session> allSessions();
+    List<Session> allSessions(User user);
     Session getSessionById(int id);
 }

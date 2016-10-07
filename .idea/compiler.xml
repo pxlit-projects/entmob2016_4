@@ -23,10 +23,12 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="Back_end" />
+        <module name="entmob2016_4" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Back_end" target="1.8" />
+      <module name="entmob2016_4" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -24,7 +24,6 @@ public class TemperatureRepository implements TemperatureDao {
         this.emf = emf;
     }
 
-    @Transactional
     public Temperature addTemperature(Temperature temperature, int sessionId) {
         EntityManager em = emf.createEntityManager();
         EntityTransaction et = em.getTransaction();

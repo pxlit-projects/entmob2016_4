@@ -21,7 +21,6 @@ public class SessionRepository implements SessionDao  {
         this.emf = emf;
     }
 
-    @Transactional
     public Session startSession(Session session) {
         EntityManager em = emf.createEntityManager();
         EntityTransaction et = em.getTransaction();
@@ -35,7 +34,6 @@ public class SessionRepository implements SessionDao  {
         return session;
     }
 
-    @Transactional
     public Session stopSession(Session session) {
         EntityManager em = emf.createEntityManager();
         EntityTransaction et = em.getTransaction();
@@ -49,7 +47,6 @@ public class SessionRepository implements SessionDao  {
         return session;
     }
 
-    @Transactional
     public List<Session> allSessions() {
         EntityManager em = emf.createEntityManager();
         EntityTransaction et = em.getTransaction();
@@ -64,7 +61,6 @@ public class SessionRepository implements SessionDao  {
         return results;
     }
 
-    @Transactional
     public Session getSessionById(int id) {
         EntityManager em = emf.createEntityManager();
         EntityTransaction et = em.getTransaction();
