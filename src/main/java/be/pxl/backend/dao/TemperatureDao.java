@@ -7,6 +7,6 @@ import be.pxl.backend.models.Temperature;
  */
 public interface TemperatureDao {
 
-    Temperature addTemperature(Temperature temperature, int sessionId);
+    Temperature addTemperature(Temperature temperature);
 
 }
