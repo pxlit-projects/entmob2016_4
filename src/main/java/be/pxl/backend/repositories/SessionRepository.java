@@ -2,7 +2,7 @@ package be.pxl.backend.repositories;
 
 import be.pxl.backend.dao.SessionDao;
 import be.pxl.backend.models.Session;
-import org.springframework.transaction.annotation.Transactional;
+import be.pxl.backend.models.User;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.*;
@@ -47,7 +47,7 @@ public class SessionRepository implements SessionDao  {
         return session;
     }
 
-    public List<Session> allSessions() {
+    public List<Session> allSessions(User user) {
         EntityManager em = emf.createEntityManager();
         EntityTransaction et = em.getTransaction();
         et.begin();

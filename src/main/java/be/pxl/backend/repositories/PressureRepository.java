@@ -1,8 +1,9 @@
 package be.pxl.backend.repositories;
 
-import be.pxl.backend.dao.TemperatureDao;
-import be.pxl.backend.models.Temperature;
+import be.pxl.backend.dao.PressureDao;
+import be.pxl.backend.models.Pressure;
 import org.springframework.stereotype.Repository;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
@@ -12,8 +13,8 @@ import javax.persistence.PersistenceUnit;
  * Created by Jonas on 7/10/16.
  */
 
-@Repository("temperatureRepository")
-public class TemperatureRepository implements TemperatureDao {
+@Repository("pressureRepository")
+public class PressureRepository implements PressureDao {
 
     private EntityManagerFactory emf;
 
@@ -22,16 +23,17 @@ public class TemperatureRepository implements TemperatureDao {
         this.emf = emf;
     }
 
-    @Override
-    public Temperature addTemperature(Temperature temperature) {
+    public Pressure addPresure(Pressure pressure) {
         EntityManager em = emf.createEntityManager();
         EntityTransaction et = em.getTransaction();
+        et.begin();
 
-        em.persist(temperature);
+        em.persist(pressure);
 
         et.commit();
         em.close();
 
-        return temperature;
+        return pressure;
     }
+
 }
