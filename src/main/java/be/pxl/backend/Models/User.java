@@ -1,20 +1,32 @@
-package be.pxl.backend.Models;
+package be.pxl.backend.models;
+
+import javax.persistence.*;
+import java.util.*;
 
 /**
  * Created by Jonas on 7/10/16.
  */
+
+@Entity
+@Table(name = "Users")
 public class User {
 
+    @Id
+    @GeneratedValue
+    @Column(name = "Id")
     private int id;
+
+    @Column(name = "Username")
     private String username;
+
+    @Column(name = "Password")
     private String password;
+
+    @OneToMany(mappedBy = "Users")
+    private Set<Session> sessions;
 
     public int getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getUsername() {
@@ -32,4 +44,5 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
+
 }

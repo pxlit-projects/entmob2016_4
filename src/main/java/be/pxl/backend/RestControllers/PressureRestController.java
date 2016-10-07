@@ -1,6 +1,6 @@
-package be.pxl.backend.RestControllers;
+package be.pxl.backend.restcontrollers;
 
-import be.pxl.backend.Models.Pressure;
+import be.pxl.backend.models.Pressure;
 import org.springframework.web.bind.annotation.*;
 import java.util.*;
 

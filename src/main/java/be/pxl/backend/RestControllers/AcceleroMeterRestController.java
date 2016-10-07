@@ -1,6 +1,6 @@
-package be.pxl.backend.RestControllers;
+package be.pxl.backend.restcontrollers;
 
-import be.pxl.backend.Models.AcceleroMeter;
+import be.pxl.backend.models.AcceleroMeter;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;

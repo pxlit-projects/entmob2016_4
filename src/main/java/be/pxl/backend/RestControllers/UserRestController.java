@@ -1,6 +1,6 @@
-package be.pxl.backend.RestControllers;
+package be.pxl.backend.restcontrollers;
 
-import be.pxl.backend.Models.User;
+import be.pxl.backend.models.User;
 import org.springframework.web.bind.annotation.*;
 
 /**

@@ -1,23 +1,33 @@
-package be.pxl.backend.Models;
+package be.pxl.backend.models;
 
+import javax.persistence.*;
 import java.util.Date;
 
 /**
  * Created by Jonas on 7/10/16.
  */
+@Entity
+@Table(name = "AcceleroMeters")
 public class AcceleroMeter {
 
+    @Id
+    @GeneratedValue
+    @Column(name = "Id")
     private int id;
 
-    private float x, y, z;
+    @Column(name = "X")
+    private float x;
+    @Column(name = "Y")
+    private float y;
+    @Column(name = "Z")
+    private float z;
+
+    @Temporal(TemporalType.TIMESTAMP)
+    @Column(name = "Date")
     private Date date;
 
     public int getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public float getX() {
