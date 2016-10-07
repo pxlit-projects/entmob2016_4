@@ -3,6 +3,7 @@ package be.pxl.backend.repositories;
 import be.pxl.backend.dao.UserDao;
 import be.pxl.backend.models.User;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -23,7 +24,7 @@ public class UserRepository implements UserDao {
         this.emf = emf;
     }
 
-    @Override
+    @Transactional
     public User getUserById(int id) {
         EntityManager em = emf.createEntityManager();
         EntityTransaction et = em.getTransaction();
@@ -34,7 +35,7 @@ public class UserRepository implements UserDao {
         return user;
     }
 
-    @Override
+    @Transactional
     public User addUser(User user) {
         EntityManager em = emf.createEntityManager();
         EntityTransaction et = em.getTransaction();
