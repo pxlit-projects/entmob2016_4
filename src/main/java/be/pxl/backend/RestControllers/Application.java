@@ -1,4 +1,4 @@
-package be.pxl.backend.Config;
+package be.pxl.backend.RestControllers;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
