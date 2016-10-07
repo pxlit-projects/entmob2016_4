@@ -22,6 +22,18 @@ public class Humidity {
     @Column(name = "Date")
     private Date date;
 
+    @ManyToOne
+    @JoinColumn(name = "SessionId")
+    private Session session;
+
+    public Session getSession() {
+        return session;
+    }
+
+    public void setSession(Session session) {
+        this.session = session;
+    }
+
     public int getId() {
         return id;
     }

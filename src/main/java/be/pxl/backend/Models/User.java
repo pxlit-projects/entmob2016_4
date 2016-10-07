@@ -23,7 +23,7 @@ public class User {
     private String password;
 
     @OneToMany(mappedBy = "Users")
-    private Set<Session> sessions;
+    private Set<Session> sessions = new HashSet<Session>();
 
     public int getId() {
         return id;
