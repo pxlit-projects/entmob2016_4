@@ -1,6 +1,7 @@
 package be.pxl.backend.models;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
@@ -9,7 +10,7 @@ import java.util.List;
  */
 @Entity
 @Table(name = "Sessions")
-public class Session {
+public class Session implements Serializable {
 
     @Id
     @GeneratedValue

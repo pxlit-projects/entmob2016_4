@@ -20,17 +20,17 @@ public class SessionRestController {
         return new Session();
     }
 
-    @RequestMapping(method = RequestMethod.GET)
+    @RequestMapping(method = RequestMethod.GET, value = "/all")
     public List<Session> getAllSessions() {
         return new ArrayList<>();
     }
 
-    @RequestMapping(method = RequestMethod.POST)
+    @RequestMapping(method = RequestMethod.POST, value = "/start")
     public Session startSession(@RequestParam(value = "start") Date start) {
         return new Session();
     }
 
-    @RequestMapping(method = RequestMethod.POST)
+    @RequestMapping(method = RequestMethod.POST, value = "/stop")
     public Session stopSession(@RequestBody Session session) {
         return new Session();
     }
