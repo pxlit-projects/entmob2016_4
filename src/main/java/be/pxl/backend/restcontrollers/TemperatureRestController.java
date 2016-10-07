@@ -14,7 +14,7 @@ import java.util.*;
 public class TemperatureRestController {
 
     @RequestMapping(method = RequestMethod.GET)
-    public List<Temperature> getTemperaturesRange(@RequestParam(value = "amount") int amount) {
+    public List<Temperature> getTemperaturesForSession(@RequestParam(value = "sessionId") int sessionId) {
         return new ArrayList<Temperature>();
     }
 

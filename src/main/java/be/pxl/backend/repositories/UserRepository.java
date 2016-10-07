@@ -2,6 +2,7 @@ package be.pxl.backend.repositories;
 
 import be.pxl.backend.dao.UserDao;
 import be.pxl.backend.models.User;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.stereotype.Repository;
 
@@ -17,6 +18,7 @@ import javax.persistence.PersistenceUnit;
 @Repository("userRepository")
 public class UserRepository implements UserDao {
 
+    @Autowired
     private EntityManagerFactory emf;
 
     @PersistenceUnit
@@ -24,7 +26,7 @@ public class UserRepository implements UserDao {
         this.emf = emf;
     }
 
-   @Transactional
+   //@Transactional
     public User getUserById(int id) {
         EntityManager em = emf.createEntityManager();
         EntityTransaction et = em.getTransaction();
@@ -38,7 +40,7 @@ public class UserRepository implements UserDao {
         return user;
     }
 
-    @Transactional
+    //@Transactional
     public User addUser(User user) {
         EntityManager em = emf.createEntityManager();
         EntityTransaction et = em.getTransaction();

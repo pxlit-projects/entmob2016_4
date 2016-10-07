@@ -1,8 +1,9 @@
-package be.pxl.backend.restcontrollers;
+package be.pxl.backend.Start;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.*;
 import java.util.stream.Stream;
 
 /**
@@ -10,6 +11,7 @@ import java.util.stream.Stream;
  */
 
 @SpringBootApplication
+@ComponentScan(basePackages = { "be.pxl.backend.restcontrollers","be.pxl.backend.repositories", "be.pxl.backend.models"})
 public class Application {
 
     public static void main(String []args) {
