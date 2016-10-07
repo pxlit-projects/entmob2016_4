@@ -1,0 +1,23 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DataLayer.Models
+{
+    class AcceleroMeter
+    {
+        private int id { get; }
+        private float y { get; set; }
+        private float x { get; set; }
+        private float z { get; set; }
+        private DateTime date { get; set; }
+        private Session session { get; set; }
+
+        public AcceleroMeter()
+        {
+
+        }
+    }
+}
