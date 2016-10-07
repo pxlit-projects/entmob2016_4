@@ -1,0 +1,11 @@
+/Users/Jonas/entmob2016_4/src/main/java/be/pxl/backend/RestControllers/HumidityRestController.java
+/Users/Jonas/entmob2016_4/src/main/java/be/pxl/backend/Models/Humidity.java
+/Users/Jonas/entmob2016_4/src/main/java/be/pxl/backend/RestControllers/TemperatureRestController.java
+/Users/Jonas/entmob2016_4/src/main/java/be/pxl/backend/RestControllers/UserRestController.java
+/Users/Jonas/entmob2016_4/src/main/java/be/pxl/backend/Models/AcceleroMeter.java
+/Users/Jonas/entmob2016_4/src/main/java/be/pxl/backend/RestControllers/AcceleroMeterRestController.java
+/Users/Jonas/entmob2016_4/src/main/java/be/pxl/backend/Application.java
+/Users/Jonas/entmob2016_4/src/main/java/be/pxl/backend/Models/Temperature.java
+/Users/Jonas/entmob2016_4/src/main/java/be/pxl/backend/Models/User.java
+/Users/Jonas/entmob2016_4/src/main/java/be/pxl/backend/Models/Pressure.java
+/Users/Jonas/entmob2016_4/src/main/java/be/pxl/backend/RestControllers/PressureRestController.java
