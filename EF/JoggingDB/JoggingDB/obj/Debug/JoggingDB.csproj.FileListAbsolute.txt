@@ -12,3 +12,4 @@ c:\users\nick bleyen\documents\visual studio 2015\Projects\JoggingDB\JoggingDB\o
 c:\users\nick bleyen\documents\visual studio 2015\Projects\JoggingDB\JoggingDB\obj\Debug\JoggingDB.pdb
 C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\JoggingDB\JoggingDB\obj\Debug\JoggingDB.Migrations.Initial.resources
 C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\JoggingDB\JoggingDB\obj\Debug\JoggingDB.csproj.GenerateResource.Cache
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\JoggingDB\JoggingDB\obj\Debug\JoggingDB.Migrations.PasswordAdded.resources

@@ -57,6 +57,10 @@
     <Compile Include="Migrations\201610141234058_Initial.Designer.cs">
       <DependentUpon>201610141234058_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201610141316033_PasswordAdded.cs" />
+    <Compile Include="Migrations\201610141316033_PasswordAdded.Designer.cs">
+      <DependentUpon>201610141316033_PasswordAdded.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -74,6 +78,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201610141234058_Initial.resx">
       <DependentUpon>201610141234058_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610141316033_PasswordAdded.resx">
+      <DependentUpon>201610141316033_PasswordAdded.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

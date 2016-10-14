@@ -10,7 +10,6 @@ namespace Jogging.Model.Models
    public class Session
     {
 
-        [Key]
         public int Id { get; set; }
 
         public DateTime End { get; set; }
