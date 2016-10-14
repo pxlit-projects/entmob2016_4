@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 /**
  * Created by Jonas on 14/10/16.
  */
+
+
 public class UserService {
 
     @Autowired

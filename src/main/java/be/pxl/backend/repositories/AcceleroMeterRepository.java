@@ -5,7 +5,7 @@ import be.pxl.backend.models.AcceleroMeter;
 /**
  * Created by Jonas on 7/10/16.
  */
-public interface AcceleroMeterDao {
+public interface AcceleroMeterRepository {
 
     AcceleroMeter addAcceleroMeter(AcceleroMeter acceleroMeter);
 

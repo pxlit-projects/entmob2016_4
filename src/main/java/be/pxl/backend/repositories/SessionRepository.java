@@ -8,7 +8,7 @@ import java.util.*;
 /**
  * Created by Jonas on 7/10/16.
  */
-public interface SessionDao {
+public interface SessionRepository {
 
     Session startSession(Session session);
     Session stopSession(Session session);

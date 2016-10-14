@@ -11,7 +11,7 @@ import java.util.stream.Stream;
  */
 
 @SpringBootApplication
-@ComponentScan(basePackages = { "be.pxl.backend.restcontrollers","be.pxl.backend.repositories", "be.pxl.backend.models"})
+@ComponentScan(basePackages = { "be.pxl.backend.restcontrollers","be.pxl.backend.repositories", "be.pxl.backend.models", "be.pxl.backend.services"})
 public class Application {
 
     public static void main(String []args) {
