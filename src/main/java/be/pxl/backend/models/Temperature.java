@@ -1,6 +1,10 @@
 package be.pxl.backend.models;
 
+import org.hibernate.annotations.*;
+
 import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -9,6 +13,7 @@ import java.util.Date;
  */
 
 @Entity
+@org.hibernate.annotations.NamedQuery(name="Temperature.getTemperaturesForSession", query = "select t from Temperature where t.session.id=:id")
 @Table(name = "Temperatures")
 public class Temperature implements Serializable {
 

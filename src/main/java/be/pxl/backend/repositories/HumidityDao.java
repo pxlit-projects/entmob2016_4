@@ -1,7 +1,6 @@
-package be.pxl.backend.dao;
+package be.pxl.backend.repositories;
 
 import be.pxl.backend.models.Humidity;
-import be.pxl.backend.models.Temperature;
 
 /**
  * Created by Jonas on 7/10/16.

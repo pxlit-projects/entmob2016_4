@@ -1,4 +1,4 @@
-package be.pxl.backend.dao;
+package be.pxl.backend.repositories;
 
 import be.pxl.backend.models.Session;
 import be.pxl.backend.models.User;

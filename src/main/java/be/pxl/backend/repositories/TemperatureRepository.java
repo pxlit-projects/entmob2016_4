@@ -1,37 +1,16 @@
 package be.pxl.backend.repositories;
 
-import be.pxl.backend.dao.TemperatureDao;
 import be.pxl.backend.models.Temperature;
-import org.springframework.stereotype.Repository;
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.EntityTransaction;
-import javax.persistence.PersistenceUnit;
+import org.springframework.data.repository.CrudRepository;
+
+import java.util.List;
 
 /**
  * Created by Jonas on 7/10/16.
  */
 
-@Repository("temperatureRepository")
-public class TemperatureRepository implements TemperatureDao {
+public interface TemperatureRepository extends CrudRepository<Temperature, Integer> {
 
-    private EntityManagerFactory emf;
+    List<Temperature> getTemperaturesForSession(int id);
 
-    @PersistenceUnit
-    public void addPeristenceUnit(EntityManagerFactory emf) {
-        this.emf = emf;
-    }
-
-    @Override
-    public Temperature addTemperature(Temperature temperature) {
-        EntityManager em = emf.createEntityManager();
-        EntityTransaction et = em.getTransaction();
-
-        em.persist(temperature);
-
-        et.commit();
-        em.close();
-
-        return temperature;
-    }
 }
