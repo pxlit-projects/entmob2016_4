@@ -4,10 +4,12 @@ import java.util.*;
 import be.pxl.backend.models.Temperature;
 import be.pxl.backend.repositories.TemperatureRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /**
  * Created by Jonas on 14/10/16.
  */
+@Service
 public class TemperatureService {
 
     @Autowired
@@ -18,7 +20,7 @@ public class TemperatureService {
     }
 
     public List<Temperature> getTemperaturesForSession(int id) {
-        return temperatureRepository.getTemperaturesForSession(id);
+        return temperatureRepository.getTemperaturesForSession();
     }
 
 }

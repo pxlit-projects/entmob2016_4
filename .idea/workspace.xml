@@ -3,24 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="9c1084ce-cec4-4ef3-b7ee-fa5411be3932" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/be/pxl/backend/Start/Application.java" afterPath="$PROJECT_DIR$/src/main/java/be/pxl/backend/Start/Application.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/be/pxl/backend/models/AcceleroMeter.java" afterPath="$PROJECT_DIR$/src/main/java/be/pxl/backend/models/AcceleroMeter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/be/pxl/backend/models/Humidity.java" afterPath="$PROJECT_DIR$/src/main/java/be/pxl/backend/models/Humidity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/be/pxl/backend/models/Pressure.java" afterPath="$PROJECT_DIR$/src/main/java/be/pxl/backend/models/Pressure.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/be/pxl/backend/models/Session.java" afterPath="$PROJECT_DIR$/src/main/java/be/pxl/backend/models/Session.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/be/pxl/backend/models/Temperature.java" afterPath="$PROJECT_DIR$/src/main/java/be/pxl/backend/models/Temperature.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/be/pxl/backend/models/User.java" afterPath="$PROJECT_DIR$/src/main/java/be/pxl/backend/models/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/be/pxl/backend/repositories/AcceleroMeterRepository.java" afterPath="$PROJECT_DIR$/src/main/java/be/pxl/backend/repositories/AcceleroMeterRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/be/pxl/backend/repositories/HumidityRepository.java" afterPath="$PROJECT_DIR$/src/main/java/be/pxl/backend/repositories/HumidityRepository.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/be/pxl/backend/repositories/PressureRepository.java" afterPath="$PROJECT_DIR$/src/main/java/be/pxl/backend/repositories/PressureRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/be/pxl/backend/repositories/SessionRepository.java" afterPath="$PROJECT_DIR$/src/main/java/be/pxl/backend/repositories/SessionRepository.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/be/pxl/backend/repositories/TemperatureRepository.java" afterPath="$PROJECT_DIR$/src/main/java/be/pxl/backend/repositories/TemperatureRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/be/pxl/backend/repositories/UserRepository.java" afterPath="$PROJECT_DIR$/src/main/java/be/pxl/backend/repositories/UserRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/be/pxl/backend/restcontrollers/SessionRestController.java" afterPath="$PROJECT_DIR$/src/main/java/be/pxl/backend/restcontrollers/SessionRestController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/be/pxl/backend/restcontrollers/UserRestController.java" afterPath="$PROJECT_DIR$/src/main/java/be/pxl/backend/restcontrollers/UserRestController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/be/pxl/backend/services/HumidityService.java" afterPath="$PROJECT_DIR$/src/main/java/be/pxl/backend/services/HumidityService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/be/pxl/backend/services/SessionService.java" afterPath="$PROJECT_DIR$/src/main/java/be/pxl/backend/services/SessionService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/be/pxl/backend/services/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/be/pxl/backend/services/UserService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/be/pxl/backend/restcontrollers/PressureRestController.java" afterPath="$PROJECT_DIR$/src/main/java/be/pxl/backend/restcontrollers/PressureRestController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/be/pxl/backend/restcontrollers/TemperatureRestController.java" afterPath="$PROJECT_DIR$/src/main/java/be/pxl/backend/restcontrollers/TemperatureRestController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/be/pxl/backend/services/PressureService.java" afterPath="$PROJECT_DIR$/src/main/java/be/pxl/backend/services/PressureService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/be/pxl/backend/services/TemperatureService.java" afterPath="$PROJECT_DIR$/src/main/java/be/pxl/backend/services/TemperatureService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
     </list>
     <ignored path="entmob_4_back_end.iws" />
@@ -45,49 +38,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SessionRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/be/pxl/backend/repositories/SessionRepository.java">
+      <file leaf-file-name="Pressure.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/be/pxl/backend/models/Pressure.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/be/pxl/backend/models/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state relative-caret-position="237">
+              <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#481#490#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/be/pxl/backend/services/UserService.java">
+      <file leaf-file-name="Humidity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/be/pxl/backend/models/Humidity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
+            <state relative-caret-position="357">
+              <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#402#403#0" expanded="true" />
-                <element signature="e#451#452#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -95,8 +65,8 @@
       <file leaf-file-name="Session.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/be/pxl/backend/models/Session.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
+            <state relative-caret-position="510">
+              <caret line="46" column="22" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -104,11 +74,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HumidityRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/be/pxl/backend/repositories/HumidityRepository.java">
+      <file leaf-file-name="PressureRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/be/pxl/backend/repositories/PressureRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
+            <state relative-caret-position="180">
+              <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -116,11 +86,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AcceleroMeterRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/be/pxl/backend/repositories/AcceleroMeterRepository.java">
+      <file leaf-file-name="AcceleroMeter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/be/pxl/backend/models/AcceleroMeter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="49" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
+            <state relative-caret-position="420">
+              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -128,45 +98,64 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserRestController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/be/pxl/backend/restcontrollers/UserRestController.java">
+      <file leaf-file-name="PressureService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/be/pxl/backend/services/PressureService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#580#581#0" expanded="true" />
+                <element signature="e#648#649#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TemperatureService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/be/pxl/backend/services/TemperatureService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
-              <caret line="25" column="35" selection-start-line="22" selection-start-column="0" selection-end-line="25" selection-end-column="35" />
+              <caret line="22" column="63" selection-start-line="22" selection-start-column="63" selection-end-line="22" selection-end-column="63" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TemperatureRestController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/be/pxl/backend/restcontrollers/TemperatureRestController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="23" column="60" selection-start-line="23" selection-start-column="60" selection-end-line="23" selection-end-column="60" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SessionService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/be/pxl/backend/services/SessionService.java">
+      <file leaf-file-name="PressureRestController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/be/pxl/backend/restcontrollers/PressureRestController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+            <state relative-caret-position="330">
+              <caret line="26" column="52" selection-start-line="26" selection-start-column="52" selection-end-line="26" selection-end-column="52" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1009#1010#0" expanded="true" />
-                <element signature="e#1066#1067#0" expanded="true" />
+                <element signature="e#763#764#0" expanded="true" />
+                <element signature="e#823#824#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SessionRestController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SessionRestController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/be/pxl/backend/restcontrollers/SessionRestController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="30" column="44" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="44" />
+            <state relative-caret-position="162">
+              <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="68" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#563#564#0" expanded="true" />
-                <element signature="e#619#620#0" expanded="true" />
-                <element signature="e#728#729#0" expanded="true" />
-                <element signature="e#782#783#0" expanded="true" />
                 <element signature="e#914#915#0" expanded="true" />
                 <element signature="e#973#974#0" expanded="true" />
-                <element signature="e#1103#1104#0" expanded="true" />
-                <element signature="e#1161#1162#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -204,34 +193,35 @@
         <option value="$PROJECT_DIR$/src/main/java/be/pxl/backend/dao/UserDao.java" />
         <option value="$PROJECT_DIR$/src/main/resources/persistence.xml" />
         <option value="$PROJECT_DIR$/src/main/java/be/pxl/backend/repositories/Repository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/pxl/backend/restcontrollers/TemperatureRestController.java" />
         <option value="$PROJECT_DIR$/src/main/java/be/pxl/backend/restcontrollers/Application.java" />
         <option value="$PROJECT_DIR$/src/main/java/be/pxl/backend/dao/SessionDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/be/pxl/backend/dao/TemperatureDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/be/pxl/backend/dao/PressureDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/be/pxl/backend/dao/UserRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/pxl/backend/services/TemperatureService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/pxl/backend/services/PressureService.java" />
         <option value="$PROJECT_DIR$/src/main/java/be/pxl/backend/services/AcceleroMeterService.java" />
         <option value="$PROJECT_DIR$/src/main/java/be/pxl/backend/repositories/UserRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/be/pxl/backend/Start/Application.java" />
         <option value="$PROJECT_DIR$/src/main/java/be/pxl/backend/models/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/pxl/backend/models/Session.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/pxl/backend/models/AcceleroMeter.java" />
         <option value="$PROJECT_DIR$/src/main/java/be/pxl/backend/services/HumidityService.java" />
         <option value="$PROJECT_DIR$/src/main/java/be/pxl/backend/repositories/HumidityRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/be/pxl/backend/repositories/AcceleroMeterRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/pxl/backend/repositories/PressureRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/pxl/backend/repositories/TemperatureRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/pxl/backend/models/Humidity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/pxl/backend/models/Pressure.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/pxl/backend/models/Temperature.java" />
         <option value="$PROJECT_DIR$/src/main/java/be/pxl/backend/restcontrollers/UserRestController.java" />
         <option value="$PROJECT_DIR$/src/main/java/be/pxl/backend/services/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/be/pxl/backend/repositories/SessionRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/be/pxl/backend/services/SessionService.java" />
         <option value="$PROJECT_DIR$/src/main/java/be/pxl/backend/restcontrollers/SessionRestController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/be/pxl/backend/restcontrollers/TemperatureRestController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/pxl/backend/repositories/TemperatureRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/pxl/backend/services/TemperatureService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/pxl/backend/models/Temperature.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/pxl/backend/repositories/PressureRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/pxl/backend/models/Session.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/pxl/backend/models/Pressure.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/pxl/backend/models/Humidity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/pxl/backend/models/AcceleroMeter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/pxl/backend/services/PressureService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/pxl/backend/restcontrollers/PressureRestController.java" />
       </list>
     </option>
   </component>
@@ -974,12 +964,12 @@
       <workItem from="1475848472078" duration="63000" />
       <workItem from="1475848539096" duration="1185000" />
       <workItem from="1476430914516" duration="5707000" />
-      <workItem from="1476447335700" duration="4488000" />
+      <workItem from="1476447335700" duration="6244000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26077000" />
+    <option name="totallyTimeSpent" value="27833000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -994,12 +984,12 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32876712" sideWeight="0.87318254" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20958903" sideWeight="0.87318254" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3739903" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31098545" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1026,12 +1016,6 @@
           <properties class="be.pxl.backend.Start.Application" method="main" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/be/pxl/backend/restcontrollers/SessionRestController.java</url>
-          <line>21</line>
-          <properties />
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
       </breakpoints>
       <option name="time" value="3" />
     </breakpoint-manager>
@@ -1042,14 +1026,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/pxl/backend/repositories/SessionRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/be/pxl/backend/restcontrollers/TemperatureRestController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -1226,36 +1202,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/be/pxl/backend/repositories/UserRepositoryImpl.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/pxl/backend/restcontrollers/TemperatureRestController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="16" column="54" selection-start-line="16" selection-start-column="54" selection-end-line="16" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/pxl/backend/services/TemperatureService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="20" column="67" selection-start-line="20" selection-start-column="67" selection-end-line="20" selection-end-column="67" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/pxl/backend/services/PressureService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="21" column="15" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#523#524#0" expanded="true" />
-            <element signature="e#591#592#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/be/pxl/backend/services/AcceleroMeterService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -1284,66 +1230,6 @@
             <element signature="imports" expanded="true" />
             <element signature="e#522#523#0" expanded="true" />
             <element signature="e#589#590#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/pxl/backend/repositories/PressureRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/pxl/backend/repositories/TemperatureRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="47" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/pxl/backend/models/AcceleroMeter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="32" column="32" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/pxl/backend/models/Humidity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/pxl/backend/models/Temperature.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/pxl/backend/models/Pressure.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1401,14 +1287,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/be/pxl/backend/restcontrollers/UserRestController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -1437,30 +1315,133 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/pxl/backend/models/Session.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
+        <state relative-caret-position="105">
+          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/pxl/backend/repositories/TemperatureRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/pxl/backend/restcontrollers/SessionRestController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/pxl/backend/models/Temperature.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="30" column="44" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="44" />
+        <state relative-caret-position="345">
+          <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#563#564#0" expanded="true" />
-            <element signature="e#619#620#0" expanded="true" />
-            <element signature="e#728#729#0" expanded="true" />
-            <element signature="e#782#783#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/pxl/backend/models/Session.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="46" column="22" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/pxl/backend/models/Humidity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/pxl/backend/models/AcceleroMeter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/pxl/backend/repositories/PressureRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/pxl/backend/restcontrollers/PressureRestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="26" column="52" selection-start-line="26" selection-start-column="52" selection-end-line="26" selection-end-column="52" />
+          <folding>
+            <element signature="e#763#764#0" expanded="true" />
+            <element signature="e#823#824#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/pxl/backend/restcontrollers/SessionRestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="68" />
+          <folding>
+            <element signature="imports" expanded="true" />
             <element signature="e#914#915#0" expanded="true" />
             <element signature="e#973#974#0" expanded="true" />
-            <element signature="e#1103#1104#0" expanded="true" />
-            <element signature="e#1161#1162#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/pxl/backend/services/PressureService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#580#581#0" expanded="true" />
+            <element signature="e#648#649#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/pxl/backend/restcontrollers/TemperatureRestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="23" column="60" selection-start-line="23" selection-start-column="60" selection-end-line="23" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/pxl/backend/services/TemperatureService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="22" column="63" selection-start-line="22" selection-start-column="63" selection-end-line="22" selection-end-column="63" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/pxl/backend/models/Pressure.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -1,6 +1,8 @@
 package be.pxl.backend.restcontrollers;
 
 import be.pxl.backend.models.Pressure;
+import be.pxl.backend.services.PressureService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.*;
 
@@ -12,14 +14,17 @@ import java.util.*;
 @RequestMapping("/pressure")
 public class PressureRestController {
 
+    @Autowired
+    private PressureService pressureService;
+
     @RequestMapping(method = RequestMethod.GET)
-    public List<Pressure> getPressuresRange(@RequestParam(value = "amount") int amount) {
-        return new ArrayList<Pressure>();
+    public List<Pressure> getPressuresFromSession(@RequestParam(value = "id") int id) {
+        return pressureService.getPressuresForSession(id);
     }
 
     @RequestMapping(method = RequestMethod.POST)
     public Pressure addPressure(@RequestBody Pressure pressure) {
-        return new Pressure();
+        return pressureService.addPressure(pressure);
     }
 
 }

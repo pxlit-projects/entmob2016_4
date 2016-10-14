@@ -1,5 +1,6 @@
 package be.pxl.backend.models;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import org.hibernate.annotations.NamedQuery;
 
 import javax.persistence.*;
@@ -28,6 +29,7 @@ public class Temperature implements Serializable {
     private Date date;
 
     @ManyToOne
+    @JsonManagedReference
     @JoinColumn(name = "SessionId")
     private Session session;
 

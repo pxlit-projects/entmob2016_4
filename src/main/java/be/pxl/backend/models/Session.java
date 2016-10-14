@@ -1,5 +1,6 @@
 package be.pxl.backend.models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import org.hibernate.annotations.JoinColumnOrFormula;
 import org.hibernate.annotations.NamedQuery;
 import javax.persistence.*;
@@ -31,15 +32,19 @@ public class Session implements Serializable {
     @JoinColumn(name = "UserId")
     private User user;
 
+    @JsonBackReference
     @OneToMany(mappedBy = "session")
     private List<Temperature> temperatures;
 
+    @JsonBackReference
     @OneToMany(mappedBy = "session")
     private List<Pressure> pressures;
 
+    @JsonBackReference
     @OneToMany(mappedBy = "session")
     private List<Humidity> humidities;
 
+    @JsonBackReference
     @OneToMany(mappedBy = "session")
     private List<AcceleroMeter> acceleroMeters;
 
