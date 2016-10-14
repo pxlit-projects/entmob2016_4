@@ -21,6 +21,10 @@ public class Session implements Serializable {
     @Column(name = "Id")
     private int id;
 
+    @ManyToOne
+    @JoinColumn(name = "")
+    private User user;
+
     @Temporal(TemporalType.TIMESTAMP)
     private Date start;
 

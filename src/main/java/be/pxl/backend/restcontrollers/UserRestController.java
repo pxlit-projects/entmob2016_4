@@ -13,9 +13,6 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/user")
 public class UserRestController {
 
-    @Autowired
-    private UserService userService;
-
     @RequestMapping(method = RequestMethod.GET)
     public User getUserById(@RequestParam(value = "id") int id) {
         return new User();
@@ -23,8 +20,8 @@ public class UserRestController {
 
     @RequestMapping(method = RequestMethod.POST)
     public User addNewUser(@RequestBody User user) {
-        User savedUser = userService.addUser(user);
-        return savedUser;
+        //User savedUser = userService.addUser(user);
+        return new User();//savedUser;
     }
 
 }
