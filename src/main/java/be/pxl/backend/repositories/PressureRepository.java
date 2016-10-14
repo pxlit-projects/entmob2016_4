@@ -1,12 +1,15 @@
 package be.pxl.backend.repositories;
 
 import be.pxl.backend.models.Pressure;
+import org.springframework.data.repository.CrudRepository;
+
+import java.util.List;
 
 /**
  * Created by Jonas on 7/10/16.
  */
-public interface PressureRepository {
+public interface PressureRepository extends CrudRepository<Pressure, Integer> {
 
-    Pressure addPresure(Pressure pressure);
+    List<Pressure> getPressuresForSession(int id);
 
 }

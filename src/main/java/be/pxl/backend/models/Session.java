@@ -1,6 +1,9 @@
 package be.pxl.backend.models;
 
+import org.hibernate.annotations.NamedQuery;
 import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
@@ -9,6 +12,7 @@ import java.util.List;
  * Created by Jonas on 7/10/16.
  */
 @Entity
+@NamedQuery(name = "Session.allSessions", query = "select s from Session")
 @Table(name = "Sessions")
 public class Session implements Serializable {
 
