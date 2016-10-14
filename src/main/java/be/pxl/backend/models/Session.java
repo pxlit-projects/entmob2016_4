@@ -32,7 +32,7 @@ public class Session implements Serializable {
     @JoinColumn(name = "UserId")
     private User user;
 
-    @JsonBackReference
+    //@JsonBackReference
     @OneToMany(mappedBy = "session")
     private List<Temperature> temperatures;
 
@@ -40,11 +40,11 @@ public class Session implements Serializable {
     @OneToMany(mappedBy = "session")
     private List<Pressure> pressures;
 
-    @JsonBackReference
+    //@JsonBackReference
     @OneToMany(mappedBy = "session")
     private List<Humidity> humidities;
 
-    @JsonBackReference
+    //@JsonBackReference
     @OneToMany(mappedBy = "session")
     private List<AcceleroMeter> acceleroMeters;
 

@@ -21,6 +21,11 @@ public class UserRestController {
         return userService.getUserById(id);
     }
 
+    @RequestMapping(method = RequestMethod.GET)
+    public User getUserByUsername(@RequestParam(value = "username") String username) {
+        return userService.getUserByUsername(username);
+    }
+
     @RequestMapping(method = RequestMethod.POST)
     public User addNewUser(@RequestBody User user) {
         User savedUser = userService.addUser(user);

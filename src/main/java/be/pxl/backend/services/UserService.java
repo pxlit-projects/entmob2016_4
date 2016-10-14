@@ -20,7 +20,15 @@ public class UserService {
     }
 
     public User addUser(User user) {
-        return userRepository.save(user);
+        if (user.getPassword() != null && user.getPassword().length() > 5) {
+            return userRepository.save(user);
+        } else {
+            return null;
+        }
+    }
+
+    public User getUserByUsername(String username) {
+        return userRepository.getUserByUsername(username);
     }
 
 }

@@ -31,7 +31,7 @@ public class AcceleroMeter implements Serializable {
     private Date date;
 
     @ManyToOne
-    @JsonManagedReference
+    //@JsonManagedReference
     @JoinColumn(name = "SessionId")
     private Session session;
 

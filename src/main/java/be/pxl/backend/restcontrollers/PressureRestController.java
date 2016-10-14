@@ -3,6 +3,7 @@ package be.pxl.backend.restcontrollers;
 import be.pxl.backend.models.Pressure;
 import be.pxl.backend.services.PressureService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import java.util.*;
 
@@ -22,7 +23,7 @@ public class PressureRestController {
         return pressureService.getPressuresForSession(id);
     }
 
-    @RequestMapping(method = RequestMethod.POST)
+    @RequestMapping(method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
     public Pressure addPressure(@RequestBody Pressure pressure) {
         return pressureService.addPressure(pressure);
     }
