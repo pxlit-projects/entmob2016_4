@@ -1,6 +1,7 @@
 package be.pxl.backend.repositories;
 
 import be.pxl.backend.models.Humidity;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
@@ -10,6 +11,7 @@ import java.util.List;
  */
 public interface HumidityRepository extends CrudRepository<Humidity, Integer> {
 
-    List<Humidity> getHumidityForSessesion(int id);
+    @Query(value = "select h from Humidity h")
+    List<Humidity> getHumidityForSession(int id);
 
 }

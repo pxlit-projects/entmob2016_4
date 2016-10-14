@@ -9,7 +9,6 @@ import java.util.*;
  */
 
 @Entity
-@Table(name = "Users")
 public class User implements Serializable {
 
     @Id
@@ -23,7 +22,7 @@ public class User implements Serializable {
     @Column(name = "Password")
     private String password;
 
-    @OneToMany(mappedBy = "Users")
+    @OneToMany(mappedBy = "user")
     private Set<Session> sessions = new HashSet<Session>();
 
     public int getId() {

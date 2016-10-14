@@ -18,7 +18,7 @@ public class UserRestController {
 
     @RequestMapping(method = RequestMethod.GET)
     public User getUserById(@RequestParam(value = "id") int id) {
-        return new User();
+        return userService.getUserById(id);
     }
 
     @RequestMapping(method = RequestMethod.POST)

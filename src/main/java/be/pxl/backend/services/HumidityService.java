@@ -19,7 +19,7 @@ public class HumidityService {
     }
 
     public List<Humidity> getHumidityForSession(int id) {
-        return humidityRepository.getHumidityForSessesion(id);
+        return humidityRepository.getHumidityForSession(id);
     }
 
 }

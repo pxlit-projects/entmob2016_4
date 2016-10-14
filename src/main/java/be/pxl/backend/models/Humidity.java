@@ -12,8 +12,6 @@ import java.util.Date;
  * Created by Jonas on 7/10/16.
  */
 @Entity
-@NamedQuery(name = "Humidity.getHumidityForSession", query = "select h from Humidity where h.Session.id =: id")
-@Table(name = "Humidities")
 public class Humidity implements Serializable {
 
     @Id

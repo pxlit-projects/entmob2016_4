@@ -1,5 +1,6 @@
 package be.pxl.backend.models;
 
+import org.hibernate.annotations.JoinColumnOrFormula;
 import org.hibernate.annotations.NamedQuery;
 import javax.persistence.*;
 import javax.persistence.Entity;
@@ -12,8 +13,7 @@ import java.util.List;
  * Created by Jonas on 7/10/16.
  */
 @Entity
-@NamedQuery(name = "Session.allSessions", query = "select s from Session")
-@Table(name = "Sessions")
+@NamedQuery(name = "Session.getAllSessions", query = "select s from Session s")
 public class Session implements Serializable {
 
     @Id
@@ -27,16 +27,20 @@ public class Session implements Serializable {
     @Temporal(TemporalType.TIMESTAMP)
     private Date end;
 
-    @OneToMany(mappedBy = "Sessions")
+    @ManyToOne
+    @JoinColumn(name = "UserId")
+    private User user;
+
+    @OneToMany(mappedBy = "session")
     private List<Temperature> temperatures;
 
-    @OneToMany(mappedBy = "Sessions")
+    @OneToMany(mappedBy = "session")
     private List<Pressure> pressures;
 
-    @OneToMany(mappedBy = "Sessions")
+    @OneToMany(mappedBy = "session")
     private List<Humidity> humidities;
 
-    @OneToMany(mappedBy = "Sessions")
+    @OneToMany(mappedBy = "session")
     private List<AcceleroMeter> acceleroMeters;
 
     public int getId() {

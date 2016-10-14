@@ -1,6 +1,7 @@
 package be.pxl.backend.repositories;
 
 import be.pxl.backend.models.Pressure;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
@@ -10,6 +11,7 @@ import java.util.List;
  */
 public interface PressureRepository extends CrudRepository<Pressure, Integer> {
 
+    @Query(value = "select p from Pressure p")
     List<Pressure> getPressuresForSession(int id);
 
 }

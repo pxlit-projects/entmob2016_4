@@ -1,10 +1,9 @@
 package be.pxl.backend.restcontrollers;
 
 import be.pxl.backend.models.Session;
+import be.pxl.backend.services.SessionService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -15,24 +14,27 @@ import java.util.List;
 @RequestMapping("/session")
 public class SessionRestController {
 
+    @Autowired
+    private SessionService sessionService;
+
     @RequestMapping(method = RequestMethod.GET)
     public Session getSessionById(@RequestParam(value = "id") int id) {
-        return new Session();
+        return sessionService.getSessionById(id);
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "/all")
     public List<Session> getAllSessions() {
-        return new ArrayList<>();
+        return sessionService.getAllSessions();
     }
 
     @RequestMapping(method = RequestMethod.POST, value = "/start")
-    public Session startSession(@RequestParam(value = "start") Date start) {
-        return new Session();
+    public Session startSession(@RequestBody Session session) {
+        return sessionService.startSession(session);
     }
 
     @RequestMapping(method = RequestMethod.POST, value = "/stop")
     public Session stopSession(@RequestBody Session session) {
-        return new Session();
+        return sessionService.stopSession(session);
     }
 
 }

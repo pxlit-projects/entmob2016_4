@@ -3,12 +3,14 @@ package be.pxl.backend.services;
 import be.pxl.backend.models.Session;
 import be.pxl.backend.repositories.SessionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 /**
  * Created by Jonas on 14/10/16.
  */
+@Service
 public class SessionService {
 
     @Autowired
@@ -35,7 +37,7 @@ public class SessionService {
     }
 
     public List<Session> getAllSessions() {
-        return sessionRepository.allSessions();
+        return sessionRepository.getAllSessions();
     }
 
 }

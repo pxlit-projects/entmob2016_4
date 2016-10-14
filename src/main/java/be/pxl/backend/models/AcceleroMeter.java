@@ -1,6 +1,9 @@
 package be.pxl.backend.models;
 
+import org.hibernate.annotations.NamedQuery;
+
 import javax.persistence.*;
+import javax.persistence.Entity;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -8,7 +11,6 @@ import java.util.Date;
  * Created by Jonas on 7/10/16.
  */
 @Entity
-@Table(name = "AcceleroMeters")
 public class AcceleroMeter implements Serializable {
 
     @Id
@@ -74,4 +76,5 @@ public class AcceleroMeter implements Serializable {
     public void setDate(Date date) {
         this.date = date;
     }
+
 }
