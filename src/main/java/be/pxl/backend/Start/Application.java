@@ -2,11 +2,8 @@ package be.pxl.backend.Start;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.orm.jpa.EntityScan;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.*;
-import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
-
 import java.util.stream.Stream;
 
 /**
@@ -14,9 +11,7 @@ import java.util.stream.Stream;
  */
 
 @SpringBootApplication
-//@EntityScan(basePackages = "be.pxl.backend.models")
-//@EnableJpaRepositories(basePackages = "be.pxl.backend.respositories")
-@ComponentScan(basePackages = "be.pxl.backend")//@ComponentScan(basePackages = { "be.pxl.backend.restcontrollers","be.pxl.backend.repositories", "be.pxl.backend.models", "be.pxl.backend.services"})
+@ComponentScan(basePackages = { "be.pxl.backend.restcontrollers","be.pxl.backend.repositories", "be.pxl.backend.models", "be.pxl.backend.services"})
 public class Application {
 
     public static void main(String []args) {
