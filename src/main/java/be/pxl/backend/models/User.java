@@ -20,7 +20,7 @@ public class User implements Serializable {
 
     private String lastName;
 
-    @Column(nullable = false)
+    @Column(nullable = false, unique = true)
     private String name;
 
     @Column(nullable = false)
