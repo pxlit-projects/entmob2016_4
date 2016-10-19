@@ -20,7 +20,8 @@ public class UserService {
     public User addUser(User user) {
         String password = user.getPassword();
         ShaPasswordEncoder shaPasswordEncoder = new ShaPasswordEncoder(256);
-        shaPasswordEncoder.en
+        String hashed = shaPasswordEncoder.encodePassword(password, "");
+        user.setPassword(hashed);
         return userRepository.save(user);
     }
 

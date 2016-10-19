@@ -1,4 +1,4 @@
-package be.pxl.backend.Start;
+package be.pxl.backend.start;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
