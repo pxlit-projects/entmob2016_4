@@ -1,11 +1,8 @@
 package be.pxl.backend.models;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import org.hibernate.annotations.JoinColumnOrFormula;
 import org.hibernate.annotations.NamedQuery;
 import javax.persistence.*;
 import javax.persistence.Entity;
-import javax.persistence.Table;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
@@ -14,12 +11,12 @@ import java.util.List;
  * Created by Jonas on 7/10/16.
  */
 @Entity
+@Table(name = "Sessions")
 @NamedQuery(name = "Session.getAllSessions", query = "select s from Session s")
 public class Session implements Serializable {
 
     @Id
     @GeneratedValue
-    @Column(name = "Id")
     private int id;
 
     @Temporal(TemporalType.TIMESTAMP)
@@ -29,27 +26,31 @@ public class Session implements Serializable {
     private Date end;
 
     @ManyToOne
-    @JoinColumn(name = "UserId")
+    @JoinColumn(name = "userId")
     private User user;
 
-    //@JsonBackReference
     @OneToMany(mappedBy = "session")
     private List<Temperature> temperatures;
 
-    @JsonBackReference
     @OneToMany(mappedBy = "session")
     private List<Pressure> pressures;
 
-    //@JsonBackReference
     @OneToMany(mappedBy = "session")
     private List<Humidity> humidities;
 
-    //@JsonBackReference
     @OneToMany(mappedBy = "session")
     private List<AcceleroMeter> acceleroMeters;
 
     public int getId() {
         return id;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public Date getStart() {

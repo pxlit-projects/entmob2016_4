@@ -32,7 +32,7 @@ public class SessionRestController {
         return sessionService.startSession(session);
     }
 
-    @RequestMapping(method = RequestMethod.POST, value = "/stop")
+    @RequestMapping(method = RequestMethod.PUT, value = "/stop")
     public Session stopSession(@RequestBody Session session) {
         return sessionService.stopSession(session);
     }

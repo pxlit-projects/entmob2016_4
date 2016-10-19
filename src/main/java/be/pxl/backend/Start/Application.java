@@ -6,6 +6,7 @@ import org.springframework.boot.orm.jpa.EntityScan;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.*;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 
 import java.util.stream.Stream;
 
@@ -14,6 +15,7 @@ import java.util.stream.Stream;
  */
 
 @SpringBootApplication
+@EnableGlobalMethodSecurity(securedEnabled = true)
 @EnableJpaRepositories(basePackages = "be.pxl.backend.repositories")
 @EntityScan(basePackages = "be.pxl.backend.models")
 @ComponentScan(basePackages = { "be.pxl.backend.restcontrollers", "be.pxl.backend.repositories", "be.pxl.backend.models", "be.pxl.backend.services"})

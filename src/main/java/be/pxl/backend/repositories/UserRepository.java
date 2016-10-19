@@ -3,6 +3,7 @@ package be.pxl.backend.repositories;
 import be.pxl.backend.models.User;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -12,8 +13,8 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface UserRepository extends CrudRepository<User, Integer> {
 
-    @Query(value = "select u from User u where u.username =:username")
-    User getUserByUsername(String username);
+    @Query(value = "select u from User u where u.userName =:username")
+    User getUserByUsername(@Param(value = "username") String username);
 
 }
 

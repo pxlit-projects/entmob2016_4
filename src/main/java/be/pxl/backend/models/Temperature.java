@@ -21,15 +21,14 @@ public class Temperature implements Serializable {
     @Column(name = "Id")
     private int id;
 
-    @Column(name = "Temperature")
+    @Column(name = "Temperature", nullable = false)
     private float temperature;
 
     @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "Date")
+    @Column(name = "Date", nullable = false)
     private Date date;
 
     @ManyToOne
-    //@JsonManagedReference
     @JoinColumn(name = "SessionId")
     private Session session;
 

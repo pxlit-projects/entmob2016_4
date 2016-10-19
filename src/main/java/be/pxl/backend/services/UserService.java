@@ -15,12 +15,8 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
 
-    public User getUserById(int id) {
-        return userRepository.findOne(id);
-    }
-
     public User addUser(User user) {
-        if (user.getPassword() != null && user.getPassword().length() > 5) {
+        if (user.getPassword() != null && user.getPassword().length() >= 5) {
             return userRepository.save(user);
         } else {
             return null;

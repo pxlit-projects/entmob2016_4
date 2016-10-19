@@ -9,18 +9,26 @@ import java.util.*;
  */
 
 @Entity
+@Table(name = "Users")
 public class User implements Serializable {
 
     @Id
     @GeneratedValue
-    @Column(name = "Id")
     private int id;
 
-    @Column(name = "Username")
-    private String username;
+    private String firstName;
 
-    @Column(name = "Password")
+    private String lastName;
+
+    @Column(nullable = false)
+    private String name;
+
+    @Column(nullable = false)
     private String password;
+
+    private String role;
+
+    private Boolean enabled;
 
     @OneToMany(mappedBy = "user")
     private Set<Session> sessions = new HashSet<Session>();
@@ -29,12 +37,28 @@ public class User implements Serializable {
         return id;
     }
 
-    public String getUsername() {
-        return username;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getPassword() {
@@ -45,4 +69,27 @@ public class User implements Serializable {
         this.password = password;
     }
 
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
+    public Boolean getEnabled() {
+        return enabled;
+    }
+
+    public void setEnabled(Boolean enabled) {
+        this.enabled = enabled;
+    }
+
+    public Set<Session> getSessions() {
+        return sessions;
+    }
+
+    public void setSessions(Set<Session> sessions) {
+        this.sessions = sessions;
+    }
 }

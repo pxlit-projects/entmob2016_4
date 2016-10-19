@@ -17,17 +17,12 @@ public class UserRestController {
     private UserService userService;
 
     @RequestMapping(method = RequestMethod.GET)
-    public User getUserById(@RequestParam(value = "id") int id) {
-        return userService.getUserById(id);
-    }
-
-    @RequestMapping(method = RequestMethod.GET)
     public User getUserByUsername(@RequestParam(value = "username") String username) {
         return userService.getUserByUsername(username);
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    public User addNewUser(@RequestBody User user) {
+    public User addUser(@RequestBody User user) {
         User savedUser = userService.addUser(user);
         return savedUser;
     }
