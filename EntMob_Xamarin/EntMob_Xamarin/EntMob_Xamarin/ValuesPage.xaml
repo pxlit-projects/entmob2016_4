@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EntMob_Xamarin.ValuesPage"
+  xmlns:converters="clr-namespace:EntMob_Xamarin.Converters;assembly=EntMob_Xamarin">
+  <!--<Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />-->
+  <StackLayout Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="Center">
+    <Label Text="Your Data" FontSize="50" TextColor="Green"/>
+  </StackLayout>
+  
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <converters:ValueToDegreesConverter x:Key="ValueToDegreesConverter"/>
+    </ResourceDictionary>
+  </ContentPage.Resources>
+  
+  <ListView x:Name="ValuesView" ItemsSource="{Binding Values}">
+    <ListView.ItemTemplate>
+      <DataTemplate>
+        <TextCell Text ="{Binding Amount, Converter={StaticResource ValueToDegreesConverter}}"/>
+      </DataTemplate>
+    </ListView.ItemTemplate>
+  </ListView>
+</ContentPage>
