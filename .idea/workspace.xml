@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9c1084ce-cec4-4ef3-b7ee-fa5411be3932" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Back_end.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/be/pxl/backend/restcontrollers/AcceleroMeterRestController.java" afterPath="$PROJECT_DIR$/src/main/java/be/pxl/backend/restcontrollers/AcceleroMeterRestController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/be/pxl/backend/restcontrollers/HumidityRestController.java" afterPath="$PROJECT_DIR$/src/main/java/be/pxl/backend/restcontrollers/HumidityRestController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/be/pxl/backend/restcontrollers/UserRestController.java" afterPath="$PROJECT_DIR$/src/main/java/be/pxl/backend/restcontrollers/UserRestController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/be/pxl/backend/services/AcceleroMeterService.java" afterPath="$PROJECT_DIR$/src/main/java/be/pxl/backend/services/AcceleroMeterService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/be/pxl/backend/services/HumidityService.java" afterPath="$PROJECT_DIR$/src/main/java/be/pxl/backend/services/HumidityService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/be/pxl/backend/services/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/be/pxl/backend/services/UserService.java" />
-    </list>
+    <list default="true" id="9c1084ce-cec4-4ef3-b7ee-fa5411be3932" name="Default" comment="" />
     <ignored path="entmob_4_back_end.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -937,12 +922,12 @@
       <workItem from="1477030194201" duration="5083000" />
       <workItem from="1477035654381" duration="1044000" />
       <workItem from="1477037011080" duration="86000" />
-      <workItem from="1477037117772" duration="1440000" />
+      <workItem from="1477037117772" duration="1522000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53743000" />
+    <option name="totallyTimeSpent" value="53825000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
