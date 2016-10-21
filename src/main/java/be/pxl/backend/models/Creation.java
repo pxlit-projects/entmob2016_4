@@ -19,7 +19,7 @@ public class Creation {
     private boolean succes;
 
     @Temporal(TemporalType.TIMESTAMP)
-    private Date created;
+    private Date date;
 
     private String errorMessage;
 
@@ -43,12 +43,12 @@ public class Creation {
         this.succes = succes;
     }
 
-    public Date getCreated() {
-        return created;
+    public Date getDate() {
+        return date;
     }
 
-    public void setCreated(Date created) {
-        this.created = created;
+    public void setDate(Date date) {
+        this.date = date;
     }
 
     public String getErrorMessage() {

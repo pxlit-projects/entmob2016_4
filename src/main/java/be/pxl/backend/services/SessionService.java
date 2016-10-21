@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
+import java.util.Dictionary;
 import java.util.List;
 
 /**
@@ -41,5 +42,11 @@ public class SessionService {
     public List<Session> getAllSessions(String username) {
         return sessionRepository.getAllSessions(username);
     }
+
+    public Dictionary<String, Float> getAverages(int id) {
+        Session session = sessionRepository.findOne(id);
+        List<Float> values = session.getTemperatures().stream().map(m -> m.getTemperature());
+    }
+
 
 }

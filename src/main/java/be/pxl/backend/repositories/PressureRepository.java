@@ -5,6 +5,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -14,6 +15,7 @@ import java.util.List;
 @Repository
 public interface PressureRepository extends CrudRepository<Pressure, Integer> {
 
+    @Transactional(readOnly = true)
     @Query(value = "select p from Pressure p where p.session.id =:id")
     List<Pressure> getPressuresForSession(@Param(value = "id") int id);
 
