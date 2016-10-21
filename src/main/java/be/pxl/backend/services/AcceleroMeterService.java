@@ -1,5 +1,6 @@
 package be.pxl.backend.services;
 
+import be.pxl.backend.exceptions.AcceleroMeterException;
 import be.pxl.backend.models.AcceleroMeter;
 import be.pxl.backend.repositories.AcceleroMeterRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,11 +18,20 @@ public class AcceleroMeterService {
     private AcceleroMeterRepository acceleroMeterRepository;
 
     public AcceleroMeter addAcceleroMeter(AcceleroMeter acceleroMeter) {
-        return acceleroMeterRepository.save(acceleroMeter);
+        if (valueInRange(acceleroMeter.getX()) && valueInRange(acceleroMeter.getY()) && valueInRange(acceleroMeter.getZ())) {
+            return acceleroMeterRepository.save(acceleroMeter);
+        } else {
+            throw new AcceleroMeterException();
+        }
+
     }
 
     public List<AcceleroMeter> getAcceleroMetersForSession(int id) {
         return acceleroMeterRepository.getAcceleroMetersForSession(id);
+    }
+
+    private boolean valueInRange(float value) {
+        return (value >= 0 && value <= 250);
     }
 
 }

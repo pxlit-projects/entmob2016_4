@@ -34,7 +34,7 @@ public class UserRestController {
 
     @Secured({"ROLE_GUEST", "ROLE_USER"})
     @RequestMapping(method = RequestMethod.POST)
-    public User addUser(@RequestBody User user) throws UserException {
+    public User addUser(@RequestBody User user) {
         User savedUser = userService.addUser(user);
         return savedUser;
     }

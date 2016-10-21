@@ -17,7 +17,7 @@ public class TemperatureService {
     @Autowired
     private TemperatureRepository temperatureRepository;
 
-    public Temperature addtemperature(Temperature temperature) throws TemperatureException {
+    public Temperature addtemperature(Temperature temperature) {
         if (temperature.getTemperature() > -50 && temperature.getTemperature() < 50) {
             return temperatureRepository.save(temperature);
         } else {

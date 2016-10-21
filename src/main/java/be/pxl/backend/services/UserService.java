@@ -18,7 +18,7 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
 
-    public User addUser(User user) throws UserException {
+    public User addUser(User user) {
         if(user.getPassword() != null && user.getPassword().length() > 5) {
             String password = user.getPassword();
             ShaPasswordEncoder shaPasswordEncoder = new ShaPasswordEncoder(256);
