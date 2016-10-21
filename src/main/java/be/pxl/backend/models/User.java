@@ -1,9 +1,6 @@
 package be.pxl.backend.models;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
-
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.*;
@@ -13,7 +10,7 @@ import java.util.*;
  */
 
 @Entity
-@Table(name = "Users")
+@Table(name = "Users", uniqueConstraints = @UniqueConstraint(columnNames = "name"))
 public class User implements Serializable {
 
     @Id
@@ -24,7 +21,7 @@ public class User implements Serializable {
 
     private String lastName;
 
-    @Column(nullable = false, unique = true)
+    @Column(nullable = false)
     private String name;
 
     @Column(nullable = false)

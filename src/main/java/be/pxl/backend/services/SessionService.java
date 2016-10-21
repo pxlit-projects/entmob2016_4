@@ -1,5 +1,6 @@
 package be.pxl.backend.services;
 
+import be.pxl.backend.exceptions.SessionException;
 import be.pxl.backend.models.Session;
 import be.pxl.backend.repositories.SessionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +22,7 @@ public class SessionService {
         if (session.getStart() != null && session.getEnd() == null) {
             return sessionRepository.save(session);
         } else {
-            return null;
+            throw new SessionException("Session start cannot be null and Session end must be null!");
         }
     }
 
@@ -29,7 +30,7 @@ public class SessionService {
         if (session.getStart() != null && session.getEnd() != null) {
             return sessionRepository.save(session);
         } else {
-            return null;
+            throw new SessionException("Session start cannot be null and Session end cannot be null!");
         }
     }
 

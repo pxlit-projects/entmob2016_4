@@ -1,6 +1,8 @@
 package be.pxl.backend.services;
 
 import java.util.*;
+
+import be.pxl.backend.exceptions.TemperatureException;
 import be.pxl.backend.models.Temperature;
 import be.pxl.backend.repositories.TemperatureRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,8 +17,12 @@ public class TemperatureService {
     @Autowired
     private TemperatureRepository temperatureRepository;
 
-    public Temperature addtemperature(Temperature temperature) {
-        return temperatureRepository.save(temperature);
+    public Temperature addtemperature(Temperature temperature) throws TemperatureException {
+        if (temperature.getTemperature() > -50 && temperature.getTemperature() < 50) {
+            return temperatureRepository.save(temperature);
+        } else {
+            throw new TemperatureException();
+        }
     }
 
     public List<Temperature> getTemperaturesForSession(int id) {

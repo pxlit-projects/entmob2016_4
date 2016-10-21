@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 /**
  * Created by Jonas on 21/10/16.
  */
-
-@ResponseStatus(value = HttpStatus.NOT_ACCEPTABLE, reason = "Password cannot be emtpy and must be longer then 5 characters")
-public class UserException extends RuntimeException {
+@ResponseStatus(value = HttpStatus.NOT_ACCEPTABLE, reason = "Humdity value must be between 0.0 and 100.0")
+public class HumidityException extends RuntimeException {
 }
