@@ -11,5 +11,5 @@ c:\users\stefanie\documents\visual studio 2015\Projects\jogging_xamarin\jogging_
 c:\users\stefanie\documents\visual studio 2015\Projects\jogging_xamarin\jogging_xamarin\jogging_xamarin\obj\Debug\jogging_xamarin.pdb
 c:\users\stefanie\documents\visual studio 2015\Projects\jogging_xamarin\jogging_xamarin\jogging_xamarin\obj\Debug\jogging_xamarin.Login.xaml.g.cs
 c:\users\stefanie\documents\visual studio 2015\Projects\jogging_xamarin\jogging_xamarin\jogging_xamarin\obj\Debug\jogging_xamarin.CurrentReads.xaml.g.cs
-c:\users\stefanie\documents\visual studio 2015\Projects\jogging_xamarin\jogging_xamarin\jogging_xamarin\obj\Debug\jogging_xamarin.dll.mdb
-c:\users\stefanie\documents\visual studio 2015\Projects\jogging_xamarin\jogging_xamarin\jogging_xamarin\bin\Debug\jogging_xamarin.dll.mdb
+C:\Users\Stefanie\documents\visual studio 2015\Projects\jogging_xamarin\jogging_xamarin\jogging_xamarin\obj\Debug\jogging_xamarin.dll.mdb
+C:\Users\Stefanie\documents\visual studio 2015\Projects\jogging_xamarin\jogging_xamarin\jogging_xamarin\bin\Debug\jogging_xamarin.dll.mdb

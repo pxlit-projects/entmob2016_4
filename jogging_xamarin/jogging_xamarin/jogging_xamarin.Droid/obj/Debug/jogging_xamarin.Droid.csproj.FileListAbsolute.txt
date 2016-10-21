@@ -55,5 +55,5 @@ c:\users\stefanie\documents\visual studio 2015\Projects\jogging_xamarin\jogging_
 c:\users\stefanie\documents\visual studio 2015\Projects\jogging_xamarin\jogging_xamarin\jogging_xamarin.Droid\obj\Debug\android\assets\System.ServiceModel.Internals.dll.mdb
 c:\users\stefanie\documents\visual studio 2015\Projects\jogging_xamarin\jogging_xamarin\jogging_xamarin.Droid\obj\Debug\android\assets\System.Xml.dll.mdb
 c:\users\stefanie\documents\visual studio 2015\Projects\jogging_xamarin\jogging_xamarin\jogging_xamarin.Droid\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
-c:\users\stefanie\documents\visual studio 2015\Projects\jogging_xamarin\jogging_xamarin\jogging_xamarin.Droid\obj\Debug\jogging_xamarin.Droid.dll.mdb
-c:\users\stefanie\documents\visual studio 2015\Projects\jogging_xamarin\jogging_xamarin\jogging_xamarin.Droid\bin\Debug\jogging_xamarin.Droid.dll.mdb
+C:\Users\Stefanie\documents\visual studio 2015\Projects\jogging_xamarin\jogging_xamarin\jogging_xamarin.Droid\obj\Debug\jogging_xamarin.Droid.dll.mdb
+C:\Users\Stefanie\documents\visual studio 2015\Projects\jogging_xamarin\jogging_xamarin\jogging_xamarin.Droid\bin\Debug\jogging_xamarin.Droid.dll.mdb
