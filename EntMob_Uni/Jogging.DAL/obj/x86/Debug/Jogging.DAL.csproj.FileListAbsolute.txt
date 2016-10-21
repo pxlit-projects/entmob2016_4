@@ -1,0 +1,17 @@
+c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Uni\Jogging.DAL\bin\x86\Debug\Jogging.DAL.dll
+c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Uni\Jogging.DAL\bin\x86\Debug\Jogging.DAL.pdb
+c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Uni\Jogging.DAL\bin\x86\Debug\Jogging.DAL.pri
+c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Uni\Jogging.DAL\obj\x86\Debug\Jogging.DAL.csprojResolveAssemblyReference.cache
+c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Uni\Jogging.DAL\obj\x86\Debug\Jogging.DAL.dll
+c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Uni\Jogging.DAL\obj\x86\Debug\Jogging.DAL.pdb
+c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Uni\Jogging.DAL\obj\x86\Debug\priconfig.xml
+c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Uni\Jogging.DAL\obj\x86\Debug\priconfig.xml.intermediate
+c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Uni\Jogging.DAL\obj\x86\Debug\layout.resfiles
+c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Uni\Jogging.DAL\obj\x86\Debug\layout.resfiles.intermediate
+c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Uni\Jogging.DAL\obj\x86\Debug\resources.resfiles
+c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Uni\Jogging.DAL\obj\x86\Debug\resources.resfiles.intermediate
+c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Uni\Jogging.DAL\obj\x86\Debug\pri.resfiles
+c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Uni\Jogging.DAL\obj\x86\Debug\pri.resfiles.intermediate
+c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Uni\Jogging.DAL\obj\x86\Debug\qualifiers.txt
+c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Uni\Jogging.DAL\obj\x86\Debug\qualifiers.txt.intermediate
+c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Uni\Jogging.DAL\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt

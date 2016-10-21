@@ -1,0 +1,3 @@
+c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Uni\EntMob_Uni\EntMob_Uni.csproj;x86
+c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Uni\Jogging.DAL\Jogging.DAL.csproj;x86
+c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Uni\Jogging.Model\Jogging.Model.csproj;x86

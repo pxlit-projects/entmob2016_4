@@ -1,0 +1,17 @@
+c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Uni\Jogging.Model\bin\x86\Debug\Jogging.Model.dll
+c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Uni\Jogging.Model\bin\x86\Debug\Jogging.Model.pdb
+c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Uni\Jogging.Model\bin\x86\Debug\Jogging.Model.pri
+c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Uni\Jogging.Model\obj\x86\Debug\Jogging.Model.csprojResolveAssemblyReference.cache
+c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Uni\Jogging.Model\obj\x86\Debug\Jogging.Model.dll
+c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Uni\Jogging.Model\obj\x86\Debug\Jogging.Model.pdb
+c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Uni\Jogging.Model\obj\x86\Debug\priconfig.xml
+c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Uni\Jogging.Model\obj\x86\Debug\priconfig.xml.intermediate
+c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Uni\Jogging.Model\obj\x86\Debug\layout.resfiles
+c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Uni\Jogging.Model\obj\x86\Debug\layout.resfiles.intermediate
+c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Uni\Jogging.Model\obj\x86\Debug\resources.resfiles
+c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Uni\Jogging.Model\obj\x86\Debug\resources.resfiles.intermediate
+c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Uni\Jogging.Model\obj\x86\Debug\pri.resfiles
+c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Uni\Jogging.Model\obj\x86\Debug\pri.resfiles.intermediate
+c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Uni\Jogging.Model\obj\x86\Debug\qualifiers.txt
+c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Uni\Jogging.Model\obj\x86\Debug\qualifiers.txt.intermediate
+c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Uni\Jogging.Model\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
