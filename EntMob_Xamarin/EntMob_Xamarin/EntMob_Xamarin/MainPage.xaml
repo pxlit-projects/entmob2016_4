@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:EntMob_Xamarin"
+             x:Class="EntMob_Xamarin.MainPage"
+             BackgroundImage="jogging.png"
+  xmlns:converters="clr-namespace:EntMob_Xamarin.Converters;assembly=EntMob_Xamarin"
+  xmlns:navigation="clr-namespace:System.Windows.controls;assembly=System.Windows.Controls.Navigation">
+  
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <converters:ValueToDegreesConverter x:Key="ValueToDegreesConverter"/>
+    </ResourceDictionary>
+  </ContentPage.Resources>
+  
+  <!--<Label Text="Welcome to Xamarin Forms!"
+           VerticalOptions="Center"
+           HorizontalOptions="Center" />-->
+
+  
+  <StackLayout Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="Center">
+    <Entry Placeholder="Username" x:Name="userName" FontSize="30" TextColor="Black" />
+    <Entry Placeholder="Password" x:Name="passWord" FontSize="30" TextColor="Black" />
+
+      <Button x:Name="btnShow" Text="Login" Clicked="ItemClicked" Command="{Binding ShowCommand}"/>
+      <Label Text="{Binding Message, Converter={StaticResource ValueToDegreesConverter}}"/>
+
+  </StackLayout>
+
+</ContentPage>
