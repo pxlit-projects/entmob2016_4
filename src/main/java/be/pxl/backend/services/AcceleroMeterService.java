@@ -23,7 +23,6 @@ public class AcceleroMeterService {
         } else {
             throw new AcceleroMeterException();
         }
-
     }
 
     public List<AcceleroMeter> getAcceleroMetersForSession(int id) {
