@@ -47,6 +47,34 @@ namespace Jogging.Model
                 },
                 new Session()
                 {
+                    Start = DateTime.Now
+                },
+                new Session()
+                {
+                    Start = DateTime.Now
+                },
+                new Session()
+                {
+                    Start = DateTime.Now
+                },
+                new Session()
+                {
+                    Start = DateTime.Now
+                },
+                new Session()
+                {
+                    Start = DateTime.Now
+                },
+                new Session()
+                {
+                    Start = DateTime.Now
+                },
+                new Session()
+                {
+                    Start = DateTime.Now
+                },
+                new Session()
+                {
                      Start = DateTime.Now
                 }
             };

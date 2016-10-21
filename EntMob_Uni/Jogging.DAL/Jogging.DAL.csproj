@@ -107,10 +107,16 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IJoggingsRepository.cs" />
-    <Compile Include="JoggingsRepository.cs" />
+    <Compile Include="ISessionRepository.cs" />
+    <Compile Include="SessionRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Jogging.DAL.rd.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Jogging.Model\Jogging.Model.csproj">
+      <Project>{82003085-ae33-42b0-bdbf-20e17dc0c041}</Project>
+      <Name>Jogging.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

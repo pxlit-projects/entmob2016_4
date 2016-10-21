@@ -428,3 +428,4 @@ C:\Users\Gebruiker\Documents\entmob2016_4\EntMob_Uni\EntMob_Uni\obj\x86\Debug\qu
 C:\Users\Gebruiker\Documents\entmob2016_4\EntMob_Uni\EntMob_Uni\obj\x86\Debug\qualifiers.txt.intermediate
 C:\Users\Gebruiker\Documents\entmob2016_4\EntMob_Uni\EntMob_Uni\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Gebruiker\Documents\entmob2016_4\EntMob_Uni\EntMob_Uni\obj\x86\Debug\ProjectArchitectures.txt
+C:\Users\Gebruiker\Documents\entmob2016_4\EntMob_Uni\EntMob_Uni\bin\x86\Debug\Newtonsoft.Json.dll

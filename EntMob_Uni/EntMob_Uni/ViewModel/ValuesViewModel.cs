@@ -4,6 +4,7 @@ using EntMob_Uni.View;
 using Jogging.Model;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
@@ -18,6 +19,8 @@ namespace EntMob_Uni.ViewModel
 
         public event PropertyChangedEventHandler PropertyChanged;
 
+        private SessionDataService SessionDataService;
+
         public List<Session> ListOfSessions { get; set; }
         public DelegateCommand<ItemClickEventArgs> ItemClickedCommand { get; set; }
 
@@ -30,6 +33,29 @@ namespace EntMob_Uni.ViewModel
             LoadCommands();
             LoadSessions();
         }
+
+        private void RaisePropertyChanged(string propertyName)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+
+        private ObservableCollection<Session> sessions;
+        public ObservableCollection<Session> Sessions
+        {
+            get
+            {
+                return sessions;
+            }
+            set
+            {
+                sessions = value;
+                RaisePropertyChanged("Sessions");
+            }
+        }
+
 
         private void LoadSessions()
         {
@@ -61,25 +87,5 @@ namespace EntMob_Uni.ViewModel
             //Messenger.Default.Send<ParkingsCollectedMessage>(new ParkingsCollectedMessage() { ParkingLots = lots, MyLocation = myLocation });
         }
 
-        /*private List<Temperature> values = new List<Temperature>();
-
-        public ValuesViewModel()
-        {
-            values.Add(new Temperature() { Amount = "27" });
-            values.Add(new Temperature() { Amount = "25" });
-            values.Add(new Temperature() { Amount = "23" });
-            values.Add(new Temperature() { Amount = "21" });
-            values.Add(new Temperature() { Amount = "29" });
-        }
-
-
-
-        public List<Temperature> Values
-        {
-            get
-            {
-                return values;
-            }
-        }*/
     }
 }

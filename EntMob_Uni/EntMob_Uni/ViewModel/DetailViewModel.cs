@@ -1,8 +1,11 @@
-﻿using EntMob_Uni.Services;
+﻿using EntMob_Uni.Messages;
+using EntMob_Uni.Services;
 using EntMob_Uni.Utility;
 using EntMob_Uni.View;
+using Jogging.Model;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
 using System.Text;
@@ -11,17 +14,51 @@ using System.Windows.Input;
 
 namespace EntMob_Uni.ViewModel
 {
-    public class DetailViewModel
+    public class DetailViewModel : INotifyPropertyChanged
     {
+        
         public ICommand BackCommand { get; set; }
 
-        private DateTime localDate;
+        private ISessionDataService sessionDataService;
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        private Session selectedSession { get; set; }
+
+        public Session SelectedSession
+        {
+            get
+            {
+                return selectedSession;
+            }
+            set
+            {
+                selectedSession = value;
+            }
+        }
 
         public DetailViewModel()
         {
-            localDate = DateTime.Now;
             LoadCommands();
+            RegisterForMessages();
 
+        }
+
+        public DetailViewModel(ISessionDataService sessionDataService)
+        {
+            this.sessionDataService = sessionDataService;
+        }
+
+        private void RegisterForMessages()
+        {
+            Messenger.Default.Register<SessionSelectedMessage>(this, OnSessionReceived);
+        }
+
+        private void OnSessionReceived(SessionSelectedMessage m)
+        {
+            selectedSession = m.SelectedSession;
+
+            Messenger.Default.Send<DrawSessionMessage>(new DrawSessionMessage() { SelectedSession = selectedSession });
         }
 
 
@@ -36,29 +73,5 @@ namespace EntMob_Uni.ViewModel
             //Messenger.Default.Send<ParkingsCollectedMessage>(new ParkingsCollectedMessage() { ParkingLots = lots, MyLocation = myLocation });
         }
 
-        public string Now
-        {
-            get
-            {
-                var culture = new CultureInfo("nl-BE");
-                return localDate.ToString(culture);
-            }
-        }
-
-        /*private void CountDown()
-        {
-
-            Timer timer = new Timer();
-            timer.Interval = 1000;
-            timer.Elapsed += OnTimedEvent;
-            timer.Enabled = true;
-
-
-        }
-
-        private void OnTimedEvent(object sender, System.Timers.ElapsedEventArgs e)
-        {
-
-        }*/
     }
 }

@@ -13,25 +13,11 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <RelativePanel VerticalAlignment="Center">
             <TextBlock x:ConnectionId='1' x:Name="WelcomeMessage" Text="Welcome" FontSize="36" Margin="4" TextAlignment="Center" RelativePanel.AlignHorizontalCenterWithPanel="True"></TextBlock>
-            <TextBlock x:ConnectionId='2' x:Name="NameMessage" Text="Jonas Allard" HorizontalAlignment="Center" FontSize="26"
+            <TextBlock x:ConnectionId='2' x:Name="NameMessage" Text="Jonas Allard" HorizontalAlignment="Center" FontSize="30"
                        RelativePanel.Below="WelcomeMessage" RelativePanel.AlignHorizontalCenterWith="WelcomeMessage"/>
             <TextBlock x:ConnectionId='3' x:Name="InfoMessage" Text="Your Sessions:" HorizontalAlignment="Center" FontSize="20"
                        RelativePanel.Below="NameMessage" RelativePanel.AlignHorizontalCenterWith="NameMessage"/>
 
-            <!--<ListView x:Name="SessionsList" RelativePanel.Below="NameMessage" RelativePanel.AlignHorizontalCenterWith="NameMessage">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <StackPanel>
-                            <TextBlock Text="{Binding Start}" 
-                           Margin="20,0,20,8"
-                           FontSize="20" 
-                           FontStyle="Normal" 
-                           FontWeight="SemiBold"
-                           Foreground="ForestGreen"/>
-                        </StackPanel>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>-->
             <ScrollViewer x:ConnectionId='4' x:Name="SV" RelativePanel.Below="InfoMessage" RelativePanel.AlignHorizontalCenterWith="InfoMessage">
                 <ListView ItemsSource="{Binding ListOfSessions}"
                           IsItemClickEnabled="True">
@@ -59,15 +45,7 @@
                     </core:EventTriggerBehavior>
                 </interactivity:Interaction.Behaviors>
             </Button>
-           <!--
-            <Button x:Name="DetailButton" Content="Go Back" Background="DodgerBlue" Foreground="White" Width="80" HorizontalAlignment="Center" Margin="0.20" 
-                    RelativePanel.Below="BackButton" RelativePanel.AlignHorizontalCenterWith="BackButton">
-                <interactivity:Interaction.Behaviors>
-                    <core:EventTriggerBehavior EventName="Click">
-                        <core:InvokeCommandAction Command="{Binding NextCommand}"/>
-                    </core:EventTriggerBehavior>
-                </interactivity:Interaction.Behaviors>
-            </Button>-->
+
         </RelativePanel>
     </Grid>
 

@@ -10,10 +10,7 @@
     mc:Ignorable="d"
     DataContext="{Binding Source={StaticResource mainViewModelLocator}, Path=DetailViewModel}">
 
-    <!--<RelativePanel>
-        <Button x:Name="LastButton" Content="DetailPage" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True"></Button>
-    </RelativePanel>-->
-
+    <RelativePanel>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" x:Name="MainGrid">
 
         <Grid.ColumnDefinitions>
@@ -60,5 +57,6 @@
         </Button>
         
     </Grid>
-    
+    </RelativePanel>
+
 </Page>
