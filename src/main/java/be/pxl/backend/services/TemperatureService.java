@@ -20,7 +20,7 @@ public class TemperatureService {
     }
 
     public List<Temperature> getTemperaturesForSession(int id) {
-        return temperatureRepository.getTemperaturesForSession();
+        return temperatureRepository.getTemperaturesForSession(id);
     }
 
 }

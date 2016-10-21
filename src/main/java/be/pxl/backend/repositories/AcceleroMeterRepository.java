@@ -4,6 +4,7 @@ import be.pxl.backend.models.AcceleroMeter;
 import org.springframework.boot.orm.jpa.EntityScan;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -15,7 +16,7 @@ import java.util.List;
 @Repository
 public interface AcceleroMeterRepository extends CrudRepository<AcceleroMeter, Integer> {
 
-    @Query(value = "select a from AcceleroMeter a")
-    List<AcceleroMeter> getAcceleroMetersForSession(int id);
+    @Query(value = "select a from AcceleroMeter a where a.session.id =:id")
+    List<AcceleroMeter> getAcceleroMetersForSession(@Param(value = "id") int id);
 
 }
