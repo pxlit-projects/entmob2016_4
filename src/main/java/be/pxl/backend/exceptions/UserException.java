@@ -9,4 +9,9 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 
 @ResponseStatus(value = HttpStatus.NOT_ACCEPTABLE, reason = "Password cannot be emtpy and must be longer then 5 characters")
 public class UserException extends RuntimeException {
+
+    public UserException(String message) {
+        super(message);
+    }
+
 }

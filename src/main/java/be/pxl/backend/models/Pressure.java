@@ -14,6 +14,7 @@ import java.util.Date;
  * Created by Jonas on 7/10/16.
  */
 @Entity
+@Table(name = "Pressures")
 public class Pressure implements Serializable {
 
     @Id

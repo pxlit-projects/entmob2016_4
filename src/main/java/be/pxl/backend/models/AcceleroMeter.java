@@ -13,6 +13,7 @@ import java.util.Date;
  * Created by Jonas on 7/10/16.
  */
 @Entity
+@Table(name = "AcceleroMeters")
 public class AcceleroMeter implements Serializable {
 
     @Id

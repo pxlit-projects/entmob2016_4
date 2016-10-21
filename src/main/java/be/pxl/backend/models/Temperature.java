@@ -15,6 +15,7 @@ import java.util.Date;
  */
 
 @Entity
+@Table(name = "Temperatures")
 public class Temperature implements Serializable {
 
     @Id

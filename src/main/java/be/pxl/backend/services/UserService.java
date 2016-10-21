@@ -27,7 +27,7 @@ public class UserService {
             user.setEnabled(true);
             return userRepository.save(user);
         } else {
-            throw new UserException();
+            throw new UserException("Password cannot be null and must be 6 characters long");
         }
     }
 

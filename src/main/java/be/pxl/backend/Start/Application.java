@@ -1,6 +1,5 @@
 package be.pxl.backend.start;
 
-import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -11,7 +10,6 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.security.authentication.encoding.ShaPasswordEncoder;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
-
 import javax.sql.DataSource;
 import java.util.stream.Stream;
 
@@ -20,9 +18,10 @@ import java.util.stream.Stream;
  */
 
 @SpringBootApplication
+@EnableAspectJAutoProxy
 @EnableJpaRepositories(basePackages = "be.pxl.backend.repositories")
 @EntityScan(basePackages = "be.pxl.backend.models")
-@ComponentScan(basePackages = { "be.pxl.backend.restcontrollers", "be.pxl.backend.repositories", "be.pxl.backend.models", "be.pxl.backend.services"})
+@ComponentScan(basePackages = { "be.pxl.backend.restcontrollers", "be.pxl.backend.repositories", "be.pxl.backend.models", "be.pxl.backend.services", "be.pxl.backend.aop"})
 @EnableGlobalMethodSecurity(securedEnabled = true)
 public class Application {
 
