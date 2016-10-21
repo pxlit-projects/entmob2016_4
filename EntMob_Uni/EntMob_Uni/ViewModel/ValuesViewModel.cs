@@ -17,6 +17,8 @@ namespace EntMob_Uni.ViewModel
 
         public event PropertyChangedEventHandler PropertyChanged;
 
+        private List<Session> listOfSessions = new List<Session>();
+
         public ICommand NextCommand { get; set; }
         public ICommand BackCommand { get; set; }
 
@@ -24,13 +26,19 @@ namespace EntMob_Uni.ViewModel
         public ValuesViewModel()
         {
             LoadCommands();
+            LoadSessions();
+        }
+
+        private void LoadSessions()
+        {
+            
+            
         }
 
         private void LoadCommands()
         {
             NextCommand = new CustomCommand(Next, null);
             BackCommand = new CustomCommand(Back, null);
-
         }
 
         private void Back(object o)

@@ -10,19 +10,19 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>85714194-0202-4c55-8f0d-ef52c6d14e13</PackageIdentityName>
     <PackageIdentityPublisher>CN=Allardke</PackageIdentityPublisher>
-    <IntermediateOutputPath>c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Uni\EntMob_Uni\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Gebruiker\Documents\entmob2016_4\EntMob_Uni\EntMob_Uni\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Uni\EntMob_Uni\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Gebruiker\Documents\entmob2016_4\EntMob_Uni\EntMob_Uni\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Uni\EntMob_Uni\bin\x86\Debug\EntMob_Uni.exe">
+    <AppxPackagedFile Include="C:\Users\Gebruiker\Documents\entmob2016_4\EntMob_Uni\EntMob_Uni\bin\x86\Debug\EntMob_Uni.exe">
       <PackagePath>entrypoint\EntMob_Uni.exe</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\BehaviorsXamlSDKManaged\12.0\References\CommonConfiguration\Neutral\Microsoft.Xaml.Interactions.dll">
@@ -349,46 +349,46 @@
     <AppxPackagedFile Include="C:\Users\Gebruiker\.nuget\packages\System.Xml.XmlSerializer\4.0.10\lib\netcore50\System.Xml.XmlSerializer.dll">
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Uni\Jogging.DAL\bin\x86\Debug\Jogging.DAL.dll">
+    <AppxPackagedFile Include="C:\Users\Gebruiker\Documents\entmob2016_4\EntMob_Uni\Jogging.DAL\bin\x86\Debug\Jogging.DAL.dll">
       <PackagePath>Jogging.DAL.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Uni\Jogging.Model\bin\x86\Debug\Jogging.Model.dll">
+    <AppxPackagedFile Include="C:\Users\Gebruiker\Documents\entmob2016_4\EntMob_Uni\Jogging.Model\bin\x86\Debug\Jogging.Model.dll">
       <PackagePath>Jogging.Model.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Uni\EntMob_Uni\ApplicationInsights.config">
+    <AppxPackagedFile Include="C:\Users\Gebruiker\Documents\entmob2016_4\EntMob_Uni\EntMob_Uni\ApplicationInsights.config">
       <PackagePath>ApplicationInsights.config</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Uni\EntMob_Uni\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\Gebruiker\Documents\entmob2016_4\EntMob_Uni\EntMob_Uni\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Uni\EntMob_Uni\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Gebruiker\Documents\entmob2016_4\EntMob_Uni\EntMob_Uni\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Uni\EntMob_Uni\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Gebruiker\Documents\entmob2016_4\EntMob_Uni\EntMob_Uni\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Uni\EntMob_Uni\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Gebruiker\Documents\entmob2016_4\EntMob_Uni\EntMob_Uni\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Uni\EntMob_Uni\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Gebruiker\Documents\entmob2016_4\EntMob_Uni\EntMob_Uni\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Uni\EntMob_Uni\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\Gebruiker\Documents\entmob2016_4\EntMob_Uni\EntMob_Uni\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Uni\EntMob_Uni\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\Gebruiker\Documents\entmob2016_4\EntMob_Uni\EntMob_Uni\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Uni\EntMob_Uni\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Gebruiker\Documents\entmob2016_4\EntMob_Uni\EntMob_Uni\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Uni\EntMob_Uni\bin\x86\Debug\EntMob_Uni.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Gebruiker\Documents\entmob2016_4\EntMob_Uni\EntMob_Uni\bin\x86\Debug\EntMob_Uni.xr.xml">
       <PackagePath>EntMob_Uni.xr.xml</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.14393.0\\redist\Debug\x86\ucrtbased.dll">
@@ -397,11 +397,11 @@
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Uni\EntMob_Uni\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Gebruiker\Documents\entmob2016_4\EntMob_Uni\EntMob_Uni\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Uni\EntMob_Uni\bin\x86\Debug\Core\EntMob_Uni.exe">
+    <AppxPackagedFile Include="C:\Users\Gebruiker\Documents\entmob2016_4\EntMob_Uni\EntMob_Uni\bin\x86\Debug\Core\EntMob_Uni.exe">
       <PackagePath>EntMob_Uni.exe</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

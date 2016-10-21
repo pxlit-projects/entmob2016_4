@@ -9,38 +9,33 @@
     xmlns:core="using:Microsoft.Xaml.Interactions.Core"
     mc:Ignorable="d"
     DataContext="{Binding Source={StaticResource mainViewModelLocator}, Path=ValuesViewModel}">
-    <!--<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-        <RelativePanel>
-            <Button x:Name="RandomButton" Content="ValuesPage" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True">
-                <interactivity:Interaction.Behaviors>
-                    <core:EventTriggerBehavior EventName="Click">
-                        <core:InvokeCommandAction Command="{Binding NextCommand}"/>
-                    </core:EventTriggerBehavior>
-                </interactivity:Interaction.Behaviors>
-            </Button>
-        </RelativePanel>
-    </Grid>-->
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <RelativePanel VerticalAlignment="Center">
             <TextBlock x:Name="WelcomeMessage" Text="Welcome" FontSize="36" Margin="4" TextAlignment="Center" RelativePanel.AlignHorizontalCenterWithPanel="True"></TextBlock>
             <TextBlock x:Name="NameMessage" Text="Jonas Allard" HorizontalAlignment="Center" FontSize="26"
                        RelativePanel.Below="WelcomeMessage" RelativePanel.AlignHorizontalCenterWith="WelcomeMessage"/>
 
+            <ListView x:Name="SessionsList" RelativePanel.Below="NameMessage" RelativePanel.AlignHorizontalCenterWith="NameMessage">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <TextBlock Text="{Binding Start}" 
+                           Margin="20,0,20,8"
+                           FontSize="24" 
+                           FontStyle="Italic" 
+                           FontWeight="SemiBold"
+                           Foreground="DarkBlue" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
             <Button x:Name="BackButton" Content="Go Back" Background="DodgerBlue" Foreground="White" Width="80" HorizontalAlignment="Center" Margin="0.20" 
-                    RelativePanel.Below="NameMessage" RelativePanel.AlignHorizontalCenterWith="NameMessage">
+                    RelativePanel.Below="SessionsList" RelativePanel.AlignHorizontalCenterWith="SessionsList">
                 <interactivity:Interaction.Behaviors>
                     <core:EventTriggerBehavior EventName="Click">
                         <core:InvokeCommandAction Command="{Binding BackCommand}"/>
-                    </core:EventTriggerBehavior>
-                </interactivity:Interaction.Behaviors>
-            </Button>
-
-            <Button x:Name="LastSessionButton" Content="View your latest session data" Background="DodgerBlue" Foreground="White" Width="80" HorizontalAlignment="Center" Margin="0.20" 
-                    RelativePanel.Below="BackButton" RelativePanel.AlignHorizontalCenterWith="BackButton">
-                <interactivity:Interaction.Behaviors>
-                    <core:EventTriggerBehavior EventName="Click">
-                        <core:InvokeCommandAction Command="{Binding NextCommand}"/>
                     </core:EventTriggerBehavior>
                 </interactivity:Interaction.Behaviors>
             </Button>

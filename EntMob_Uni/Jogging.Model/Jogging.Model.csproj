@@ -114,7 +114,6 @@
     <Compile Include="Session.cs" />
     <Compile Include="Temperature.cs" />
     <Compile Include="User.cs" />
-    <Compile Include="Value.cs" />
     <EmbeddedResource Include="Properties\Jogging.Model.rd.xml" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
