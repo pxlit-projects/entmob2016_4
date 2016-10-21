@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Windows.UI.Xaml.Controls;
 
 namespace EntMob_Uni.ViewModel
 {
@@ -17,7 +18,8 @@ namespace EntMob_Uni.ViewModel
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private List<Session> listOfSessions = new List<Session>();
+        public List<Session> ListOfSessions { get; set; }
+        public DelegateCommand<ItemClickEventArgs> ItemClickedCommand { get; set; }
 
         public ICommand NextCommand { get; set; }
         public ICommand BackCommand { get; set; }
@@ -31,8 +33,14 @@ namespace EntMob_Uni.ViewModel
 
         private void LoadSessions()
         {
-            
-            
+            ListOfSessions = Session.GetSessions();
+            ItemClickedCommand = new DelegateCommand<ItemClickEventArgs>(OnItemClicked);
+        }
+
+        private void OnItemClicked(ItemClickEventArgs args)
+        {
+            Session session = args.ClickedItem as Session;
+            NavigationService.Default.Navigate(typeof(DetailPage));
         }
 
         private void LoadCommands()

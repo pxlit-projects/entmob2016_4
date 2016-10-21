@@ -358,8 +358,23 @@
     <AppxPackagedFile Include="C:\Users\Gebruiker\Documents\entmob2016_4\EntMob_Uni\EntMob_Uni\ApplicationInsights.config">
       <PackagePath>ApplicationInsights.config</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Gebruiker\Documents\entmob2016_4\EntMob_Uni\EntMob_Uni\Properties\Default.rd.xml">
-      <PackagePath>Properties\Default.rd.xml</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Gebruiker\Documents\entmob2016_4\EntMob_Uni\EntMob_Uni\Images\distance.jpeg">
+      <PackagePath>Images\distance.jpeg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Gebruiker\Documents\entmob2016_4\EntMob_Uni\EntMob_Uni\Images\baro.jpg">
+      <PackagePath>Images\baro.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Gebruiker\Documents\entmob2016_4\EntMob_Uni\EntMob_Uni\Images\humidity.jpg">
+      <PackagePath>Images\humidity.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Gebruiker\Documents\entmob2016_4\EntMob_Uni\EntMob_Uni\Images\steps.jpg">
+      <PackagePath>Images\steps.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Gebruiker\Documents\entmob2016_4\EntMob_Uni\EntMob_Uni\Images\time.png">
+      <PackagePath>Images\time.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Gebruiker\Documents\entmob2016_4\EntMob_Uni\EntMob_Uni\Images\weather-icon.png">
+      <PackagePath>Images\weather-icon.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Gebruiker\Documents\entmob2016_4\EntMob_Uni\EntMob_Uni\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
@@ -387,6 +402,9 @@
     <AppxPackagedFile Include="C:\Users\Gebruiker\Documents\entmob2016_4\EntMob_Uni\EntMob_Uni\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Gebruiker\Documents\entmob2016_4\EntMob_Uni\EntMob_Uni\Properties\Default.rd.xml">
+      <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Gebruiker\Documents\entmob2016_4\EntMob_Uni\EntMob_Uni\bin\x86\Debug\EntMob_Uni.xr.xml">
       <PackagePath>EntMob_Uni.xr.xml</PackagePath>

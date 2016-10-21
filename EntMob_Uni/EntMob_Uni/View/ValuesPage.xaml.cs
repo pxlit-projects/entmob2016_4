@@ -1,4 +1,5 @@
-﻿using Jogging.Model;
+﻿using EntMob_Uni.ViewModel;
+using Jogging.Model;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -23,19 +24,11 @@ namespace EntMob_Uni.View
     /// </summary>
     public sealed partial class ValuesPage : Page
     {
-        private List<Session> listOfSessions = new List<Session>();
 
         public ValuesPage()
         {
             this.InitializeComponent();
-
-            listOfSessions.Add(new Session { Start = new DateTime() });
-            listOfSessions.Add(new Session { Start = new DateTime() });
-            listOfSessions.Add(new Session { Start = new DateTime() });
-            listOfSessions.Add(new Session { Start = new DateTime() });
-
-            SessionsList.ItemsSource = listOfSessions;
-
+            this.DataContext = new ValuesViewModel();
         }
     }
 }

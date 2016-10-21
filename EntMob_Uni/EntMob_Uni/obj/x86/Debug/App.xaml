@@ -9,6 +9,7 @@
     <Application.Resources>
         <ResourceDictionary>
             <converter:ValueToDegreesConverter x:Key="localValueToDegreesConverter"></converter:ValueToDegreesConverter>
+            <converter:ValueToKmConverter x:Key="localValueToKmConverter"></converter:ValueToKmConverter>
             <local:ViewModelLocator x:Key="mainViewModelLocator"></local:ViewModelLocator>
         </ResourceDictionary>
     </Application.Resources>

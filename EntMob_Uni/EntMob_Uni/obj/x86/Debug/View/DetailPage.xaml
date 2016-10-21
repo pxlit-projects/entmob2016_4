@@ -10,28 +10,56 @@
     mc:Ignorable="d"
     DataContext="{Binding Source={StaticResource mainViewModelLocator}, Path=DetailViewModel}">
 
-    <!--<ListView x:Name="StudentsList">
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <StackPanel>
-                    <TextBlock Text="detail" 
-                           Margin="20,0,20,8"
-                           FontSize="24" 
-                           FontStyle="Italic" 
-                           FontWeight="SemiBold"
-                           Foreground="DarkBlue" />
-                    <TextBlock Text="Detail" 
-                           Margin="20,0,20,8"
-                           FontSize="16"
-                           Foreground="DarkGray" 
-                           Opacity="0.8" />
-                </StackPanel>
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>-->
+    <!--<RelativePanel>
+        <Button x:Name="LastButton" Content="DetailPage" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True"></Button>
+    </RelativePanel>-->
 
-    <RelativePanel>
-        <Button x:ConnectionId='1' x:Name="LastButton" Content="DetailPage" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True"></Button>
-    </RelativePanel>
+    <Grid x:ConnectionId='1' Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" x:Name="MainGrid">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid x:ConnectionId='2' x:Name="FirstGrid" Grid.Column="0" Grid.Row="0" Background="CadetBlue">
+            <Image Source="../Images/weather-icon.png" Stretch="None" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+            <TextBlock Text="27°" FontSize="70" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"></TextBlock>
+        </Grid>
+        <Grid x:ConnectionId='3' x:Name="SecondGrid" Grid.Column="1" Grid.Row="0" Background="White" >
+            <Image Source="../Images/time.png" Stretch="Fill"/>
+            <TextBlock Text="01:02:55 MIN" FontSize="20" HorizontalAlignment="Center" Foreground="White" VerticalAlignment="Bottom"></TextBlock>
+        </Grid>
+        <Grid x:ConnectionId='4' x:Name="ThirdGrid" Grid.Column="0" Grid.Row="1" Background="WhiteSmoke">
+            <Image Source="../Images/steps.jpg" Stretch="None" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBlock Text="3451 steps" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"></TextBlock>
+        </Grid>
+        <Grid x:ConnectionId='5' x:Name="FourthGrid" Grid.Column="1" Grid.Row="1" Background="White">
+            <Image Source="../Images/distance.jpeg" Stretch="Fill"/>
+            <TextBlock Text="9.8 km" FontSize="40" HorizontalAlignment="Right" VerticalAlignment="Bottom" Foreground="White"></TextBlock>
+        </Grid>
+        <Grid x:ConnectionId='6' x:Name="FifthGrid" Grid.Column="0" Grid.Row="2" Background="White">
+            <Image Source="../Images/humidity.jpg" Stretch="Fill"/>
+            <TextBlock Text="83 %" FontSize="30" HorizontalAlignment="Right" VerticalAlignment="Bottom" Foreground="Black"></TextBlock>
+        </Grid>
+        <Grid x:ConnectionId='7' x:Name="sixthGrid" Grid.Column="1" Grid.Row="2" Background="White">
+            <Image Source="../Images/baro.jpg" Stretch="None" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBlock Text="96" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"></TextBlock>
+        </Grid>
+
+        <Button x:ConnectionId='8' x:Name="BackButton" Content="BACK">
+            <interactivity:Interaction.Behaviors>
+                <core:EventTriggerBehavior EventName="Click">
+                    <core:InvokeCommandAction Command="{Binding BackCommand}"/>
+                </core:EventTriggerBehavior>
+            </interactivity:Interaction.Behaviors>
+        </Button>
+        
+    </Grid>
+    
 </Page>
 
