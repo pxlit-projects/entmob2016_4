@@ -1,60 +1,187 @@
-c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\EntMob_Xamarin.Droid.dll
-c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\EntMob_Xamarin.Droid.pdb
-c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\EntMob_Xamarin.Droid.apk
-c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\EntMob_Xamarin.Droid-Signed.apk
-c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\EntMob_Xamarin.dll
-c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\FormsViewGroup.dll
-c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\Xamarin.Android.Support.Design.dll
-c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\Xamarin.Android.Support.v4.dll
-c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\Xamarin.Android.Support.v7.AppCompat.dll
-c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\Xamarin.Android.Support.v7.CardView.dll
-c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\Xamarin.Android.Support.v7.MediaRouter.dll
-c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\Xamarin.Forms.Core.dll
-c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\Xamarin.Forms.Platform.Android.dll
-c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\Xamarin.Forms.Platform.dll
-c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\Xamarin.Forms.Xaml.dll
-c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\EntMob_Xamarin.pdb
-c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\Xamarin.Forms.Core.xml
-c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\Xamarin.Forms.Xaml.xml
-c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\EntMob_Xamarin.Droid.csprojResolveAssemblyReference.cache
-c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\EntMob_Xamarin.Droid.dll
-c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\EntMob_Xamarin.Droid.pdb
-c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\android\bin\EntMob_Xamarin.Droid.apk
-c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\res\drawable\icon.png
-c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\res\drawable-hdpi\icon.png
-c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\res\drawable-xhdpi\icon.png
-c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\res\drawable-xxhdpi\icon.png
-c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\res\layout\tabbar.xml
-c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\res\layout\toolbar.xml
-c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\res\values\styles.xml
-c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\R.cs.flag
-c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\uploadflags.txt
-c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\EntMob_Xamarin.Droid.dll.mdb
-c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\EntMob_Xamarin.dll.mdb
-c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\Java.Interop.dll.mdb
-c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\Mono.Android.dll.mdb
-c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\mscorlib.dll.mdb
-c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\System.ComponentModel.Composition.dll.mdb
-c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\System.Core.dll.mdb
-c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\System.dll.mdb
-c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\System.Net.Http.dll.mdb
-c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\System.Runtime.Serialization.dll.mdb
-c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\System.ServiceModel.Internals.dll.mdb
-c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\System.Xml.dll.mdb
-c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\System.Xml.Linq.dll.mdb
-c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\android\assets\EntMob_Xamarin.dll.mdb
-c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\android\assets\EntMob_Xamarin.Droid.dll.mdb
-c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\android\assets\Java.Interop.dll.mdb
-c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\android\assets\Mono.Android.dll.mdb
-c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\android\assets\mscorlib.dll.mdb
-c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\android\assets\System.ComponentModel.Composition.dll.mdb
-c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\android\assets\System.Core.dll.mdb
-c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\android\assets\System.dll.mdb
-c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\android\assets\System.Net.Http.dll.mdb
-c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\android\assets\System.Runtime.Serialization.dll.mdb
-c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\android\assets\System.ServiceModel.Internals.dll.mdb
-c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\android\assets\System.Xml.dll.mdb
-c:\users\gebruiker\documents\visual studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
-C:\Users\Gebruiker\documents\visual studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\res\drawable\jogging.png
-C:\Users\Gebruiker\documents\visual studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\EntMob_Xamarin.Droid.dll.mdb
-C:\Users\Gebruiker\documents\visual studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\EntMob_Xamarin.Droid.dll.mdb
+C:\Users\Gebruiker\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\EntMob_Xamarin.Droid.dll
+C:\Users\Gebruiker\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\EntMob_Xamarin.Droid.pdb
+C:\Users\Gebruiker\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\EntMob_Xamarin.Droid.apk
+C:\Users\Gebruiker\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\EntMob_Xamarin.Droid-Signed.apk
+C:\Users\Gebruiker\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\EntMob_Xamarin.dll
+C:\Users\Gebruiker\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\FormsViewGroup.dll
+C:\Users\Gebruiker\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\Xamarin.Android.Support.Design.dll
+C:\Users\Gebruiker\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\Xamarin.Android.Support.v4.dll
+C:\Users\Gebruiker\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\Xamarin.Android.Support.v7.AppCompat.dll
+C:\Users\Gebruiker\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\Xamarin.Android.Support.v7.CardView.dll
+C:\Users\Gebruiker\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\Xamarin.Android.Support.v7.MediaRouter.dll
+C:\Users\Gebruiker\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\Xamarin.Forms.Core.dll
+C:\Users\Gebruiker\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\Xamarin.Forms.Platform.Android.dll
+C:\Users\Gebruiker\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\Xamarin.Forms.Platform.dll
+C:\Users\Gebruiker\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\Xamarin.Forms.Xaml.dll
+C:\Users\Gebruiker\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\EntMob_Xamarin.pdb
+C:\Users\Gebruiker\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\Xamarin.Forms.Core.xml
+C:\Users\Gebruiker\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\Xamarin.Forms.Xaml.xml
+C:\Users\Gebruiker\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\EntMob_Xamarin.Droid.csprojResolveAssemblyReference.cache
+C:\Users\Gebruiker\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\EntMob_Xamarin.Droid.dll
+C:\Users\Gebruiker\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\EntMob_Xamarin.Droid.pdb
+C:\Users\Gebruiker\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\android\bin\EntMob_Xamarin.Droid.apk
+C:\Users\Gebruiker\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\res\drawable\icon.png
+C:\Users\Gebruiker\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\res\drawable-hdpi\icon.png
+C:\Users\Gebruiker\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\res\drawable-xhdpi\icon.png
+C:\Users\Gebruiker\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\res\drawable-xxhdpi\icon.png
+C:\Users\Gebruiker\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\res\layout\tabbar.xml
+C:\Users\Gebruiker\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\res\layout\toolbar.xml
+C:\Users\Gebruiker\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\res\values\styles.xml
+C:\Users\Gebruiker\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\res\drawable\jogging.png
+C:\Users\Gebruiker\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\R.cs.flag
+C:\Users\Gebruiker\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\uploadflags.txt
+C:\Users\Gebruiker\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\EntMob_Xamarin.Droid.dll.mdb
+C:\Users\Gebruiker\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\EntMob_Xamarin.dll.mdb
+C:\Users\Gebruiker\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\Java.Interop.dll.mdb
+C:\Users\Gebruiker\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\Mono.Android.dll.mdb
+C:\Users\Gebruiker\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\mscorlib.dll.mdb
+C:\Users\Gebruiker\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\System.ComponentModel.Composition.dll.mdb
+C:\Users\Gebruiker\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\System.Core.dll.mdb
+C:\Users\Gebruiker\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\System.dll.mdb
+C:\Users\Gebruiker\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\System.Net.Http.dll.mdb
+C:\Users\Gebruiker\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\System.Runtime.Serialization.dll.mdb
+C:\Users\Gebruiker\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\System.ServiceModel.Internals.dll.mdb
+C:\Users\Gebruiker\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\System.Xml.dll.mdb
+C:\Users\Gebruiker\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\System.Xml.Linq.dll.mdb
+C:\Users\Gebruiker\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\android\assets\EntMob_Xamarin.dll.mdb
+C:\Users\Gebruiker\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\android\assets\EntMob_Xamarin.Droid.dll.mdb
+C:\Users\Gebruiker\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\android\assets\Java.Interop.dll.mdb
+C:\Users\Gebruiker\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\android\assets\Mono.Android.dll.mdb
+C:\Users\Gebruiker\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\android\assets\mscorlib.dll.mdb
+C:\Users\Gebruiker\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\android\assets\System.ComponentModel.Composition.dll.mdb
+C:\Users\Gebruiker\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\android\assets\System.Core.dll.mdb
+C:\Users\Gebruiker\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\android\assets\System.dll.mdb
+C:\Users\Gebruiker\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\android\assets\System.Net.Http.dll.mdb
+C:\Users\Gebruiker\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\android\assets\System.Runtime.Serialization.dll.mdb
+C:\Users\Gebruiker\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\android\assets\System.ServiceModel.Internals.dll.mdb
+C:\Users\Gebruiker\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\android\assets\System.Xml.dll.mdb
+C:\Users\Gebruiker\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
+C:\Users\Gebruiker\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\EntMob_Xamarin.Droid.dll.mdb
+G:\XAMARIN BACKUP\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\EntMob_Xamarin.Droid.dll
+G:\XAMARIN BACKUP\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\EntMob_Xamarin.Droid.pdb
+G:\XAMARIN BACKUP\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\EntMob_Xamarin.Droid.apk
+G:\XAMARIN BACKUP\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\EntMob_Xamarin.Droid-Signed.apk
+G:\XAMARIN BACKUP\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\EntMob_Xamarin.dll
+G:\XAMARIN BACKUP\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\FormsViewGroup.dll
+G:\XAMARIN BACKUP\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\Xamarin.Android.Support.Design.dll
+G:\XAMARIN BACKUP\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\Xamarin.Android.Support.v4.dll
+G:\XAMARIN BACKUP\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\Xamarin.Android.Support.v7.AppCompat.dll
+G:\XAMARIN BACKUP\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\Xamarin.Android.Support.v7.CardView.dll
+G:\XAMARIN BACKUP\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\Xamarin.Android.Support.v7.MediaRouter.dll
+G:\XAMARIN BACKUP\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\Xamarin.Forms.Core.dll
+G:\XAMARIN BACKUP\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\Xamarin.Forms.Platform.Android.dll
+G:\XAMARIN BACKUP\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\Xamarin.Forms.Platform.dll
+G:\XAMARIN BACKUP\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\Xamarin.Forms.Xaml.dll
+G:\XAMARIN BACKUP\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\EntMob_Xamarin.pdb
+G:\XAMARIN BACKUP\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\EntMob_Xamarin.dll.mdb
+G:\XAMARIN BACKUP\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\Xamarin.Forms.Core.xml
+G:\XAMARIN BACKUP\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\Xamarin.Forms.Xaml.xml
+G:\XAMARIN BACKUP\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\EntMob_Xamarin.Droid.csprojResolveAssemblyReference.cache
+G:\XAMARIN BACKUP\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\EntMob_Xamarin.Droid.dll
+G:\XAMARIN BACKUP\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\EntMob_Xamarin.Droid.pdb
+G:\XAMARIN BACKUP\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\android\bin\EntMob_Xamarin.Droid.apk
+G:\XAMARIN BACKUP\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\res\drawable\icon.png
+G:\XAMARIN BACKUP\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\res\drawable-hdpi\icon.png
+G:\XAMARIN BACKUP\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\res\drawable-xhdpi\icon.png
+G:\XAMARIN BACKUP\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\res\drawable-xxhdpi\icon.png
+G:\XAMARIN BACKUP\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\res\layout\tabbar.xml
+G:\XAMARIN BACKUP\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\res\layout\toolbar.xml
+G:\XAMARIN BACKUP\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\res\values\styles.xml
+G:\XAMARIN BACKUP\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\res\drawable\jogging.png
+G:\XAMARIN BACKUP\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\R.cs.flag
+G:\XAMARIN BACKUP\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\uploadflags.txt
+G:\XAMARIN BACKUP\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\EntMob_Xamarin.Droid.dll.mdb
+G:\XAMARIN BACKUP\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\Java.Interop.dll.mdb
+G:\XAMARIN BACKUP\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\Mono.Android.dll.mdb
+G:\XAMARIN BACKUP\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\mscorlib.dll.mdb
+G:\XAMARIN BACKUP\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\System.ComponentModel.Composition.dll.mdb
+G:\XAMARIN BACKUP\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\System.Core.dll.mdb
+G:\XAMARIN BACKUP\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\System.dll.mdb
+G:\XAMARIN BACKUP\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\System.Net.Http.dll.mdb
+G:\XAMARIN BACKUP\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\System.Runtime.Serialization.dll.mdb
+G:\XAMARIN BACKUP\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\System.ServiceModel.Internals.dll.mdb
+G:\XAMARIN BACKUP\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\System.Xml.dll.mdb
+G:\XAMARIN BACKUP\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\System.Xml.Linq.dll.mdb
+G:\XAMARIN BACKUP\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\android\assets\EntMob_Xamarin.dll.mdb
+G:\XAMARIN BACKUP\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\android\assets\EntMob_Xamarin.Droid.dll.mdb
+G:\XAMARIN BACKUP\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\android\assets\Java.Interop.dll.mdb
+G:\XAMARIN BACKUP\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\android\assets\Mono.Android.dll.mdb
+G:\XAMARIN BACKUP\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\android\assets\mscorlib.dll.mdb
+G:\XAMARIN BACKUP\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\android\assets\System.ComponentModel.Composition.dll.mdb
+G:\XAMARIN BACKUP\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\android\assets\System.Core.dll.mdb
+G:\XAMARIN BACKUP\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\android\assets\System.dll.mdb
+G:\XAMARIN BACKUP\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\android\assets\System.Net.Http.dll.mdb
+G:\XAMARIN BACKUP\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\android\assets\System.Runtime.Serialization.dll.mdb
+G:\XAMARIN BACKUP\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\android\assets\System.ServiceModel.Internals.dll.mdb
+G:\XAMARIN BACKUP\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\android\assets\System.Xml.dll.mdb
+G:\XAMARIN BACKUP\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\EntMob_Xamarin.Droid.dll
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\EntMob_Xamarin.Droid.pdb
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\EntMob_Xamarin.Droid.apk
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\EntMob_Xamarin.Droid-Signed.apk
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\EntMob_Xamarin.dll
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\FormsViewGroup.dll
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\Xamarin.Android.Support.Design.dll
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\Xamarin.Android.Support.v4.dll
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\Xamarin.Android.Support.v7.AppCompat.dll
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\Xamarin.Android.Support.v7.CardView.dll
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\Xamarin.Android.Support.v7.MediaRouter.dll
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\Xamarin.Forms.Core.dll
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\Xamarin.Forms.Platform.Android.dll
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\Xamarin.Forms.Platform.dll
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\Xamarin.Forms.Xaml.dll
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\EntMob_Xamarin.pdb
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\EntMob_Xamarin.dll.mdb
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\Xamarin.Forms.Core.xml
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\Xamarin.Forms.Xaml.xml
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\EntMob_Xamarin.Droid.csprojResolveAssemblyReference.cache
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\EntMob_Xamarin.Droid.dll
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\EntMob_Xamarin.Droid.pdb
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\android\bin\EntMob_Xamarin.Droid.apk
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\res\drawable\icon.png
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\res\drawable-hdpi\icon.png
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\res\drawable-xhdpi\icon.png
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\res\drawable-xxhdpi\icon.png
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\res\layout\tabbar.xml
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\res\layout\toolbar.xml
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\res\values\styles.xml
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\res\drawable\jogging.png
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\R.cs.flag
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\uploadflags.txt
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\EntMob_Xamarin.Droid.dll.mdb
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\Java.Interop.dll.mdb
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\Mono.Android.dll.mdb
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\mscorlib.dll.mdb
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\System.ComponentModel.Composition.dll.mdb
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\System.Core.dll.mdb
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\System.dll.mdb
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\System.Net.Http.dll.mdb
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\System.Runtime.Serialization.dll.mdb
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\System.ServiceModel.Internals.dll.mdb
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\System.Xml.dll.mdb
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\System.Xml.Linq.dll.mdb
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\android\assets\EntMob_Xamarin.dll.mdb
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\android\assets\EntMob_Xamarin.Droid.dll.mdb
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\android\assets\Java.Interop.dll.mdb
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\android\assets\Mono.Android.dll.mdb
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\android\assets\mscorlib.dll.mdb
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\android\assets\System.ComponentModel.Composition.dll.mdb
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\android\assets\System.Core.dll.mdb
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\android\assets\System.dll.mdb
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\android\assets\System.Net.Http.dll.mdb
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\android\assets\System.Runtime.Serialization.dll.mdb
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\android\assets\System.ServiceModel.Internals.dll.mdb
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\android\assets\System.Xml.dll.mdb
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\AdvancedTimer.Forms.Plugin.Abstractions.dll
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\AdvancedTimer.Forms.Plugin.Android.dll
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\AdvancedTimer.Forms.Plugin.Abstractions.pdb
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\AdvancedTimer.Forms.Plugin.Abstractions.xml
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\AdvancedTimer.Forms.Plugin.Android.pdb
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\AdvancedTimer.Forms.Plugin.Android.xml
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\AdvancedTimer.Forms.Plugin.Abstractions.dll.mdb
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\AdvancedTimer.Forms.Plugin.Android.dll.mdb
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\android\assets\AdvancedTimer.Forms.Plugin.Abstractions.dll.mdb
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\android\assets\AdvancedTimer.Forms.Plugin.Android.dll.mdb
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\obj\Debug\EntMob_Xamarin.Droid.dll.mdb
+C:\Users\Nick Bleyen\Documents\Visual Studio 2015\Projects\EntMob_Xamarin\EntMob_Xamarin\EntMob_Xamarin.Droid\bin\Debug\EntMob_Xamarin.Droid.dll.mdb

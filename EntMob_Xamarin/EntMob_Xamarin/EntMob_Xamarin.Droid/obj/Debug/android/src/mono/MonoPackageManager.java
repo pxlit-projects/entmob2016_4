@@ -99,7 +99,8 @@ class MonoPackageManager_Resources {
 	public static final String[] Assemblies = new String[]{
 		/* We need to ensure that "EntMob_Xamarin.Droid.dll" comes first in this list. */
 		"EntMob_Xamarin.Droid.dll",
-		"EntMob_Xamarin.dll",
+		"AdvancedTimer.Forms.Plugin.Abstractions.dll",
+		"AdvancedTimer.Forms.Plugin.Android.dll",
 		"FormsViewGroup.dll",
 		"Xamarin.Android.Support.Design.dll",
 		"Xamarin.Android.Support.v4.dll",
@@ -110,31 +111,30 @@ class MonoPackageManager_Resources {
 		"Xamarin.Forms.Platform.Android.dll",
 		"Xamarin.Forms.Platform.dll",
 		"Xamarin.Forms.Xaml.dll",
-		"Java.Interop.dll",
+		"EntMob_Xamarin.dll",
 		"System.Runtime.dll",
 		"System.Resources.ResourceManager.dll",
-		"System.Diagnostics.Tools.dll",
-		"System.ObjectModel.dll",
-		"System.Diagnostics.Debug.dll",
-		"System.Globalization.dll",
 		"System.Collections.dll",
+		"System.Diagnostics.Debug.dll",
 		"System.Threading.Tasks.dll",
-		"System.Threading.dll",
+		"System.ObjectModel.dll",
+		"System.Globalization.dll",
 		"System.Linq.Expressions.dll",
 		"System.ComponentModel.dll",
 		"System.Xml.ReaderWriter.dll",
 		"System.Reflection.dll",
 		"System.Dynamic.Runtime.dll",
+		"System.Threading.dll",
 		"System.IO.dll",
 		"System.Runtime.Extensions.dll",
 		"System.Linq.dll",
 		"System.Reflection.Extensions.dll",
-		"System.ServiceModel.Internals.dll",
 		"System.Text.RegularExpressions.dll",
+		"System.Diagnostics.Tools.dll",
 		"System.Collections.Concurrent.dll",
 		"System.Runtime.InteropServices.dll",
 	};
 	public static final String[] Dependencies = new String[]{
 	};
-	public static final String ApiPackageName = "Mono.Android.Platform.ApiLevel_23";
+	public static final String ApiPackageName = "Mono.Android.Platform.ApiLevel_24";
 }

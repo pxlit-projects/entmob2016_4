@@ -17,11 +17,15 @@ namespace EntMob_Xamarin {
     public partial class TimerPage : global::Xamarin.Forms.ContentPage {
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.Grid TempertureGrid;
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.Button btnStop;
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
             this.LoadFromXaml(typeof(TimerPage));
+            TempertureGrid = this.FindByName<global::Xamarin.Forms.Grid>("TempertureGrid");
             btnStop = this.FindByName<global::Xamarin.Forms.Button>("btnStop");
         }
     }

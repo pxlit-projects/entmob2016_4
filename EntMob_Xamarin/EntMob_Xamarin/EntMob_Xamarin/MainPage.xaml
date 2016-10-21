@@ -17,11 +17,12 @@
            VerticalOptions="Center"
            HorizontalOptions="Center" />-->
 
+  
   <StackLayout Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="Center">
-    <Label Text="{Binding user.Username}" FontSize="30" TextColor="Green"/>
-    <Label Text="{Binding user.Password}" FontSize="30" TextColor="Blue"/>
+    <Entry Placeholder="Username" x:Name="userName" FontSize="30" TextColor="Black" />
+    <Entry Placeholder="Password" x:Name="passWord" FontSize="30" TextColor="Black" />
 
-      <Button x:Name="btnShow" Text="Start!" Clicked="ItemClicked" Command="{Binding ShowCommand}"/>
+      <Button x:Name="btnShow" Text="Login" Clicked="ItemClicked" Command="{Binding ShowCommand}"/>
       <Label Text="{Binding Message, Converter={StaticResource ValueToDegreesConverter}}"/>
 
   </StackLayout>
