@@ -1,5 +1,6 @@
 package be.pxl.backend.services;
 
+import be.pxl.backend.exceptions.UserException;
 import be.pxl.backend.repositories.UserRepository;
 import be.pxl.backend.models.*;
 import java.util.*;
@@ -17,12 +18,17 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
 
-    public User addUser(User user) {
-        String password = user.getPassword();
-        ShaPasswordEncoder shaPasswordEncoder = new ShaPasswordEncoder(256);
-        String hashed = shaPasswordEncoder.encodePassword(password, "");
-        user.setPassword(hashed);
-        return userRepository.save(user);
+    public User addUser(User user) throws Exception {
+        if(user.getPassword() != null && user.getPassword().length() > 5) {
+            String password = user.getPassword();
+            ShaPasswordEncoder shaPasswordEncoder = new ShaPasswordEncoder(256);
+            String hashed = shaPasswordEncoder.encodePassword(password, "");
+            user.setPassword(hashed);
+            user.setEnabled(true);
+            return userRepository.save(user);
+        } else {
+            throw new UserException();
+        }
     }
 
     public List<User> getAllUsers() {

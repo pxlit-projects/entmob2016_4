@@ -1,5 +1,8 @@
 package be.pxl.backend.models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import org.hibernate.annotations.NamedQuery;
 import javax.persistence.*;
 import javax.persistence.Entity;
@@ -12,7 +15,6 @@ import java.util.List;
  */
 @Entity
 @Table(name = "Sessions")
-@NamedQuery(name = "Session.getAllSessions", query = "select s from Session s")
 public class Session implements Serializable {
 
     @Id
@@ -25,19 +27,24 @@ public class Session implements Serializable {
     @Temporal(TemporalType.TIMESTAMP)
     private Date end;
 
+    @JsonBackReference
     @ManyToOne
     @JoinColumn(name = "userId")
     private User user;
 
+    @JsonManagedReference
     @OneToMany(mappedBy = "session")
     private List<Temperature> temperatures;
 
+    @JsonManagedReference
     @OneToMany(mappedBy = "session")
     private List<Pressure> pressures;
 
+    @JsonManagedReference
     @OneToMany(mappedBy = "session")
     private List<Humidity> humidities;
 
+    @JsonManagedReference
     @OneToMany(mappedBy = "session")
     private List<AcceleroMeter> acceleroMeters;
 

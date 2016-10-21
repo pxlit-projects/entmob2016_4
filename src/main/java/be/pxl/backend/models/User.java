@@ -1,5 +1,9 @@
 package be.pxl.backend.models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.*;
@@ -30,6 +34,7 @@ public class User implements Serializable {
 
     private Boolean enabled;
 
+    @JsonManagedReference
     @OneToMany(mappedBy = "user")
     private Set<Session> sessions = new HashSet<Session>();
 

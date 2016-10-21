@@ -1,9 +1,10 @@
 package be.pxl.backend.repositories;
 
 import be.pxl.backend.models.Session;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
-
 import java.util.*;
 
 /**
@@ -12,6 +13,7 @@ import java.util.*;
 @Repository
 public interface SessionRepository extends CrudRepository<Session, Integer> {
 
-    List<Session> getAllSessions();
+    @Query(value = "select s from Session s where s.user.name =:name")
+    List<Session> getAllSessions(@Param(value = "name") String name);
 
 }

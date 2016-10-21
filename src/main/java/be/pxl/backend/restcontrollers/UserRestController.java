@@ -31,9 +31,9 @@ public class UserRestController {
         return userService.getAllUsers();
     }
 
-    @Secured({"ROLE_GUEST", "ROLE_USER", "ROLE_ADMIN"})
+    @Secured({"ROLE_GUEST", "ROLE_USER"})
     @RequestMapping(method = RequestMethod.POST)
-    public User addUser(@RequestBody User user) {
+    public User addUser(@RequestBody User user) throws Exception {
         User savedUser = userService.addUser(user);
         return savedUser;
     }

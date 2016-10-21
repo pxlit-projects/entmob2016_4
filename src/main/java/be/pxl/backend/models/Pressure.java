@@ -1,5 +1,6 @@
 package be.pxl.backend.models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import org.hibernate.annotations.NamedQuery;
 
@@ -27,6 +28,7 @@ public class Pressure implements Serializable {
     @Column(name = "Date")
     private Date date;
 
+    @JsonBackReference
     @ManyToOne
     @JoinColumn(name = "SessionId")
     private Session session;

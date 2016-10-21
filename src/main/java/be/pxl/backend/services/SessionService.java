@@ -3,6 +3,7 @@ package be.pxl.backend.services;
 import be.pxl.backend.models.Session;
 import be.pxl.backend.repositories.SessionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -36,8 +37,8 @@ public class SessionService {
         return sessionRepository.findOne(id);
     }
 
-    public List<Session> getAllSessions() {
-        return sessionRepository.getAllSessions();
+    public List<Session> getAllSessions(String username) {
+        return sessionRepository.getAllSessions(username);
     }
 
 }
