@@ -1,5 +1,6 @@
 package be.pxl.backend.restcontrollers;
 
+import be.pxl.backend.exceptions.UserException;
 import be.pxl.backend.models.User;
 import be.pxl.backend.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,13 +28,13 @@ public class UserRestController {
 
     @Secured("ROLE_ADMIN")
     @RequestMapping(method = RequestMethod.GET, value = "/all")
-    public List<User> getAllUsers(){
+    public List<User> getAllUsers() {
         return userService.getAllUsers();
     }
 
     @Secured({"ROLE_GUEST", "ROLE_USER"})
     @RequestMapping(method = RequestMethod.POST)
-    public User addUser(@RequestBody User user) throws Exception {
+    public User addUser(@RequestBody User user) throws UserException {
         User savedUser = userService.addUser(user);
         return savedUser;
     }
