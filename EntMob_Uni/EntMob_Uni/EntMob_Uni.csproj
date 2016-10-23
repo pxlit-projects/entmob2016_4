@@ -136,6 +136,7 @@
     <Content Include="Images\distance.jpeg" />
     <Content Include="Images\baro.jpg" />
     <Content Include="Images\humidity.jpg" />
+    <Content Include="Images\joggings.jpg" />
     <Content Include="Images\steps.jpg" />
     <Content Include="Images\time.png" />
     <Content Include="Images\weather-icon.png" />

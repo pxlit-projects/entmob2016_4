@@ -370,6 +370,9 @@
     <AppxPackagedFile Include="C:\Users\Gebruiker\Documents\entmob2016_4\EntMob_Uni\EntMob_Uni\Images\humidity.jpg">
       <PackagePath>Images\humidity.jpg</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Gebruiker\Documents\entmob2016_4\EntMob_Uni\EntMob_Uni\Images\joggings.jpg">
+      <PackagePath>Images\joggings.jpg</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Gebruiker\Documents\entmob2016_4\EntMob_Uni\EntMob_Uni\Images\steps.jpg">
       <PackagePath>Images\steps.jpg</PackagePath>
     </AppxPackagedFile>

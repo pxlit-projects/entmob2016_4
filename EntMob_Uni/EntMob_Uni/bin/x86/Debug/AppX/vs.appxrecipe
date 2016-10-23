@@ -16,7 +16,7 @@
     <PackageRegistrationPath>
     </PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
-    <RegisteredManifestChecksum>BD8D79858AC2F041DB85C1FE3A4CCE2B2AFE71CEA06D09809C64A06A88EEBF37</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>7659700F6135115798BD3F910636D90597583195C9EF01FD4BA60572B4940BA2</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>85714194-0202-4c55-8f0d-ef52c6d14e13_1.0.0.0_x86__vjjvs5sxqs9e0</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>85714194-0202-4c55-8f0d-ef52c6d14e13_vjjvs5sxqs9e0!App</RegisteredUserModeAppID>
     <RegisteredPackageID>85714194-0202-4c55-8f0d-ef52c6d14e13</RegisteredPackageID>
@@ -28,13 +28,13 @@
     <AppXManifest Include="C:\Users\Gebruiker\Documents\entmob2016_4\EntMob_Uni\EntMob_Uni\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-10-23T21:34:23.683</Modified>
+      <Modified>2016-10-23T21:45:30.818</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Gebruiker\Documents\entmob2016_4\EntMob_Uni\EntMob_Uni\bin\x86\Debug\EntMob_Uni.exe">
       <PackagePath>entrypoint\EntMob_Uni.exe</PackagePath>
-      <Modified>2016-10-23T21:34:21.528</Modified>
+      <Modified>2016-10-23T21:45:29.802</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\BehaviorsXamlSDKManaged\12.0\References\CommonConfiguration\Neutral\Microsoft.Xaml.Interactions.dll">
       <PackagePath>Microsoft.Xaml.Interactions.dll</PackagePath>
@@ -496,6 +496,10 @@
       <PackagePath>Images\humidity.jpg</PackagePath>
       <Modified>2016-10-21T17:53:49.289</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Gebruiker\Documents\entmob2016_4\EntMob_Uni\EntMob_Uni\Images\joggings.jpg">
+      <PackagePath>Images\joggings.jpg</PackagePath>
+      <Modified>2016-10-23T21:43:05.146</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Gebruiker\Documents\entmob2016_4\EntMob_Uni\EntMob_Uni\Images\steps.jpg">
       <PackagePath>Images\steps.jpg</PackagePath>
       <Modified>2016-10-21T18:28:36.850</Modified>
@@ -561,11 +565,11 @@
     <AppxPackagedFile Include="C:\Users\Gebruiker\Documents\entmob2016_4\EntMob_Uni\EntMob_Uni\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-10-23T21:34:23.402</Modified>
+      <Modified>2016-10-23T21:45:30.567</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Gebruiker\Documents\entmob2016_4\EntMob_Uni\EntMob_Uni\bin\x86\Debug\Core\EntMob_Uni.exe">
       <PackagePath>EntMob_Uni.exe</PackagePath>
-      <Modified>2016-10-23T21:34:23.673</Modified>
+      <Modified>2016-10-23T21:45:30.815</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

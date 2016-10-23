@@ -12,8 +12,8 @@
     DataContext="{Binding Source={StaticResource mainViewModelLocator}, Path=LoginViewModel}">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
-        <RelativePanel VerticalAlignment="Center">
+        <Image Source="../Images/joggings.jpg" Stretch="Fill"/>
+        <RelativePanel VerticalAlignment="Bottom">
             <TextBlock x:ConnectionId='1' x:Name="LoginMessage" Text="Login" FontSize="36" Margin="4" TextAlignment="Center" RelativePanel.AlignHorizontalCenterWithPanel="True"></TextBlock>
             <TextBlock x:ConnectionId='2' x:Name="ErrorMessage" Text="" FontSize="20" Margin="4" Foreground="Red" TextAlignment="Center" 
                        RelativePanel.Below="LoginMessage" RelativePanel.AlignHorizontalCenterWith="LoginMessage"></TextBlock>
