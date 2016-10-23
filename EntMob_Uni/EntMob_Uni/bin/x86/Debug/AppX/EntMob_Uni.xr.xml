@@ -8,6 +8,7 @@
     <RootPropertyPathName Name="BackCommand" />
     <RootPropertyPathName Name="LoginViewModel" />
     <RootPropertyPathName Name="LoginCommand" />
+    <RootPropertyPathName Name="Username" />
     <RootPropertyPathName Name="ValuesViewModel" />
     <RootPropertyPathName Name="ListOfSessions" />
     <RootPropertyPathName Name="ItemClickedCommand" />
@@ -30,6 +31,7 @@
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
       <RootProperty Name="Source" />
       <RootProperty Name="Path" />
+      <RootProperty Name="Mode" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.RelativePanel">
@@ -93,6 +95,7 @@
     </RootType>
     <RootType FullName="EntMob_Uni.View.DetailPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
+      <RootProperty Name="Text" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Width" />
       <RootProperty Name="PlaceholderText" />

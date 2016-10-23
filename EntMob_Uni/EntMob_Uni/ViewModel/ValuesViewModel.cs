@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,7 +33,38 @@ namespace EntMob_Uni.ViewModel
         {
             LoadCommands();
             LoadSessions();
+            RegisterForMessages();
         }
+
+        private void RegisterForMessages()
+        {
+            Messenger.Default.Register<User>
+            (
+                 this,
+                 (action) => ReceiveMessage(action)
+            );
+        }
+
+        private string username;
+
+        public string Username
+        {
+            get
+            {
+                return username;
+            }
+            set
+            {
+                username = value;
+                RaisePropertyChanged("Username");
+            }
+        }
+
+        private void ReceiveMessage(User message)
+        {
+            Username = message.Username;
+        }
+
 
         private void RaisePropertyChanged(string propertyName)
         {
@@ -87,5 +119,7 @@ namespace EntMob_Uni.ViewModel
             //Messenger.Default.Send<ParkingsCollectedMessage>(new ParkingsCollectedMessage() { ParkingLots = lots, MyLocation = myLocation });
         }
 
+
     }
+
 }

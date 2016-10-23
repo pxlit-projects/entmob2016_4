@@ -28,13 +28,13 @@
     <AppXManifest Include="C:\Users\Gebruiker\Documents\entmob2016_4\EntMob_Uni\EntMob_Uni\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-10-21T22:23:35.523</Modified>
+      <Modified>2016-10-23T21:34:23.683</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Gebruiker\Documents\entmob2016_4\EntMob_Uni\EntMob_Uni\bin\x86\Debug\EntMob_Uni.exe">
       <PackagePath>entrypoint\EntMob_Uni.exe</PackagePath>
-      <Modified>2016-10-21T22:23:30.974</Modified>
+      <Modified>2016-10-23T21:34:21.528</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\BehaviorsXamlSDKManaged\12.0\References\CommonConfiguration\Neutral\Microsoft.Xaml.Interactions.dll">
       <PackagePath>Microsoft.Xaml.Interactions.dll</PackagePath>
@@ -474,11 +474,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Gebruiker\Documents\entmob2016_4\EntMob_Uni\Jogging.DAL\bin\x86\Debug\Jogging.DAL.dll">
       <PackagePath>Jogging.DAL.dll</PackagePath>
-      <Modified>2016-10-21T22:07:49.638</Modified>
+      <Modified>2016-10-23T19:44:08.891</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Gebruiker\Documents\entmob2016_4\EntMob_Uni\Jogging.Model\bin\x86\Debug\Jogging.Model.dll">
       <PackagePath>Jogging.Model.dll</PackagePath>
-      <Modified>2016-10-21T22:04:34.257</Modified>
+      <Modified>2016-10-23T17:19:04.355</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Gebruiker\Documents\entmob2016_4\EntMob_Uni\EntMob_Uni\ApplicationInsights.config">
       <PackagePath>ApplicationInsights.config</PackagePath>
@@ -548,7 +548,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Gebruiker\Documents\entmob2016_4\EntMob_Uni\EntMob_Uni\bin\x86\Debug\EntMob_Uni.xr.xml">
       <PackagePath>EntMob_Uni.xr.xml</PackagePath>
-      <Modified>2016-10-21T21:15:11.729</Modified>
+      <Modified>2016-10-23T21:34:21.339</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.14393.0\\redist\Debug\x86\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -561,11 +561,11 @@
     <AppxPackagedFile Include="C:\Users\Gebruiker\Documents\entmob2016_4\EntMob_Uni\EntMob_Uni\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-10-21T22:23:34.095</Modified>
+      <Modified>2016-10-23T21:34:23.402</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Gebruiker\Documents\entmob2016_4\EntMob_Uni\EntMob_Uni\bin\x86\Debug\Core\EntMob_Uni.exe">
       <PackagePath>EntMob_Uni.exe</PackagePath>
-      <Modified>2016-10-21T22:23:35.517</Modified>
+      <Modified>2016-10-23T21:34:23.673</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

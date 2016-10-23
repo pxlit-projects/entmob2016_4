@@ -19,6 +19,17 @@ namespace EntMob_Uni.ViewModel
 
         public ICommand LoginCommand { get; set; }
 
+        private string userName;
+
+        public string Username
+        {
+            get { return userName; }
+            set
+            {
+                    userName = value;
+                    RaisePropertyChanged("Username");
+            }
+        }
 
         private void RaisePropertyChanged(string propertyName)
         {
@@ -35,27 +46,6 @@ namespace EntMob_Uni.ViewModel
 
         }
 
-
-        /*private void RegisterMessages()
-        {
-            Messenger.Default.Register<GeoLocationMessage>(this, MyLocationRecieved);
-        }
-
-        private async void MyLocationRecieved(GeoLocationMessage obj)
-        {
-            myLocation = obj.MyLocation;
-            lots = await GetParkingLotsAsync();
-
-            IsReady = true;
-        }*/
-
-        /*private async Task<List<ParkingLot>> GetParkingLotsAsync()
-        {
-            ParkingLotDataService ps = new ParkingLotDataService();
-            List<ParkingLot> list = await ps.GetAllParkingLots();
-            return list;
-        }*/
-
         private void LoadCommands()
         {
             LoginCommand = new CustomCommand(Login, null);
@@ -65,7 +55,9 @@ namespace EntMob_Uni.ViewModel
         private void Login(object o)
         {
             NavigationService.Default.Navigate(typeof(ValuesPage));
-            //Messenger.Default.Send<ParkingsCollectedMessage>(new ParkingsCollectedMessage() { ParkingLots = lots, MyLocation = myLocation });
+
+            var msg = new User() { Username = Username };
+            Messenger.Default.Send<User>(msg);
         }
     }
 }
