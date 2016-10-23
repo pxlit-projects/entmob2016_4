@@ -10,7 +10,8 @@
     mc:Ignorable="d"
     DataContext="{Binding Source={StaticResource mainViewModelLocator}, Path=ValuesViewModel}">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="AliceBlue">
+
         <RelativePanel VerticalAlignment="Center">
             <TextBlock x:Name="WelcomeMessage" Text="Welcome" FontSize="36" Margin="4" TextAlignment="Center" RelativePanel.AlignHorizontalCenterWithPanel="True"></TextBlock>
             <TextBlock x:Name="NameMessage" Text="{Binding Username}" HorizontalAlignment="Center" FontSize="30"
@@ -18,8 +19,8 @@
             <TextBlock x:Name="InfoMessage" Text="Your Sessions:" HorizontalAlignment="Center" FontSize="20"
                        RelativePanel.Below="NameMessage" RelativePanel.AlignHorizontalCenterWith="NameMessage"/>
 
-            <ScrollViewer x:Name="SV" RelativePanel.Below="InfoMessage" RelativePanel.AlignHorizontalCenterWith="InfoMessage">
-                <ListView ItemsSource="{Binding ListOfSessions}"
+            <ScrollViewer x:Name="SV" RelativePanel.Below="InfoMessage" RelativePanel.AlignHorizontalCenterWith="InfoMessage" Width="500">
+                <ListView ItemsSource="{Binding ListOfSessions}" HorizontalAlignment="Center"
                           IsItemClickEnabled="True">
                     <interactivity:Interaction.Behaviors>
                         <core:EventTriggerBehavior EventName="ItemClick">
@@ -29,8 +30,7 @@
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <StackPanel>
-                                <TextBlock Text="{Binding Start}"
-                                           />
+                                <TextBlock Text="{Binding Start}"/>
                             </StackPanel>
                         </DataTemplate>
                     </ListView.ItemTemplate>
