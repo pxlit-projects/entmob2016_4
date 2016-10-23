@@ -18,14 +18,13 @@ public class AcceleroMeter implements Serializable {
 
     @Id
     @GeneratedValue
-    @Column(name = "Id")
     private int id;
 
-    @Column(name = "X")
+    @Column(nullable = false)
     private float x;
-    @Column(name = "Y")
+    @Column(nullable = false)
     private float y;
-    @Column(name = "Z")
+    @Column(nullable = false)
     private float z;
 
     @Temporal(TemporalType.TIMESTAMP)

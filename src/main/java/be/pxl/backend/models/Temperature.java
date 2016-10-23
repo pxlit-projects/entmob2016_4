@@ -20,19 +20,18 @@ public class Temperature implements Serializable {
 
     @Id
     @GeneratedValue
-    @Column(name = "Id")
     private int id;
 
-    @Column(name = "Temperature", nullable = false)
+    @Column(nullable = false)
     private float temperature;
 
     @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "Date", nullable = false)
+    @Column(nullable = false)
     private Date date;
 
     @ManyToOne
     @JsonBackReference
-    @JoinColumn(name = "SessionId")
+    @JoinColumn(name = "sessionId")
     private Session session;
 
     public Session getSession() {

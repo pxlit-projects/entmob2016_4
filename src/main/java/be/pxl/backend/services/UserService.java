@@ -5,7 +5,7 @@ import be.pxl.backend.repositories.UserRepository;
 import be.pxl.backend.models.*;
 import java.util.*;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.authentication.encoding.ShaPasswordEncoder;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 /**
@@ -21,8 +21,8 @@ public class UserService {
     public User addUser(User user) {
         if(user.getPassword() != null && user.getPassword().length() > 5) {
             String password = user.getPassword();
-            ShaPasswordEncoder shaPasswordEncoder = new ShaPasswordEncoder(256);
-            String hashed = shaPasswordEncoder.encodePassword(password, "");
+            BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+            String hashed = passwordEncoder.encode(password);
             user.setPassword(hashed);
             user.setEnabled(true);
             return userRepository.save(user);

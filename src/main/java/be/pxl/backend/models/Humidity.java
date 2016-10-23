@@ -19,14 +19,13 @@ public class Humidity implements Serializable {
 
     @Id
     @GeneratedValue
-    @Column(name = "Id")
     private int id;
 
-    @Column(name = "Humidity")
+    @Column(nullable = false)
     private float humidity;
 
+    @Column(nullable = false)
     @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "Date")
     private Date date;
 
     @JsonBackReference

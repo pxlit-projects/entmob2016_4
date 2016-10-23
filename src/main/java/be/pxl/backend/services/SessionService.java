@@ -43,10 +43,9 @@ public class SessionService {
         return sessionRepository.getAllSessions(username);
     }
 
-    public Dictionary<String, Float> getAverages(int id) {
-        Session session = sessionRepository.findOne(id);
-        List<Float> values = session.getTemperatures().stream().map(m -> m.getTemperature());
-    }
+    /*public Dictionary<String, Float> getAverages(int id) {
+
+    }*/
 
 
 }

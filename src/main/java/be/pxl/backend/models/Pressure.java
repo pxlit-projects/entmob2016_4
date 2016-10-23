@@ -19,14 +19,13 @@ public class Pressure implements Serializable {
 
     @Id
     @GeneratedValue
-    @Column(name = "Id")
     private int id;
 
-    @Column(name = "Pressure")
+    @Column(nullable = false)
     private float pressure;
 
+    @Column(nullable = false)
     @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "Date")
     private Date date;
 
     @JsonBackReference
