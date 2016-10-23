@@ -1,0 +1,4 @@
+C:\Users\Gebruiker\Documents\entmob2016_4\EntMob_Uni\EntMob_Uni\EntMob_Uni.csproj;x86
+C:\Users\Gebruiker\Documents\entmob2016_4\EntMob_Uni\Jogging.DAL\Jogging.DAL.csproj;x86
+C:\Users\Gebruiker\Documents\entmob2016_4\EntMob_Uni\Jogging.Model\Jogging.Model.csproj;x86
+C:\Users\Gebruiker\Documents\entmob2016_4\EntMob_Uni\Jogging.Test\Jogging.Test.csproj;x86

@@ -20,7 +20,7 @@ namespace EntMob_Uni.ViewModel
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private SessionDataService SessionDataService;
+        //private SessionDataService SessionDataService;
 
         public List<Session> ListOfSessions { get; set; }
         public DelegateCommand<ItemClickEventArgs> ItemClickedCommand { get; set; }
