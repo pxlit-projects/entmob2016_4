@@ -4,15 +4,8 @@
              xmlns:local="clr-namespace:EntMob_Xamarin"
              x:Class="EntMob_Xamarin.MainPage"
              BackgroundImage="joggings.jpg"
-  xmlns:converters="clr-namespace:EntMob_Xamarin.Converters;assembly=EntMob_Xamarin"
-  xmlns:navigation="clr-namespace:System.Windows.controls;assembly=System.Windows.Controls.Navigation">
-  
-  <ContentPage.Resources>
-    <ResourceDictionary>
-      <converters:ValueToDegreesConverter x:Key="ValueToDegreesConverter"/>
-    </ResourceDictionary>
-  </ContentPage.Resources>
-  
+             BindingContext="{Binding Main, Source={StaticResource Locator}}">
+    
 
 
   <ContentPage.Content>
@@ -22,7 +15,7 @@
           <Label Text="Enter your username and password below" HorizontalOptions="Center" FontSize="16"></Label>
           <Entry StyleId="UserId" Text="{Binding Path=Username}" Placeholder="Username" />
           <Entry StyleId="PasswordId" Text="{Binding Path=Password}" Placeholder="Password" IsPassword="true" />
-          <Button x:Name="loginButtonAndroid" Text="Login" Clicked="ItemClicked" />
+          <Button x:Name="loginButtonAndroid" Text="Login" Command="{Binding LoginCommand}"/>
         </StackLayout>
 
   </ContentPage.Content>

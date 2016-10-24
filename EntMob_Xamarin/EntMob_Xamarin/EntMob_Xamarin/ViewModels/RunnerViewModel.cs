@@ -7,58 +7,19 @@ using EntMob_Xamarin.Models;
 using System.ComponentModel;
 using Xamarin.Forms;
 using System.Runtime.CompilerServices;
+using System.Windows.Input;
+using EntMob_Xamarin.Utility;
+using System.Diagnostics;
 
 namespace EntMob_Xamarin.ViewModels
 {
     public class RunnerViewModel : INotifyPropertyChanged
     {
-        private string _message;
-        private User _user;
-
-        public User user
-        {
-            get
-            {
-                return _user;
-            }
-            set
-            {
-                _user = value;
-                OnPropertyChanged();
-            }
-
-        }
+        public ICommand LoginCommand { get; set; }
 
         public RunnerViewModel()
         {
-            user = new User() {
-                Username = "Jonas",
-                Password = "Allard"
-            };
-        }
-
-        public string Message
-        {
-            get
-            {
-                return _message;
-            }
-            set
-            {
-                _message = value;
-                OnPropertyChanged();
-            }
-        }
-
-        public Command ShowCommand
-        {
-            get
-            {
-                return new Command(() =>
-                {
-                    Message = "User show : Username = " + user.Username + "\n";
-                });
-            }
+            LoadCommands();
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -66,6 +27,21 @@ namespace EntMob_Xamarin.ViewModels
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        private void LoadCommands()
+        {
+            LoginCommand = new CustomCommand(Login, null);
+        }
+
+
+        private void Login(object o)
+        {
+            /*NavigationPage navigationPage = new NavigationPage(new MainPage());
+            navigationPage.PushAsync(new TimerPage());*/
+
+            /*var msg = new User() { Username = Username };
+            Messenger.Default.Send<User>(msg);*/
         }
 
     }

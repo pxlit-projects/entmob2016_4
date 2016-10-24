@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              BackgroundColor="Silver"
-             x:Class="EntMob_Xamarin.TimerPage">
+             x:Class="EntMob_Xamarin.TimerPage"
+             BindingContext="{Binding Timer, Source={StaticResource Locator}}">
 
   <Grid x:Name="TempertureGrid" ColumnSpacing="1">
     <Grid.RowDefinitions>

@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="using:EntMob_Xamarin"
-             xmlns:converter="using:EntMob_Xamarin.Converters"
-             x:Class="EntMob_Xamarin.App">
+             x:Class="EntMob_Xamarin.App"
+             xmlns:local="clr-namespace:EntMob_Xamarin"
+             xmlns:converter="using:EntMob_Xamarin.Converters">
   <Application.Resources>
 
     <ResourceDictionary>
-      <converter:ValueToDegreesConverter x:Key="localValueToDegreesConverter"></converter:ValueToDegreesConverter>
-      <converter:ValueToKmConverter x:Key="localValueToKmConverter"></converter:ValueToKmConverter>
-      <local:ViewModelLocator x:Key="mainViewModelLocator"></local:ViewModelLocator>
+      <!--<converter:ValueToDegreesConverter x:Key="localValueToDegreesConverter"></converter:ValueToDegreesConverter>
+      <converter:ValueToKmConverter x:Key="localValueToKmConverter"></converter:ValueToKmConverter>-->
+      <!--<local:ViewModelLocator x:Key="Locator"></local:ViewModelLocator>-->
     </ResourceDictionary>
 
   </Application.Resources>

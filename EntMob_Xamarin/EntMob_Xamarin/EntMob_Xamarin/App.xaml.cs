@@ -5,6 +5,7 @@ using System.Text;
 using EntMob_Xamarin;
 
 using Xamarin.Forms;
+using EntMob_Xamarin.Converters;
 
 namespace EntMob_Xamarin
 {
@@ -14,7 +15,12 @@ namespace EntMob_Xamarin
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new MainPage());
+            Resources = new ResourceDictionary();
+            Resources.Add("Locator", new ViewModelLocator());
+            Resources.Add("ValueToDegreesConverter", new ValueToDegreesConverter());
+            Resources.Add("ValueToKmConverter", new ValueToKmConverter());
+
+            MainPage = new MainPage();
         }
 
         protected override void OnStart()

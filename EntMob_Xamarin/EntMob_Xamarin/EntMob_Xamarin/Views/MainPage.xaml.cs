@@ -13,13 +13,6 @@ namespace EntMob_Xamarin
         public MainPage()
         {
             InitializeComponent();
-            BindingContext = new RunnerViewModel(); 
-            
-        }
-
-        public void ItemClicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new TimerPage());
         }
     }
 }

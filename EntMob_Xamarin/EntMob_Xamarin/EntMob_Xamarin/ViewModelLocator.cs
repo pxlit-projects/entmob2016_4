@@ -9,36 +9,42 @@ namespace EntMob_Xamarin
 {
     public class ViewModelLocator
     {
-        private static RunnerViewModel runnerViewModel;
-        private static TimerViewModel timerViewModel;
-        private static ValuesViewModel valuesViewModel;
 
-        //private static IDialogService dialogService = new DialogService(parkingLotSelectionViewModel.SelectedParking, routeDetailViewModel.selectedRoute);
-        //private static IParkingLotDataService parkingLotDataService = new ParkingLotDataService(new ParkingsRepository());
+        private readonly Dictionary<Type, object> viewModels = new Dictionary<Type, object>();
 
-        public static RunnerViewModel RunnerViewModel
+        private T CreateViewModel<T>() where T : new()
+        {
+            var type = typeof(T);
+            object existing;
+            if (!viewModels.TryGetValue(type, out existing))
+            {
+                existing = new T();
+                viewModels[type] = existing;
+            }
+            return (T)existing;
+        }
+
+        public RunnerViewModel Main
         {
             get
             {
-                return runnerViewModel ?? (runnerViewModel = new RunnerViewModel(/*parkingLotDataService, dialogService*/));
+                return CreateViewModel<RunnerViewModel>();
             }
         }
 
-
-        public static TimerViewModel DetailViewModel
+        public TimerViewModel Timer
         {
             get
             {
-                return timerViewModel ?? (timerViewModel = new TimerViewModel(/*parkingLotDataService, dialogService*/));
+                return CreateViewModel<TimerViewModel>();
             }
         }
 
-
-        public static ValuesViewModel ValuesViewModel
+        public ValuesViewModel Values
         {
             get
             {
-                return valuesViewModel ?? (valuesViewModel = new ValuesViewModel(/*parkingLotDataService, dialogService*/));
+                return CreateViewModel<ValuesViewModel>();
             }
         }
     }
