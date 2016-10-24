@@ -6,6 +6,8 @@ using EntMob_Xamarin;
 
 using Xamarin.Forms;
 using EntMob_Xamarin.Converters;
+using EntMob_Xamarin.Services;
+using EntMob_Xamarin.ViewModels;
 
 namespace EntMob_Xamarin
 {
@@ -20,7 +22,7 @@ namespace EntMob_Xamarin
             Resources.Add("ValueToDegreesConverter", new ValueToDegreesConverter());
             Resources.Add("ValueToKmConverter", new ValueToKmConverter());
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()

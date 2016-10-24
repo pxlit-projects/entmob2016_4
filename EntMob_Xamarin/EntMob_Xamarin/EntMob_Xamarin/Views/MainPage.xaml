@@ -7,7 +7,6 @@
              BindingContext="{Binding Main, Source={StaticResource Locator}}">
     
 
-
   <ContentPage.Content>
 
         <StackLayout VerticalOptions="End">

@@ -10,38 +10,49 @@ using System.Runtime.CompilerServices;
 using System.Windows.Input;
 using EntMob_Xamarin.Utility;
 using System.Diagnostics;
+using Android.Content.Res;
+using EntMob_Xamarin.Services;
 
 namespace EntMob_Xamarin.ViewModels
 {
     public class RunnerViewModel : INotifyPropertyChanged
     {
-        public ICommand LoginCommand { get; set; }
+        private INavigation navigation;
 
         public RunnerViewModel()
         {
-            LoadCommands();
+
+        }
+
+        public RunnerViewModel(INavigation navi)
+        {
+            navigation = navi;
+        }
+
+        public ICommand LoginCommand
+        {
+            get
+            {
+                return new Command(async() =>
+                {
+                    await navigation.PushAsync(new TimerPage());
+                });
+            }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
+        private void RaisePropertyChanged(string propertyName)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
-        private void LoadCommands()
-        {
-            LoginCommand = new CustomCommand(Login, null);
-        }
-
-
-        private void Login(object o)
-        {
-            /*NavigationPage navigationPage = new NavigationPage(new MainPage());
-            navigationPage.PushAsync(new TimerPage());*/
-
-            /*var msg = new User() { Username = Username };
-            Messenger.Default.Send<User>(msg);*/
         }
 
     }

@@ -15,22 +15,7 @@ namespace EntMob_Xamarin
         public ValuesPage()
         {
             InitializeComponent();
-
-            var people = new List<User> {
-                new User () { Username = "Jonas" , Password = "Allard"},
-                new User () { Username = "Jonas" , Password = "Allard"},
-                new User () { Username = "Jonas" , Password = "Allard"},
-                new User () { Username = "Jonas" , Password = "Allard"},
-                new User () { Username = "Jonas" , Password = "Allard"},
-                new User () { Username = "Jonas" , Password = "Allard"},
-                new User () { Username = "Jonas" , Password = "Allard"},
-                new User () { Username = "Jonas" , Password = "Allard"},
-                new User () { Username = "Jonas" , Password = "Allard"},
-
-            };
-
-            listView.ItemsSource = people;
-            BindingContext = new ValuesViewModel();
+            BindingContext = new ViewModelLocator().Values(this.Navigation);
         }
     }
 }

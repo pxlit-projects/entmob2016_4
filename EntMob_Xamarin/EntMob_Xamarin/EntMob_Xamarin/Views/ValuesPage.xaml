@@ -18,9 +18,9 @@
                 <ColumnDefinition Width="0.2*" />
                 <ColumnDefinition Width="0.3*" />
               </Grid.ColumnDefinitions>
-              <Label Text="{Binding Username}" FontAttributes="Bold" />
-              <Label Grid.Column="1" Text="{Binding Password}" />
-              <Label Grid.Column="2" Text="{Binding Password}" HorizontalTextAlignment="End" />
+              <Label Text="{Binding Users.Username}" FontAttributes="Bold" />
+              <Label Grid.Column="1" Text="{Binding Users.Password}" />
+              <Label Grid.Column="2" Text="{Binding Users.Password}" HorizontalTextAlignment="End" />
             </Grid>
           </ViewCell>
         </DataTemplate>

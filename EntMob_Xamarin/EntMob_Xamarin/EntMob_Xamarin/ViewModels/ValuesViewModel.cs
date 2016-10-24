@@ -6,31 +6,57 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using EntMob_Xamarin.Models;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace EntMob_Xamarin.ViewModels
 {
-    public class ValuesViewModel
+    public class ValuesViewModel : INotifyPropertyChanged
     {
-
-        private List<Temperature> values = new List<Temperature>();
+        public event PropertyChangedEventHandler PropertyChanged;
+        private INavigation navigation;
+        private List<User> users;
 
         public ValuesViewModel()
         {
-            values.Add(new Temperature() { Amount = "27" });
-            values.Add(new Temperature() { Amount = "25" });
-            values.Add(new Temperature() { Amount = "23" });
-            values.Add(new Temperature() { Amount = "21" });
-            values.Add(new Temperature() { Amount = "29" });
+
         }
 
+        public ValuesViewModel(INavigation navigation)
+        {
+            this.navigation = navigation;
+        }
 
-
-        public List<Temperature> Values
+        public List<User> Users
         {
             get
             {
-                return values; 
+                return users;
             }
+            set
+            {
+                users.Add(new User() { Username = "Jonas", Password = "Allard" });
+                users.Add(new User() { Username = "Jonas", Password = "Allard" });
+                users.Add(new User() { Username = "Jonas", Password = "Allard" });
+                users.Add(new User() { Username = "Jonas", Password = "Allard" });
+                users.Add(new User() { Username = "Jonas", Password = "Allard" });
+                users.Add(new User() { Username = "Jonas", Password = "Allard" });
+                RaisePropertyChanged("Users");
+            }
+        }
+
+        private void RaisePropertyChanged(string propertyName)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+
+
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

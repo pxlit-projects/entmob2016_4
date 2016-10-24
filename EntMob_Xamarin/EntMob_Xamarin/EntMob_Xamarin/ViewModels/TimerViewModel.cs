@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EntMob_Xamarin.Utility;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
@@ -6,12 +7,16 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace EntMob_Xamarin.ViewModels
 {
     public class TimerViewModel : INotifyPropertyChanged
     {
+        private INavigation navigation;
+        public ICommand StartStopCommand { get; set; }
+
         private bool Run = true;
         int Min, Sec, Hours, Tenth;
         private DateTime localDate;
@@ -33,7 +38,38 @@ namespace EntMob_Xamarin.ViewModels
 
         public TimerViewModel()
         {
+            LoadCommands();
             localDate = DateTime.Now;
+        }
+
+        public TimerViewModel(INavigation navigation)
+        {
+            LoadCommands();
+            localDate = DateTime.Now;
+            this.navigation = navigation;
+        }
+
+        private void LoadCommands()
+        {
+            Debug.WriteLine("loading commands");
+            StartStopCommand = new Command(
+            (parameter) =>
+            {
+                var button = parameter as Xamarin.Forms.Button;
+                if (button != null)
+                {
+                    if (button.Text == "Stop")
+                    {
+                        button.Text = "Start";
+                        navigation.PushAsync(new ValuesPage());
+                    }
+                    else
+                    {
+                        StartTimer();
+                        button.Text = "Stop";
+                    }
+                }
+            });
         }
 
         public void StartTimer() {
@@ -104,23 +140,6 @@ namespace EntMob_Xamarin.ViewModels
 
 
         }
-
-
-        /*private void CountDown()
-        {
-
-            Timer timer = new Timer();
-            timer.Interval = 1000;
-            timer.Elapsed += OnTimedEvent;
-            timer.Enabled = true;
-
-
-        }
-
-        private void OnTimedEvent(object sender, System.Timers.ElapsedEventArgs e)
-        {
-
-        }*/
 
     }
 }
