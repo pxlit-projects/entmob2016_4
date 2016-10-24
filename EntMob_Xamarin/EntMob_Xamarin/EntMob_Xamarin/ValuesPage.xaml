@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EntMob_Xamarin.ValuesPage"
+  xmlns:converters="clr-namespace:EntMob_Xamarin.Converters;assembly=EntMob_Xamarin">
+  <StackLayout Padding="0,20,0,0">
+    <Label Text="Information about your last jogging session" FontAttributes="Bold" HorizontalOptions="Center" />
+    <ListView x:Name="listView">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <Grid>
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.5*" />
+                <ColumnDefinition Width="0.2*" />
+                <ColumnDefinition Width="0.3*" />
+              </Grid.ColumnDefinitions>
+              <Label Text="{Binding Username}" FontAttributes="Bold" />
+              <Label Grid.Column="1" Text="{Binding Password}" />
+              <Label Grid.Column="2" Text="{Binding Password}" HorizontalTextAlignment="End" />
+            </Grid>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </StackLayout>
+  
+  <!--<ContentPage.Resources>
+    <ResourceDictionary>
+      <converters:ValueToDegreesConverter x:Key="ValueToDegreesConverter"/>
+    </ResourceDictionary>
+  </ContentPage.Resources>
+  
+  <ListView x:Name="ValuesView" ItemsSource="{Binding Values}">
+    <ListView.ItemTemplate>
+      <DataTemplate>
+        <TextCell Text ="{Binding Amount, Converter={StaticResource ValueToDegreesConverter}}"/>
+      </DataTemplate>
+    </ListView.ItemTemplate>
+  </ListView>-->
+</ContentPage>
