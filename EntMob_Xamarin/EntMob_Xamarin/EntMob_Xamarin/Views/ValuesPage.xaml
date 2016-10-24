@@ -3,6 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="EntMob_Xamarin.ValuesPage"
   xmlns:converters="clr-namespace:EntMob_Xamarin.Converters;assembly=EntMob_Xamarin">
+  
+  
   <StackLayout Padding="0,20,0,0">
     <Label Text="Information about your last jogging session" FontAttributes="Bold" HorizontalOptions="Center" />
     <ListView x:Name="listView">
@@ -24,18 +26,5 @@
       </ListView.ItemTemplate>
     </ListView>
   </StackLayout>
-  
-  <!--<ContentPage.Resources>
-    <ResourceDictionary>
-      <converters:ValueToDegreesConverter x:Key="ValueToDegreesConverter"/>
-    </ResourceDictionary>
-  </ContentPage.Resources>
-  
-  <ListView x:Name="ValuesView" ItemsSource="{Binding Values}">
-    <ListView.ItemTemplate>
-      <DataTemplate>
-        <TextCell Text ="{Binding Amount, Converter={StaticResource ValueToDegreesConverter}}"/>
-      </DataTemplate>
-    </ListView.ItemTemplate>
-  </ListView>-->
+ 
 </ContentPage>

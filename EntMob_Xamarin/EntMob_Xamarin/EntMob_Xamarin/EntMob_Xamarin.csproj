@@ -41,7 +41,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\Humidity.cs" />
-    <Compile Include="MainPage.xaml.cs">
+    <Compile Include="Views\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\Pressure.cs" />
@@ -49,10 +49,10 @@
     <Compile Include="Models\Session.cs" />
     <Compile Include="Models\Temperature.cs" />
     <Compile Include="Models\User.cs" />
-    <Compile Include="TimerPage.xaml.cs">
+    <Compile Include="Views\TimerPage.xaml.cs">
       <DependentUpon>TimerPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ValuesPage.xaml.cs">
+    <Compile Include="Views\ValuesPage.xaml.cs">
       <DependentUpon>ValuesPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\RunnerViewModel.cs" />
@@ -60,7 +60,7 @@
     <Compile Include="ViewModels\ValuesViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="MainPage.xaml">
+    <EmbeddedResource Include="Views\MainPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -93,13 +93,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ValuesPage.xaml">
+    <EmbeddedResource Include="Views\ValuesPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="TimerPage.xaml">
+    <EmbeddedResource Include="Views\TimerPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
