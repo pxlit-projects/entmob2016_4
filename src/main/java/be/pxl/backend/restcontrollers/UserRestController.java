@@ -26,7 +26,7 @@ public class UserRestController {
         return userService.getUserByUsername(username);
     }
 
-    @Secured("ROLE_ADMIN")
+    @Secured("ROLE_USER")
     @RequestMapping(method = RequestMethod.GET, value = "/all")
     public List<User> getAllUsers() {
         return userService.getAllUsers();

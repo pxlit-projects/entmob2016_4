@@ -1,9 +1,6 @@
 package be.pxl.backend.models;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
-import org.hibernate.annotations.NamedQuery;
+import com.fasterxml.jackson.annotation.*;
 import javax.persistence.*;
 import javax.persistence.Entity;
 import java.io.Serializable;
@@ -32,18 +29,26 @@ public class Session implements Serializable {
     @JoinColumn(name = "userId")
     private User user;
 
+    @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
+    @JsonIdentityReference(alwaysAsId = true)
     @JsonManagedReference
     @OneToMany(mappedBy = "session")
     private List<Temperature> temperatures;
 
+    @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
+    @JsonIdentityReference(alwaysAsId = true)
     @JsonManagedReference
     @OneToMany(mappedBy = "session")
     private List<Pressure> pressures;
 
+    @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
+    @JsonIdentityReference(alwaysAsId = true)
     @JsonManagedReference
     @OneToMany(mappedBy = "session")
     private List<Humidity> humidities;
 
+    @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
+    @JsonIdentityReference(alwaysAsId = true)
     @JsonManagedReference
     @OneToMany(mappedBy = "session")
     private List<AcceleroMeter> acceleroMeters;

@@ -1,6 +1,7 @@
 package be.pxl.backend.models;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.*;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.*;
@@ -31,6 +32,8 @@ public class User implements Serializable {
 
     private Boolean enabled;
 
+    @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
+    @JsonIdentityReference(alwaysAsId = true)
     @JsonManagedReference
     @OneToMany(mappedBy = "user")
     private Set<Session> sessions = new HashSet<Session>();

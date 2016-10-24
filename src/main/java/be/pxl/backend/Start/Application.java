@@ -29,7 +29,6 @@ public class Application {
     public static void main(String []args) {
         ApplicationContext ctx = SpringApplication.run(Application.class, args);
         Stream.of(ctx.getBeanDefinitionNames()).sorted().forEach(System.out::println);
-
     }
 
     @Autowired
