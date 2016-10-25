@@ -3274,7 +3274,7 @@ namespace EntMob_Xamarin.Droid
 			public const int icon = 2130837590;
 			
 			// aapt resource value: 0x7f020057
-			public const int joggings = 2130837591;
+			public const int Joggings = 2130837591;
 			
 			// aapt resource value: 0x7f020058
 			public const int mr_ic_cast_dark = 2130837592;
