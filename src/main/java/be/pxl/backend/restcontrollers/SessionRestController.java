@@ -53,4 +53,9 @@ public class SessionRestController {
         return sessionService.stopSession(session);
     }
 
+    @Secured("ROLE_USER")
+    @RequestMapping(value = "/delete", method = RequestMethod.GET)
+    public void deleteSessionForId(@RequestParam(value = "id") int id) {
+        sessionService.deleteSessionForId(id);
+    }
 }

@@ -43,6 +43,10 @@ public class SessionService {
         return sessionRepository.getAllSessions(username);
     }
 
+    public void deleteSessionForId(int id) {
+        sessionRepository.delete(id);
+    }
+
     public Map<String, Double> getAverages(int id) {
         Session session = getSessionById(id);
         Map<String, Double> dictionary = new HashMap<>();

@@ -22,14 +22,13 @@ import java.util.stream.Stream;
 @EnableAspectJAutoProxy
 @EnableJpaRepositories(basePackages = "be.pxl.backend.repositories")
 @EntityScan(basePackages = "be.pxl.backend.models")
-@ComponentScan(basePackages = { "be.pxl.backend.restcontrollers", "be.pxl.backend.repositories", "be.pxl.backend.models", "be.pxl.backend.services", "be.pxl.backend.aop"})
+@ComponentScan(basePackages = { "be.pxl.backend.restcontrollers", "be.pxl.backend.repositories", "be.pxl.backend.models", "be.pxl.backend.services", "be.pxl.backend.aop", "be.pxl.backend.jms"})
 @EnableGlobalMethodSecurity(securedEnabled = true)
 @EnableJms
 public class Application {
 
     public static void main(String []args) throws Exception {
         ApplicationContext ctx = SpringApplication.run(Application.class, args);
-
         Stream.of(ctx.getBeanDefinitionNames()).sorted().forEach(System.out::println);
     }
 

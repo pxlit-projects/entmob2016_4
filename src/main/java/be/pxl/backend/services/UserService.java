@@ -1,6 +1,7 @@
 package be.pxl.backend.services;
 
 import be.pxl.backend.exceptions.UserException;
+import be.pxl.backend.jms.JmsSender;
 import be.pxl.backend.repositories.UserRepository;
 import be.pxl.backend.models.*;
 import java.util.*;
@@ -17,7 +18,7 @@ import org.springframework.stereotype.Service;
 public class UserService {
 
     @Autowired
-    private JmsTemplate jmsTemplate;
+    private JmsSender jmsSender;
 
     @Autowired
     private UserRepository userRepository;
@@ -31,7 +32,7 @@ public class UserService {
             user.setEnabled(true);
             return userRepository.save(user);
         } else {
-            jmsTemplate.send("LogQueue", s -> s.createTextMessage("Error creating user"));
+            //jmsSender.sendMessage("Test");
             throw new UserException("Password cannot be null and must be 6 characters long");
         }
     }
