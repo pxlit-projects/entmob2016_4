@@ -1,14 +1,14 @@
 package be.pxl.backend.services;
 
 import be.pxl.backend.exceptions.SessionException;
+import be.pxl.backend.models.AcceleroMeter;
 import be.pxl.backend.models.Session;
 import be.pxl.backend.repositories.SessionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
-import java.util.Dictionary;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by Jonas on 14/10/16.
@@ -43,9 +43,28 @@ public class SessionService {
         return sessionRepository.getAllSessions(username);
     }
 
-    /*public Dictionary<String, Float> getAverages(int id) {
+    public Map<String, Double> getAverages(int id) {
+        Session session = getSessionById(id);
+        Map<String, Double> dictionary = new HashMap<>();
 
-    }*/
+        OptionalDouble avgTemp = session.getTemperatures().stream().mapToDouble(t -> t.getTemperature()).average();
+        if (avgTemp.isPresent()) {
+            dictionary.put("AverageTemperature", avgTemp.getAsDouble());
+        }
 
+        OptionalDouble avgHumidity = session.getHumidities().stream().mapToDouble(h -> h.getHumidity()).average();
+        if(avgHumidity.isPresent()) {
+            dictionary.put("AverageHumidity", avgHumidity.getAsDouble());
+        }
+
+        OptionalDouble avgPressure = session.getPressures().stream().mapToDouble(p -> p.getPressure()).average();
+        if(avgPressure.isPresent()) {
+            dictionary.put("AveragePressure", avgPressure.getAsDouble());
+        }
+
+        List<AcceleroMeter> acceleroMeters = session.getAcceleroMeters();
+
+        return dictionary;
+    }
 
 }

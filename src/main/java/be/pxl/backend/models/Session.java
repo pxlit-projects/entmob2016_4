@@ -24,6 +24,8 @@ public class Session implements Serializable {
     @Temporal(TemporalType.TIMESTAMP)
     private Date end;
 
+    @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
+    @JsonIdentityReference(alwaysAsId = true)
     @JsonBackReference
     @ManyToOne
     @JoinColumn(name = "userId")

@@ -8,6 +8,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by Jonas on 7/10/16.
@@ -23,9 +24,12 @@ public class SessionRestController {
     @Secured({"ROLE_USER"})
     @RequestMapping(method = RequestMethod.GET)
     public Session getSessionById(@RequestParam(value = "id") int id) {
-        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        String name = auth.getName();
         return sessionService.getSessionById(id);
+    }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/average")
+    public Map<String, Double> getAveragesForSession(@RequestParam(value = "id") int id) {
+        return sessionService.getAverages(id);
     }
 
     @Secured({"ROLE_USER"})

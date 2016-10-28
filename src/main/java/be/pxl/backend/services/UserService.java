@@ -5,6 +5,7 @@ import be.pxl.backend.repositories.UserRepository;
 import be.pxl.backend.models.*;
 import java.util.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jms.core.JmsTemplate;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -14,6 +15,9 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class UserService {
+
+    @Autowired
+    private JmsTemplate jmsTemplate;
 
     @Autowired
     private UserRepository userRepository;
@@ -27,6 +31,7 @@ public class UserService {
             user.setEnabled(true);
             return userRepository.save(user);
         } else {
+            jmsTemplate.send("LogQueue", s -> s.createTextMessage("Error creating user"));
             throw new UserException("Password cannot be null and must be 6 characters long");
         }
     }
