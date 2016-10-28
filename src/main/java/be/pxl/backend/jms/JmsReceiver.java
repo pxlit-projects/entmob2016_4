@@ -19,7 +19,7 @@ public class JmsReceiver {
         try {
             if(msg instanceof TextMessage) {
                 String text = ((TextMessage)msg).getText();
-                System.out.print(text);
+                System.out.println(text);
             }
         } catch (JMSException ex) {
             ex.printStackTrace();
