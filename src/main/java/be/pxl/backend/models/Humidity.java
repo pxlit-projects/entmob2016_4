@@ -49,15 +49,8 @@ public class Humidity implements Serializable {
         return humidity;
     }
 
-    public void setHumidity(float humidity) {
-        this.humidity = humidity;
-    }
-
     public Date getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
-    }
 }

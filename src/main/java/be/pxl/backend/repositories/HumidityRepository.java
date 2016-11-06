@@ -4,6 +4,7 @@ import be.pxl.backend.models.Humidity;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
@@ -11,6 +12,7 @@ import java.util.List;
 /**
  * Created by Jonas on 7/10/16.
  */
+@Repository
 public interface HumidityRepository extends CrudRepository<Humidity, Integer> {
 
     @Transactional(readOnly = true)

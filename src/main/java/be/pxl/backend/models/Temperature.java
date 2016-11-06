@@ -34,6 +34,15 @@ public class Temperature implements Serializable {
     @JoinColumn(name = "sessionId")
     private Session session;
 
+    public Temperature() {
+
+    }
+
+    public Temperature(float temperature, Date date) {
+        this.temperature = temperature;
+        this.date = date;
+    }
+
     public Session getSession() {
         return session;
     }
@@ -50,18 +59,8 @@ public class Temperature implements Serializable {
         return temperature;
     }
 
-    public void setTemperature(float temperature) {
-        this.temperature = temperature;
-    }
-
     public Date getDate() {
         return date;
     }
-
-    public void setDate(Date date) {
-        this.date = date;
-    }
-
-
 
 }

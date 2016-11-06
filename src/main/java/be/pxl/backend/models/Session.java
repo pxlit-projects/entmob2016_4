@@ -47,6 +47,19 @@ public class Session implements Serializable {
     @OneToMany(mappedBy = "session")
     private List<AcceleroMeter> acceleroMeters;
 
+    public Session() {
+
+    }
+
+    public Session(Date start) {
+        this.start = start;
+    }
+
+    public Session(Date start, Date end) {
+        this.start = start;
+        this.end = end;
+    }
+
     public int getId() {
         return id;
     }
@@ -63,16 +76,8 @@ public class Session implements Serializable {
         return start;
     }
 
-    public void setStart(Date start) {
-        this.start = start;
-    }
-
     public Date getEnd() {
         return end;
-    }
-
-    public void setEnd(Date end) {
-        this.end = end;
     }
 
     public List<Temperature> getTemperatures() {

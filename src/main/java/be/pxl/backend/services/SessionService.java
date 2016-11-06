@@ -5,6 +5,7 @@ import be.pxl.backend.models.AcceleroMeter;
 import be.pxl.backend.models.Session;
 import be.pxl.backend.repositories.SessionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.expression.spel.ast.FloatLiteral;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
@@ -28,10 +29,12 @@ public class SessionService {
     }
 
     public Session stopSession(Session session) {
-        if (session.getStart() != null && session.getEnd() != null) {
-            return sessionRepository.save(session);
-        } else {
+        if (session.getStart() == null && session.getEnd() == null) {
             throw new SessionException("Session start cannot be null and Session end cannot be null!");
+        } else if (session.getEnd().before(session.getStart())) {
+            throw new SessionException("Session end must me after Session start");
+        } else {
+            return sessionRepository.save(session);
         }
     }
 
@@ -67,8 +70,18 @@ public class SessionService {
         }
 
         List<AcceleroMeter> acceleroMeters = session.getAcceleroMeters();
+        double activity = activity(acceleroMeters);
+        dictionary.put("AverageActivity", activity);
 
         return dictionary;
+    }
+
+    private double activity(List<AcceleroMeter> acceleroMeters) {
+        double activity = 0.0;
+        for(AcceleroMeter acceleroMeter: acceleroMeters) {
+            double temp = 0.0;
+        }
+        return activity / (float)acceleroMeters.size();
     }
 
 }

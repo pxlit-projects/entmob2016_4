@@ -37,7 +37,6 @@ public class SessionRestController {
     public List<Session> getAllSessions() {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         String name = auth.getName();
-        System.out.println(name);
         return sessionService.getAllSessions(name);
     }
 

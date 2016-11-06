@@ -33,6 +33,13 @@ public class Pressure implements Serializable {
     @JoinColumn(name = "SessionId")
     private Session session;
 
+    public Pressure() {}
+
+    public Pressure(float pressure, Date date) {
+        this.pressure = pressure;
+        this.date = date;
+    }
+
     public Session getSession() {
         return session;
     }
@@ -49,15 +56,9 @@ public class Pressure implements Serializable {
         return pressure;
     }
 
-    public void setPressure(float pressure) {
-        this.pressure = pressure;
-    }
-
     public Date getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
-    }
+
 }
