@@ -20,6 +20,10 @@ public class SessionService {
     @Autowired
     private SessionRepository sessionRepository;
 
+    public void setSessionRepository(SessionRepository sessionRepository) {
+        this.sessionRepository = sessionRepository;
+    }
+
     public Session startSession(Session session) {
         if (session.getStart() != null && session.getEnd() == null) {
             return sessionRepository.save(session);

@@ -23,6 +23,10 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
 
+    public void setJmsSender(JmsSender jmsSender) {
+        this.jmsSender = jmsSender;
+    }
+
     public void setUserRepository(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
