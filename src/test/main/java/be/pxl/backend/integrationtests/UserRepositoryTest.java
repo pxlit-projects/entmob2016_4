@@ -31,8 +31,7 @@ public class UserRepositoryTest {
     public void addUserSucces() {
         deleteAll();
 
-        User user = new User();
-        user.setName("Jonas");
+        User user = new User("Jonas");
         user.setPassword("123456");
         user.setRole("ROLE_USER");
         user.setEnabled(true);
@@ -48,20 +47,28 @@ public class UserRepositoryTest {
     public void addUserFailedNoPassword() {
         deleteAll();
 
-        User user = new User();
-        user.setName("Jonas");
+        User user = new User("Jonas");
         user.setRole("ROLE_USER");
         user.setEnabled(true);
 
         User savedUser = userRepository.save(user);
     }
 
+    @Test(expected = Exception.class)
+    public void addUserFailedNoName() {
+        deleteAll();
+
+        User user = new User();
+        user.setPassword("Test1234");
+
+        userRepository.save(user);
+    }
+
     @Test
     public void getUserByUserName() {
         deleteAll();
 
-        User user = new User();
-        user.setName("Jonas");
+        User user = new User("Jonas");
         user.setPassword("123456");
 
         User savedUser = userRepository.save(user);

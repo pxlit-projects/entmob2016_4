@@ -31,18 +31,22 @@ public class Session implements Serializable {
     @JoinColumn(name = "userId")
     private User user;
 
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @JsonManagedReference
     @OneToMany(mappedBy = "session")
     private List<Temperature> temperatures;
 
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @JsonManagedReference
     @OneToMany(mappedBy = "session")
     private List<Pressure> pressures;
 
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @JsonManagedReference
     @OneToMany(mappedBy = "session")
     private List<Humidity> humidities;
 
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @JsonManagedReference
     @OneToMany(mappedBy = "session")
     private List<AcceleroMeter> acceleroMeters;

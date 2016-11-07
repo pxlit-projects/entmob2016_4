@@ -37,7 +37,7 @@ public class PressureRepositoryTest {
     }
 
     @Test
-    public void addPressure() {
+    public void addPressureSucces() {
         deleteAll();
 
         Pressure pressure = new Pressure(1000, new Date());
@@ -45,6 +45,14 @@ public class PressureRepositoryTest {
 
         assertEquals(pressure.getDate(), savedPressure.getDate());
         assertEquals(pressure.getPressure(), savedPressure.getPressure(), 0);
+    }
+
+    @Test(expected = Exception.class)
+    public void addPressureFailed() {
+        deleteAll();
+
+        Pressure pressure = new Pressure();
+        pressureRepository.save(pressure);
     }
 
     @Test

@@ -37,7 +37,7 @@ public class HumdityRepositoryTest {
     }
 
     @Test
-    public void addHumidity(){
+    public void addHumiditySucces(){
         deletelAll();
 
         Humidity humidity = new Humidity(20, new Date());
@@ -46,6 +46,14 @@ public class HumdityRepositoryTest {
         assertEquals(humidity.getDate(), savedHumidity.getDate());
         assertEquals(humidity.getHumidity(), savedHumidity.getHumidity(), 0);
         assertNotNull(humidity.getId());
+    }
+
+    @Test(expected = Exception.class)
+    public void addHumidityFailed() {
+        deletelAll();
+
+        Humidity humidity = new Humidity();
+        humidityRepository.save(humidity);
     }
 
     @Test

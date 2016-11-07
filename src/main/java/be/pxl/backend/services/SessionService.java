@@ -46,7 +46,7 @@ public class SessionService {
         return sessionRepository.findOne(id);
     }
 
-    public List<Integer> getAllSessions(String username) {
+    public List<Session> getAllSessions(String username) {
         return sessionRepository.getAllSessions(username);
     }
 

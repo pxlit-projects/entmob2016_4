@@ -61,8 +61,7 @@ public class SessionRepositoryTest {
     public void getAllSessions() {
         deleteAll();
 
-        User user = new User();
-        user.setName("Jonas");
+        User user = new User("Jonas");
         user.setPassword("123456");
 
         User savedUser = userRepository.save(user);
@@ -79,7 +78,7 @@ public class SessionRepositoryTest {
         int id2 = sessionRepository.save(session2).getId();
         sessionRepository.save(startSession);
 
-        List<Integer> sessions = sessionRepository.getAllSessions(user.getName());
+        List<Session> sessions = sessionRepository.getAllSessions(user.getName());
         assertEquals(2, sessions.size());
         assertTrue(sessions.contains(id1));
         assertTrue(sessions.contains(id2));

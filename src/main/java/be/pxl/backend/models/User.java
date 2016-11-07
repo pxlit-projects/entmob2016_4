@@ -38,6 +38,14 @@ public class User implements Serializable {
     @OneToMany(mappedBy = "user")
     private Set<Session> sessions = new HashSet<Session>();
 
+    public User() {
+
+    }
+
+    public User(String name) {
+        this.name = name;
+    }
+
     public int getId() {
         return id;
     }
@@ -46,24 +54,13 @@ public class User implements Serializable {
         return firstName;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
 
     public String getLastName() {
         return lastName;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public String getPassword() {

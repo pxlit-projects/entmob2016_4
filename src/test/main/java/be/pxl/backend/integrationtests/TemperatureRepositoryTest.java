@@ -7,6 +7,8 @@ import be.pxl.backend.models.Temperature;
 import be.pxl.backend.repositories.SessionRepository;
 import be.pxl.backend.repositories.TemperatureRepository;
 import be.pxl.backend.start.Application;
+import com.mysql.jdbc.exceptions.MySQLIntegrityConstraintViolationException;
+import org.hibernate.engine.jdbc.spi.SqlExceptionHelper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +16,7 @@ import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import java.sql.SQLException;
 import java.util.Date;
 import java.util.List;
 
@@ -37,7 +40,7 @@ public class TemperatureRepositoryTest {
     }
 
     @Test
-    public void addTemperature() {
+    public void addTemperatureSucces() {
         deleteAll();
 
         Temperature temperature = new Temperature(20, new Date());
@@ -45,6 +48,14 @@ public class TemperatureRepositoryTest {
 
         assertEquals(temperature.getDate(), savedTemperature.getDate());
         assertEquals(temperature.getTemperature(), savedTemperature.getTemperature(), 0);
+    }
+
+    @Test(expected = Exception.class)
+    public void addTemperatureFailed() {
+        deleteAll();
+
+        Temperature temperature = new Temperature();
+        temperatureRepository.save(temperature);
     }
 
     @Test

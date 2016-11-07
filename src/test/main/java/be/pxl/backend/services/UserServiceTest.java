@@ -1,6 +1,5 @@
 package be.pxl.backend.services;
 
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.when;
 
@@ -44,19 +43,18 @@ public class UserServiceTest {
 
     @Test(expected = UserException.class)
     public void addUserFailed() {
-        User user = new User();
+        User user = new User("Jonas");
         user.setPassword("abc");
-        user.setName("jonas");
 
         userService.addUser(user);
     }
 
     @Test
     public void addUserSucces() {
-        User user = new User();
+        User user = new User("Jonas");
         user.setPassword("abcdef");
-        user.setName("jonas");
 
+        when(userService.addUser(user)).thenReturn(user);
         User savedUser = userService.addUser(user);
 
         assertTrue(new BCryptPasswordEncoder().matches(user.getPassword(), savedUser.getPassword()));
