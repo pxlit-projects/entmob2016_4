@@ -15,7 +15,6 @@ import java.util.*;
 @Repository
 public interface SessionRepository extends CrudRepository<Session, Integer> {
 
-    @Transactional(readOnly = true)
     @Query(value = "select s from Session s where s.user.name =:name and s.end is NOT NULL")
     List<Session> getAllSessions(@Param(value = "name") String name);
 

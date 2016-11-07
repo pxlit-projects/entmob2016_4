@@ -31,8 +31,6 @@ public class Application {
     public static void main(String []args) throws Exception {
         ApplicationContext ctx = SpringApplication.run(Application.class, args);
         //Stream.of(ctx.getBeanDefinitionNames()).sorted().forEach(System.out::println);
-        System.out.println(new Date(200).toString());
-        System.out.print(new Date().compareTo(new Date(200)));
     }
 
     @Autowired

@@ -32,6 +32,7 @@ public class User implements Serializable {
 
     private Boolean enabled;
 
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
     @JsonIdentityReference(alwaysAsId = true)
     @JsonManagedReference

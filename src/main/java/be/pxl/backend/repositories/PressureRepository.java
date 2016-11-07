@@ -1,6 +1,7 @@
 package be.pxl.backend.repositories;
 
 import be.pxl.backend.models.Pressure;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
@@ -15,8 +16,10 @@ import java.util.List;
 @Repository
 public interface PressureRepository extends CrudRepository<Pressure, Integer> {
 
-    @Transactional(readOnly = true)
     @Query(value = "select p from Pressure p where p.session.id =:id")
     List<Pressure> getPressuresForSession(@Param(value = "id") int id);
 
+    @Modifying
+    @Query(value = "delete from Pressure p where p.session.id =:id")
+    void deleteForSession(@Param(value = "id") int id);
 }

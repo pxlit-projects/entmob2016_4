@@ -3,11 +3,13 @@ package be.pxl.backend.services;
 import be.pxl.backend.exceptions.SessionException;
 import be.pxl.backend.models.AcceleroMeter;
 import be.pxl.backend.models.Session;
-import be.pxl.backend.repositories.SessionRepository;
+import be.pxl.backend.models.Temperature;
+import be.pxl.backend.repositories.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.expression.spel.ast.FloatLiteral;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.*;
 
@@ -16,6 +18,18 @@ import java.util.*;
  */
 @Service
 public class SessionService {
+
+    @Autowired
+    private HumidityRepository humidityRepository;
+
+    @Autowired
+    private AcceleroMeterRepository acceleroMeterRepository;
+
+    @Autowired
+    private PressureRepository pressureRepository;
+
+    @Autowired
+    private TemperatureRepository temperatureRepository;
 
     @Autowired
     private SessionRepository sessionRepository;
@@ -50,7 +64,12 @@ public class SessionService {
         return sessionRepository.getAllSessions(username);
     }
 
+    @Transactional
     public void deleteSessionForId(int id) {
+        pressureRepository.deleteForSession(id);
+        temperatureRepository.deleteForSession(id);
+        humidityRepository.deleteForSession(id);
+        acceleroMeterRepository.deleteForSession(id);
         sessionRepository.delete(id);
     }
 

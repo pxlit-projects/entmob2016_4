@@ -16,7 +16,6 @@ import java.util.List;
 @Repository
 public interface UserRepository extends CrudRepository<User, Integer> {
 
-    @Transactional(readOnly = true)
     @Query(value = "select u from User u where u.name =:username")
     User getUserByUsername(@Param(value = "username") String username);
 
