@@ -33,9 +33,9 @@ public class SessionService {
     }
 
     public Session stopSession(Session session) {
-        if (session.getStart() == null && session.getEnd() == null) {
+        if (session.getStart() == null || session.getEnd() == null) {
             throw new SessionException("Session start cannot be null and Session end cannot be null!");
-        } else if (session.getEnd().before(session.getStart())) {
+        } else if (session.getEnd().compareTo(session.getStart()) == 1) {
             throw new SessionException("Session end must me after Session start");
         } else {
             return sessionRepository.save(session);

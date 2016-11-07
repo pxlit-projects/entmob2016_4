@@ -1,6 +1,7 @@
 package be.pxl.backend.integrationtests;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
 import be.pxl.backend.models.*;
@@ -40,19 +41,22 @@ public class SessionRepositoryTest {
     public void startSession() {
         deleteAll();
 
-        Session session = new Session(new Date());
+        Session session = new Session("Test",  new Date());
         Session savedSession = sessionRepository.save(session);
 
+        assertEquals(session.getName(), savedSession.getName());
         assertEquals(session.getStart(), savedSession.getStart());
+        assertNull(savedSession.getEnd());
     }
 
     @Test
     public void endSession() {
         deleteAll();
 
-        Session session = new Session(new Date(), new Date());
+        Session session = new Session("Test", new Date(), new Date());
         Session savedSession = sessionRepository.save(session);
 
+        assertEquals(session.getName(), savedSession.getName());
         assertEquals(session.getStart(), savedSession.getStart());
         assertEquals(session.getEnd(), savedSession.getEnd());
     }
@@ -66,22 +70,22 @@ public class SessionRepositoryTest {
 
         User savedUser = userRepository.save(user);
 
-        Session session1 = new Session(new Date(), new Date());
-        Session session2 = new Session(new Date(), new Date());
-        Session startSession = new Session(new Date());
+        Session session1 = new Session("Test1", new Date(), new Date());
+        Session session2 = new Session("Test2", new Date(), new Date());
+        Session startSession = new Session("Test3", new Date());
 
         startSession.setUser(savedUser);
         session1.setUser(savedUser);
         session2.setUser(savedUser);
 
-        int id1 = sessionRepository.save(session1).getId();
-        int id2 = sessionRepository.save(session2).getId();
+        Session s1 = sessionRepository.save(session1);
+        Session s2 = sessionRepository.save(session2);
         sessionRepository.save(startSession);
 
         List<Session> sessions = sessionRepository.getAllSessions(user.getName());
         assertEquals(2, sessions.size());
-        assertTrue(sessions.contains(id1));
-        assertTrue(sessions.contains(id2));
+        assertTrue(sessions.contains(s1));
+        assertTrue(sessions.contains(s2));
     }
 
 }

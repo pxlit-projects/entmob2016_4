@@ -12,6 +12,7 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import javax.sql.DataSource;
+import java.util.Date;
 import java.util.stream.Stream;
 
 /**
@@ -30,6 +31,8 @@ public class Application {
     public static void main(String []args) throws Exception {
         ApplicationContext ctx = SpringApplication.run(Application.class, args);
         //Stream.of(ctx.getBeanDefinitionNames()).sorted().forEach(System.out::println);
+        System.out.println(new Date(200).toString());
+        System.out.print(new Date().compareTo(new Date(200)));
     }
 
     @Autowired

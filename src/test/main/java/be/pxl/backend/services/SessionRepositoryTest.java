@@ -44,11 +44,10 @@ public class SessionRepositoryTest {
         sessionService.startSession(session);
     }
 
-    @Test
-    public void addSessionFailed() {
-        Session session = new Session(new Date());
-        Session savedSession = sessionService.startSession(session);
-
+    @Test(expected = SessionException.class)
+    public void addSessionFailedEnd() {
+        Session session = new Session("Test", new Date(1908), new Date());
+        Session savedSession = sessionService.stopSession(session);
     }
 
 }

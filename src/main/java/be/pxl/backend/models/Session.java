@@ -18,6 +18,9 @@ public class Session implements Serializable {
     @GeneratedValue
     private int id;
 
+    @Column(nullable = false)
+    private String name;
+
     @Temporal(TemporalType.TIMESTAMP)
     private Date start;
 
@@ -55,12 +58,13 @@ public class Session implements Serializable {
 
     }
 
-    public Session(Date start) {
+    public Session(String name, Date start) {
+        this.name = name;
         this.start = start;
     }
 
-    public Session(Date start, Date end) {
-        this.start = start;
+    public Session(String name,  Date start, Date end) {
+        this(name, start);
         this.end = end;
     }
 
@@ -74,6 +78,10 @@ public class Session implements Serializable {
 
     public void setUser(User user) {
         this.user = user;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public Date getStart() {
