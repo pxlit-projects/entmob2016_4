@@ -2,6 +2,7 @@ package be.pxl.backend.services;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
+import static org.mockito.Mockito.when;
 
 import be.pxl.backend.exceptions.UserException;
 import be.pxl.backend.jms.JmsSender;
@@ -12,7 +13,6 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -47,17 +47,18 @@ public class UserServiceTest {
         User user = new User();
         user.setPassword("abc");
         user.setName("jonas");
-       userService.addUser(user);
+
+        userService.addUser(user);
     }
 
     @Test
     public void addUserSucces() {
         User user = new User();
-        user.setName("Jonas");
-        user.setPassword("123456");
-        userService.addUser(user);
-        assertEquals("Jonas", user.getName());
-        assertTrue(new BCryptPasswordEncoder().matches("123456", user.getPassword()));
-    }
+        user.setPassword("abcdef");
+        user.setName("jonas");
 
+        User savedUser = userService.addUser(user);
+
+        assertTrue(new BCryptPasswordEncoder().matches(user.getPassword(), savedUser.getPassword()));
+    }
 }

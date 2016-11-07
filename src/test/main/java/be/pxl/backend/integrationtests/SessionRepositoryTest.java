@@ -1,6 +1,7 @@
 package be.pxl.backend.integrationtests;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import be.pxl.backend.models.*;
 import be.pxl.backend.repositories.SessionRepository;
@@ -11,7 +12,6 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.annotation.DirtiesContext;
-import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.util.Date;
@@ -22,7 +22,6 @@ import java.util.List;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = Application.class)
-//@ContextConfiguration(classes = Application.class)
 @DirtiesContext
 public class SessionRepositoryTest {
 
@@ -76,12 +75,14 @@ public class SessionRepositoryTest {
         session1.setUser(savedUser);
         session2.setUser(savedUser);
 
-        sessionRepository.save(session1);
-        sessionRepository.save(session2);
+        int id1 = sessionRepository.save(session1).getId();
+        int id2 = sessionRepository.save(session2).getId();
         sessionRepository.save(startSession);
 
-        List<Session> sessions = sessionRepository.getAllSessions(user.getName());
+        List<Integer> sessions = sessionRepository.getAllSessions(user.getName());
         assertEquals(2, sessions.size());
+        assertTrue(sessions.contains(id1));
+        assertTrue(sessions.contains(id2));
     }
 
 }

@@ -12,7 +12,6 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.annotation.DirtiesContext;
-import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.util.Date;
@@ -23,7 +22,6 @@ import java.util.List;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = Application.class)
-//@ContextConfiguration(classes = Application.class)
 @DirtiesContext
 public class TemperatureRepositoryTest {
 
@@ -35,6 +33,7 @@ public class TemperatureRepositoryTest {
 
     public void deleteAll() {
         temperatureRepository.deleteAll();
+        sessionRepository.deleteAll();
     }
 
     @Test
@@ -57,7 +56,7 @@ public class TemperatureRepositoryTest {
 
         Temperature temperature1 = new Temperature(20, new Date());
         temperature1.setSession(savedSession);
-        Temperature temperature2 = new Temperature(20, new Date());
+        Temperature temperature2 = new Temperature(10, new Date());
         temperature2.setSession(savedSession);
 
         temperatureRepository.save(temperature1);
@@ -66,5 +65,6 @@ public class TemperatureRepositoryTest {
         List<Temperature> temperatures = temperatureRepository.getTemperaturesForSession(savedSession.getId());
 
         assertEquals(2, temperatures.size());
+        assertEquals(30, temperatures.stream().mapToDouble(t -> t.getTemperature()).sum(), 0);
     }
 }

@@ -34,7 +34,7 @@ public class SessionRestController {
 
     @Secured({"ROLE_USER"})
     @RequestMapping(method = RequestMethod.GET, value = "/all")
-    public List<Session> getAllSessions() {
+    public List<Integer> getAllSessions() {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         String name = auth.getName();
         return sessionService.getAllSessions(name);

@@ -12,7 +12,6 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.annotation.DirtiesContext;
-import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.util.Date;
@@ -23,7 +22,6 @@ import java.util.List;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = Application.class)
-//@ContextConfiguration(classes = Application.class)
 @DirtiesContext
 public class PressureRepositoryTest {
 
@@ -35,6 +33,7 @@ public class PressureRepositoryTest {
 
     public void deleteAll() {
         pressureRepository.deleteAll();
+        sessionRepository.deleteAll();
     }
 
     @Test
@@ -67,6 +66,7 @@ public class PressureRepositoryTest {
         List<Pressure> pressures = pressureRepository.getPressuresForSession(savedSession.getId());
 
         assertEquals(pressures.size(), 2);
+        assertEquals(6000, pressures.stream().mapToDouble(p -> p.getPressure()).sum(), 0);
     }
 
 }

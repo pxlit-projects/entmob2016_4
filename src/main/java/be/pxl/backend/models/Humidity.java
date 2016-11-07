@@ -33,6 +33,15 @@ public class Humidity implements Serializable {
     @JoinColumn(name = "SessionId")
     private Session session;
 
+    public Humidity() {
+
+    }
+
+    public Humidity(float humidity, Date date) {
+        this.humidity = humidity;
+        this.date = date;
+    }
+
     public Session getSession() {
         return session;
     }

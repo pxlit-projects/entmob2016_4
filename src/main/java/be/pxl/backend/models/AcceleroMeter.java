@@ -36,6 +36,16 @@ public class AcceleroMeter implements Serializable {
     @JoinColumn(name = "SessionId")
     private Session session;
 
+    public AcceleroMeter() {
+
+    }
+
+    public AcceleroMeter(float x, float y, float z, Date date) {
+        this.x = x;
+        this.y = y;
+        this.z = z;
+    }
+
     public Session getSession() {
         return session;
     }

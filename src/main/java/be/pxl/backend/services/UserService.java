@@ -38,6 +38,7 @@ public class UserService {
             String hashed = passwordEncoder.encode(password);
             user.setPassword(hashed);
             user.setEnabled(true);
+            user.setRole("ROLE_USER");
             return userRepository.save(user);
         } else {
             jmsSender.sendMessage("User error");
