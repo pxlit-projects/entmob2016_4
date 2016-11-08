@@ -39,19 +39,26 @@ public class UserService {
             user.setPassword(hashed);
             user.setEnabled(true);
             user.setRole("ROLE_USER");
-            return userRepository.save(user);
+            user = userRepository.save(user);
+            jmsSender.sendMessage("add user with id:" + user.getId());
+            return user;
         } else {
-            jmsSender.sendMessage("User error");
-            throw new UserException("Password cannot be null and must be 6 characters long");
+            UserException userException = new UserException("Password cannot be null and must be 6 characters long");
+            jmsSender.sendMessage("add user error:" + userException.getMessage());
+            throw userException;
         }
     }
 
     public List<User> getAllUsers() {
-        return (List<User>) userRepository.findAll();
+        List<User> users = (List<User>) userRepository.findAll();
+        jmsSender.sendMessage("get all users");
+        return users;
     }
 
     public User getUserByUsername(String username) {
-        return userRepository.getUserByUsername(username);
+        User user = userRepository.getUserByUsername(username);
+        jmsSender.sendMessage("get user by name:" + user.getName());
+        return user;
     }
 
 }

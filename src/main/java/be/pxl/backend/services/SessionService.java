@@ -1,6 +1,7 @@
 package be.pxl.backend.services;
 
 import be.pxl.backend.exceptions.SessionException;
+import be.pxl.backend.jms.JmsSender;
 import be.pxl.backend.models.AcceleroMeter;
 import be.pxl.backend.models.Session;
 import be.pxl.backend.models.Temperature;
@@ -18,6 +19,9 @@ import java.util.*;
  */
 @Service
 public class SessionService {
+
+    @Autowired
+    private JmsSender jmsSender;
 
     @Autowired
     private HumidityRepository humidityRepository;
@@ -40,28 +44,41 @@ public class SessionService {
 
     public Session startSession(Session session) {
         if (session.getStart() != null && session.getEnd() == null) {
-            return sessionRepository.save(session);
+            session = sessionRepository.save(session);
+            jmsSender.sendMessage("start session with id:" + session.getId());
+            return session;
         } else {
-            throw new SessionException("Session start cannot be null and Session end must be null!");
+            SessionException sessionException = new SessionException("Session start cannot be null and Session end must be null!");
+            jmsSender.sendMessage("start session:" + sessionException.getMessage());
+            throw sessionException;
         }
     }
 
     public Session stopSession(Session session) {
         if (session.getStart() == null || session.getEnd() == null) {
-            throw new SessionException("Session start cannot be null and Session end cannot be null!");
+            SessionException sessionException = new SessionException("Session start cannot be null and Session end cannot be null!");
+            jmsSender.sendMessage("stop session:" + sessionException.getMessage());
+            throw sessionException;
         } else if (session.getEnd().compareTo(session.getStart()) == 1) {
-            throw new SessionException("Session end must me after Session start");
+            SessionException sessionException = new SessionException("Session end must me after Session start");
+            jmsSender.sendMessage("stop session:" + sessionException.getMessage());
+            throw sessionException;
         } else {
-            return sessionRepository.save(session);
+            session = sessionRepository.save(session);
+            return session;
         }
     }
 
     public Session getSessionById(int id) {
-        return sessionRepository.findOne(id);
+        Session session = sessionRepository.findOne(id);
+        jmsSender.sendMessage("get session by id:" + id);
+        return session;
     }
 
     public List<Session> getAllSessions(String username) {
-        return sessionRepository.getAllSessions(username);
+        List<Session> sessions = sessionRepository.getAllSessions(username);
+        jmsSender.sendMessage("get all sessions for user:" + username);
+        return sessions;
     }
 
     @Transactional
@@ -96,6 +113,7 @@ public class SessionService {
         double activity = activity(acceleroMeters);
         dictionary.put("AverageActivity", activity);
 
+        jmsSender.sendMessage("get averages for session with id:" + id);
         return dictionary;
     }
 

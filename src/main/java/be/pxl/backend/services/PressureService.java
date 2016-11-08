@@ -1,5 +1,6 @@
 package be.pxl.backend.services;
 
+import be.pxl.backend.jms.JmsSender;
 import be.pxl.backend.models.Pressure;
 import be.pxl.backend.repositories.PressureRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,13 +16,20 @@ import java.util.List;
 public class PressureService {
 
     @Autowired
+    private JmsSender jmsSender;
+
+    @Autowired
     private PressureRepository pressureRepository;
 
     public Pressure addPressure(Pressure pressure) {
-        return pressureRepository.save(pressure);
+        pressure = pressureRepository.save(pressure);
+        jmsSender.sendMessage("add pressure with id:" + pressure.getId());
+        return pressure;
     }
 
     public List<Pressure> getPressuresForSession(int id) {
-        return pressureRepository.getPressuresForSession(id);
+        List<Pressure> pressures = pressureRepository.getPressuresForSession(id);
+        jmsSender.sendMessage("get pressures for session id:" + id);
+        return pressures;
     }
 }
