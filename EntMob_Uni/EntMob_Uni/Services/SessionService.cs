@@ -17,31 +17,24 @@ namespace EntMob_Uni.Services
             this.sessionRepository = sessionRepository;
         }
 
-        /*public async void PushUser(UserObject user)
+        public void DeleteSessionForSession(User user, int id)
         {
-            repository.PostUser(user.id);
-        }*/
-
-        public async Task<List<Session>> GetAllSessions()
-        {
-            //return await Task.Run(() => repository.GetAllSessions());
-            throw new NotImplementedException();
+            sessionRepository.DeleteSessionForId(user, id);
         }
 
-        public Session GetSessionById(int id)
+        public List<Session> GetAllSessions(User user)
         {
-            //return repository.GetSessionById(id);
-            throw new NotImplementedException();
+            return sessionRepository.GetAllSessions(user);
         }
 
-        List<Session> ISessionService.GetAllSessions()
+        public Dictionary<string, double> GetAverageForSession(User user, int id)
         {
-            throw new NotImplementedException();
+            return sessionRepository.GetAveragesForSession(user, id);
         }
 
-        ISessionService ISessionService.GetSessionById(int id)
+        public Session GetSessionById(User user, int id)
         {
-            throw new NotImplementedException();
+            return sessionRepository.GetSessionById(user, id);
         }
     }
 }

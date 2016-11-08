@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Jogging.Model.JsonConverters;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,76 +11,19 @@ namespace Jogging.Model
     public class Session
     {
 
+        [JsonProperty("id")]
         public int Id { get; set; }
-
-        public String name { get; set; }
+        [JsonProperty("name")]
+        public string Name { get; set; }
+        [JsonProperty("start")]
+        [JsonConverter(typeof(UnixDateTimeConverter))]
         public DateTime Start { get; set; }
+        [JsonProperty("end")]
+        [JsonConverter(typeof(UnixDateTimeConverter))]
         public DateTime End { get; set; }
 
+        [JsonProperty("user")]
         public User User { get; set; }
 
-        public List<Temperature> Temperatures { get; set; }
-        public List<Pressure> Pressures { get; set; }
-        public List<Humidity> Humidities { get; set; }
-        public List<AcceleroMeter> AcceleroMeters { get; set; }
-
-        public static List<Session> GetSessions()
-        {
-            return new List<Session>
-            {
-                new Session()
-                {
-                    Start = DateTime.Now
-                },
-                new Session()
-                {
-                    Start = DateTime.Now
-                },
-                new Session()
-                {
-                    Start = DateTime.Now
-                },
-                new Session()
-                {
-                    Start = DateTime.Now
-                },
-                new Session()
-                {
-                    Start = DateTime.Now
-                },
-                new Session()
-                {
-                    Start = DateTime.Now
-                },
-                new Session()
-                {
-                    Start = DateTime.Now
-                },
-                new Session()
-                {
-                    Start = DateTime.Now
-                },
-                new Session()
-                {
-                    Start = DateTime.Now
-                },
-                new Session()
-                {
-                    Start = DateTime.Now
-                },
-                new Session()
-                {
-                    Start = DateTime.Now
-                },
-                new Session()
-                {
-                    Start = DateTime.Now
-                },
-                new Session()
-                {
-                     Start = DateTime.Now
-                }
-            };
-        }
     }
 }

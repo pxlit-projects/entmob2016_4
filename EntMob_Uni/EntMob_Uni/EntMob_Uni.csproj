@@ -106,10 +106,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\DialogService.cs" />
     <Compile Include="Services\IDialogService.cs" />
-    <Compile Include="Services\ISessionDataService.cs" />
+    <Compile Include="Services\ISessionService.cs" />
     <Compile Include="Services\IUserService.cs" />
     <Compile Include="Services\NavigationService.cs" />
-    <Compile Include="Services\SessionDataService.cs" />
+    <Compile Include="Services\SessionService.cs" />
     <Compile Include="Services\UserService.cs" />
     <Compile Include="Utility\CustomCommand.cs" />
     <Compile Include="Utility\DelegateCommand.cs" />

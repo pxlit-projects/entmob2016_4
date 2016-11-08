@@ -14,13 +14,13 @@
 
         <RelativePanel VerticalAlignment="Center">
             <TextBlock x:ConnectionId='1' x:Name="WelcomeMessage" Text="Welcome" FontSize="36" Margin="4" TextAlignment="Center" RelativePanel.AlignHorizontalCenterWithPanel="True"></TextBlock>
-            <TextBlock x:ConnectionId='2' x:Name="NameMessage" Text="{Binding Username}" HorizontalAlignment="Center" FontSize="30"
+            <TextBlock x:ConnectionId='2' x:Name="NameMessage" Text="{Binding Path=User.Name}" HorizontalAlignment="Center" FontSize="30"
                        RelativePanel.Below="WelcomeMessage" RelativePanel.AlignHorizontalCenterWith="WelcomeMessage"/>
             <TextBlock x:ConnectionId='3' x:Name="InfoMessage" Text="Your Sessions:" HorizontalAlignment="Center" FontSize="20"
                        RelativePanel.Below="NameMessage" RelativePanel.AlignHorizontalCenterWith="NameMessage"/>
 
             <ScrollViewer x:ConnectionId='4' x:Name="SV" RelativePanel.Below="InfoMessage" RelativePanel.AlignHorizontalCenterWith="InfoMessage" Width="500">
-                <ListView ItemsSource="{Binding ListOfSessions}" HorizontalAlignment="Center"
+                <ListView ItemsSource="{Binding Sessions}" HorizontalAlignment="Center"
                           IsItemClickEnabled="True">
                     <interactivity:Interaction.Behaviors>
                         <core:EventTriggerBehavior EventName="ItemClick">
@@ -30,7 +30,7 @@
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <StackPanel>
-                                <TextBlock Text="{Binding Start}"/>
+                                <TextBlock Text="{Binding Name}"/>
                             </StackPanel>
                         </DataTemplate>
                     </ListView.ItemTemplate>

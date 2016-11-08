@@ -28,7 +28,6 @@ namespace EntMob_Uni.View
         public ValuesPage()
         {
             this.InitializeComponent();
-            this.DataContext = new ValuesViewModel();
         }
     }
 }

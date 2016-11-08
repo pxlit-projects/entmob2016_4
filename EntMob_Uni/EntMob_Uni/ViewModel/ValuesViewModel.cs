@@ -20,18 +20,17 @@ namespace EntMob_Uni.ViewModel
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        //private SessionDataService SessionDataService;
+        private ISessionService sessionService;
 
-        public List<Session> ListOfSessions { get; set; }
         public DelegateCommand<ItemClickEventArgs> ItemClickedCommand { get; set; }
 
         public ICommand NextCommand { get; set; }
         public ICommand BackCommand { get; set; }
 
-        public ValuesViewModel()
+        public ValuesViewModel(ISessionService sessionService)
         {
+            this.sessionService = sessionService;
             LoadCommands();
-            LoadSessions();
             RegisterForMessages();
         }
 
@@ -44,32 +43,29 @@ namespace EntMob_Uni.ViewModel
             );
         }
 
-        private string username;
-
-        public string Username
+        private void ReceiveMessage(User user)
         {
-            get
-            {
-                return username;
-            }
-            set
-            {
-                username = value;
-                RaisePropertyChanged("Username");
-            }
+            this.User = user;
+            LoadSessions();
         }
-
-        private void ReceiveMessage(User message)
-        {
-            Username = message.Name;
-        }
-
 
         private void RaisePropertyChanged(string propertyName)
         {
             if (PropertyChanged != null)
             {
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+
+        private User user;
+        public User User {
+            get
+            {
+                return user;
+            }
+            set
+            {
+                user = value;
             }
         }
 
@@ -90,15 +86,8 @@ namespace EntMob_Uni.ViewModel
 
         private void LoadSessions()
         {
-            ListOfSessions = Session.GetSessions();
+            Sessions = new ObservableCollection<Session>(sessionService.GetAllSessions(user));
             ItemClickedCommand = new DelegateCommand<ItemClickEventArgs>(OnItemClicked);
-            LoadSession2();
-        }
-
-        private void LoadSession2()
-        {
-            SessionDataService sessionDataService = new SessionDataService();
-            sessionDataService.GetAllSessions();
         }
 
         private void OnItemClicked(ItemClickEventArgs args)

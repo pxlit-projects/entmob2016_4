@@ -13,6 +13,7 @@ namespace EntMob_Uni
     {
 
         private static IUserService userService = new UserService(new UserRepository());
+        private static ISessionService sessionService = new SessionService(new SessionRepository());
 
         private static LoginViewModel loginViewModel;
         private static DetailViewModel detailViewModel;
@@ -43,7 +44,7 @@ namespace EntMob_Uni
         {
             get
             {
-                return valuesViewModel ?? (valuesViewModel = new ValuesViewModel(/*parkingLotDataService, dialogService*/));
+                return valuesViewModel ?? (valuesViewModel = new ValuesViewModel(sessionService));
             }
         }
     }

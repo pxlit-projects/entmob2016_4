@@ -7,9 +7,13 @@ using System.Threading.Tasks;
 
 namespace EntMob_Uni.Services
 {
-    public interface ISessionDataService
+    public interface ISessionService
     {
-        List<Session> GetAllSessions();
-        ISessionDataService GetSessionById(int id);
+
+        List<Session> GetAllSessions(User user);
+        Session GetSessionById(User user, int id);
+        Dictionary<String, Double> GetAverageForSession(User user, int id);
+        void DeleteSessionForSession(User user, int id);
+
     }
 }

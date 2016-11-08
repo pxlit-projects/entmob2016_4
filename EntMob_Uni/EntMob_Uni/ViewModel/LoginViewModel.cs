@@ -32,7 +32,7 @@ namespace EntMob_Uni.ViewModel
             set
             {
                 userName = value;
-                RaisePropertyChanged("Username");
+                RaisePropertyChanged("UserName");
             }
         }
 
@@ -83,6 +83,7 @@ namespace EntMob_Uni.ViewModel
            if(userService.CheckCredentials(ref user))
             {
                 NavigationService.Default.Navigate(typeof(ValuesPage));
+                user.Password = password;
                 Messenger.Default.Send<User>(user);
             } else
             {

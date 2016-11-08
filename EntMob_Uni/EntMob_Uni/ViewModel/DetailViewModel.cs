@@ -19,7 +19,7 @@ namespace EntMob_Uni.ViewModel
         
         public ICommand BackCommand { get; set; }
 
-        private ISessionDataService sessionDataService;
+        private ISessionService sessionDataService;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -44,7 +44,7 @@ namespace EntMob_Uni.ViewModel
 
         }
 
-        public DetailViewModel(ISessionDataService sessionDataService)
+        public DetailViewModel(ISessionService sessionDataService)
         {
             this.sessionDataService = sessionDataService;
         }
