@@ -26,7 +26,7 @@ namespace EntMob_Uni.ViewModel
         private string password;
         private string userName;
 
-        public string Username
+        public string UserName
         {
             get { return userName; }
             set
@@ -86,8 +86,8 @@ namespace EntMob_Uni.ViewModel
                 Messenger.Default.Send<User>(user);
             } else
             {
-                userName = "";
-                password = "";
+                UserName = "";
+                Password = "";
             }
         }
     }

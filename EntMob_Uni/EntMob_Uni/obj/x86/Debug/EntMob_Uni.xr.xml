@@ -9,11 +9,12 @@
     <RootPropertyPathName Name="LoginViewModel" />
     <RootPropertyPathName Name="LoginCommand" />
     <RootPropertyPathName Name="Password" />
-    <RootPropertyPathName Name="Username" />
+    <RootPropertyPathName Name="UserName" />
     <RootPropertyPathName Name="ValuesViewModel" />
     <RootPropertyPathName Name="ListOfSessions" />
     <RootPropertyPathName Name="ItemClickedCommand" />
     <RootPropertyPathName Name="Start" />
+    <RootPropertyPathName Name="Username" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application">

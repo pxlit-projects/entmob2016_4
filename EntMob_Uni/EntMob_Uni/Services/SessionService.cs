@@ -8,13 +8,13 @@ using Jogging.DAL;
 
 namespace EntMob_Uni.Services
 {
-    public class SessionDataService : ISessionDataService
+    public class SessionService : ISessionService
     {
-        SessionRepository repository = new SessionRepository();
+        private ISessionRepository sessionRepository;
 
-        public SessionDataService()
+        public SessionService(ISessionRepository sessionRepository)
         {
-
+            this.sessionRepository = sessionRepository;
         }
 
         /*public async void PushUser(UserObject user)
@@ -34,12 +34,12 @@ namespace EntMob_Uni.Services
             throw new NotImplementedException();
         }
 
-        List<Session> ISessionDataService.GetAllSessions()
+        List<Session> ISessionService.GetAllSessions()
         {
             throw new NotImplementedException();
         }
 
-        ISessionDataService ISessionDataService.GetSessionById(int id)
+        ISessionService ISessionService.GetSessionById(int id)
         {
             throw new NotImplementedException();
         }
