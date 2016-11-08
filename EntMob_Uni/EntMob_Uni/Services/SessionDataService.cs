@@ -24,12 +24,14 @@ namespace EntMob_Uni.Services
 
         public async Task<List<Session>> GetAllSessions()
         {
-            return await Task.Run(() => repository.GetAllSessions());
+            //return await Task.Run(() => repository.GetAllSessions());
+            throw new NotImplementedException();
         }
 
         public Session GetSessionById(int id)
         {
-            return repository.GetSessionById(id);
+            //return repository.GetSessionById(id);
+            throw new NotImplementedException();
         }
 
         List<Session> ISessionDataService.GetAllSessions()

@@ -11,6 +11,7 @@ namespace Jogging.Model
 
         public int Id { get; set; }
 
+        public String name { get; set; }
         public DateTime Start { get; set; }
         public DateTime End { get; set; }
 
@@ -20,7 +21,6 @@ namespace Jogging.Model
         public List<Pressure> Pressures { get; set; }
         public List<Humidity> Humidities { get; set; }
         public List<AcceleroMeter> AcceleroMeters { get; set; }
-
 
         public static List<Session> GetSessions()
         {

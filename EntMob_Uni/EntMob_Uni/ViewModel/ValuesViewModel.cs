@@ -28,7 +28,6 @@ namespace EntMob_Uni.ViewModel
         public ICommand NextCommand { get; set; }
         public ICommand BackCommand { get; set; }
 
-
         public ValuesViewModel()
         {
             LoadCommands();
@@ -62,7 +61,7 @@ namespace EntMob_Uni.ViewModel
 
         private void ReceiveMessage(User message)
         {
-            Username = message.Username;
+            Username = message.Name;
         }
 
 
@@ -93,6 +92,13 @@ namespace EntMob_Uni.ViewModel
         {
             ListOfSessions = Session.GetSessions();
             ItemClickedCommand = new DelegateCommand<ItemClickEventArgs>(OnItemClicked);
+            LoadSession2();
+        }
+
+        private void LoadSession2()
+        {
+            SessionDataService sessionDataService = new SessionDataService();
+            sessionDataService.GetAllSessions();
         }
 
         private void OnItemClicked(ItemClickEventArgs args)

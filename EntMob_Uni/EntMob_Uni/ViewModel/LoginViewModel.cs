@@ -1,10 +1,12 @@
 ﻿using EntMob_Uni.Services;
 using EntMob_Uni.Utility;
 using EntMob_Uni.View;
+using Jogging.DAL;
 using Jogging.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -19,6 +21,9 @@ namespace EntMob_Uni.ViewModel
 
         public ICommand LoginCommand { get; set; }
 
+        private IUserService userService;
+
+        private string password;
         private string userName;
 
         public string Username
@@ -26,8 +31,18 @@ namespace EntMob_Uni.ViewModel
             get { return userName; }
             set
             {
-                    userName = value;
-                    RaisePropertyChanged("Username");
+                userName = value;
+                RaisePropertyChanged("Username");
+            }
+        }
+
+        public string Password
+        {
+            get { return password; }
+            set
+            {
+                password = value;
+                RaisePropertyChanged("Password");
             }
         }
 
@@ -39,25 +54,41 @@ namespace EntMob_Uni.ViewModel
             }
         }
 
-        public LoginViewModel()
+        public LoginViewModel(IUserService userService)
         {
-
+            this.userService = userService;
             LoadCommands();
-
         }
 
         private void LoadCommands()
         {
-            LoginCommand = new CustomCommand(Login, null);
+            LoginCommand = new CustomCommand(Login, CanLogin);
         }
 
+        private bool CanLogin(object o)
+        {
+            if (password != null && userName != null)
+            {
+                return true;
+            }  
+            return false;
+        }
 
         private void Login(object o)
         {
-            NavigationService.Default.Navigate(typeof(ValuesPage));
+            User user = new User();
+            user.Name = userName;
+            user.Password = password;
 
-            var msg = new User() { Username = Username };
-            Messenger.Default.Send<User>(msg);
+           if(userService.CheckCredentials(ref user))
+            {
+                NavigationService.Default.Navigate(typeof(ValuesPage));
+                Messenger.Default.Send<User>(user);
+            } else
+            {
+                userName = "";
+                password = "";
+            }
         }
     }
 }

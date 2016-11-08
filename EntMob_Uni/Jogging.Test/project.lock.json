@@ -3,6 +3,14 @@
   "version": 1,
   "targets": {
     "UAP,Version=v10.0": {
+      "BCrypt.Net-PCL/1.0.1": {
+        "compile": {
+          "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10/BCrypt.Net.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10/BCrypt.Net.dll": {}
+        }
+      },
       "Microsoft.ApplicationInsights/1.2.3": {
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
@@ -1819,6 +1827,14 @@
       }
     },
     "UAP,Version=v10.0/win10-arm": {
+      "BCrypt.Net-PCL/1.0.1": {
+        "compile": {
+          "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10/BCrypt.Net.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10/BCrypt.Net.dll": {}
+        }
+      },
       "Microsoft.ApplicationInsights/1.2.3": {
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
@@ -3496,6 +3512,14 @@
       }
     },
     "UAP,Version=v10.0/win10-arm-aot": {
+      "BCrypt.Net-PCL/1.0.1": {
+        "compile": {
+          "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10/BCrypt.Net.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10/BCrypt.Net.dll": {}
+        }
+      },
       "Microsoft.ApplicationInsights/1.2.3": {
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
@@ -5131,6 +5155,14 @@
       }
     },
     "UAP,Version=v10.0/win10-x64": {
+      "BCrypt.Net-PCL/1.0.1": {
+        "compile": {
+          "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10/BCrypt.Net.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10/BCrypt.Net.dll": {}
+        }
+      },
       "Microsoft.ApplicationInsights/1.2.3": {
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
@@ -6816,6 +6848,14 @@
       }
     },
     "UAP,Version=v10.0/win10-x64-aot": {
+      "BCrypt.Net-PCL/1.0.1": {
+        "compile": {
+          "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10/BCrypt.Net.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10/BCrypt.Net.dll": {}
+        }
+      },
       "Microsoft.ApplicationInsights/1.2.3": {
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
@@ -8451,6 +8491,14 @@
       }
     },
     "UAP,Version=v10.0/win10-x86": {
+      "BCrypt.Net-PCL/1.0.1": {
+        "compile": {
+          "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10/BCrypt.Net.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10/BCrypt.Net.dll": {}
+        }
+      },
       "Microsoft.ApplicationInsights/1.2.3": {
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
@@ -10136,6 +10184,14 @@
       }
     },
     "UAP,Version=v10.0/win10-x86-aot": {
+      "BCrypt.Net-PCL/1.0.1": {
+        "compile": {
+          "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10/BCrypt.Net.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10/BCrypt.Net.dll": {}
+        }
+      },
       "Microsoft.ApplicationInsights/1.2.3": {
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
@@ -11772,6 +11828,16 @@
     }
   },
   "libraries": {
+    "BCrypt.Net-PCL/1.0.1": {
+      "sha512": "SaqujrnwXZHGmvLRGRloKGOOIBX4RMFI0Cv+LSyTRdcB8vZvKgO5uvXvpVrXsoCPfJ63u+eeO+7eeYBfdLhVpQ==",
+      "type": "package",
+      "files": [
+        "BCrypt.Net-PCL.1.0.1.nupkg.sha512",
+        "BCrypt.Net-PCL.nuspec",
+        "Readme.txt",
+        "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10/BCrypt.Net.dll"
+      ]
+    },
     "Microsoft.ApplicationInsights/1.2.3": {
       "sha512": "a34atobxpucCTTX9VCD7aIu6Ydzry+Va7TxK2tTQcfaMvefGW4kUKtg9GHKIn19IaXe+A4oZt/GBqsOt5vQrBA==",
       "type": "package",

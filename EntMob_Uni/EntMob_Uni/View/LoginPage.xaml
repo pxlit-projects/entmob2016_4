@@ -21,7 +21,7 @@
                        RelativePanel.Below="ErrorMessage" RelativePanel.AlignHorizontalCenterWith="ErrorMessage"></TextBlock>
 
             <TextBox x:Name="UsernameTextBox" Text="{Binding Username, Mode=TwoWay}"  Margin="4" Width="250" RelativePanel.Below="Info" PlaceholderText="Username" RelativePanel.AlignHorizontalCenterWith="Info"></TextBox>
-            <PasswordBox x:Name="PasswordBox" Margin="4" Width="250" RelativePanel.Below="UsernameTextBox" PlaceholderText="Password" RelativePanel.AlignHorizontalCenterWith="UsernameTextBox"></PasswordBox>
+            <PasswordBox x:Name="PasswordBox" Password="{Binding Password, Mode=TwoWay}" Margin="4" Width="250" RelativePanel.Below="UsernameTextBox" PlaceholderText="Password" RelativePanel.AlignHorizontalCenterWith="UsernameTextBox"></PasswordBox>
 
             <Button x:Name="SignInButton" Content="Login" Background="DodgerBlue" Foreground="White" Width="80" HorizontalAlignment="Center" Margin="0.20" 
                     RelativePanel.Below="PasswordBox" RelativePanel.AlignHorizontalCenterWith="PasswordBox">

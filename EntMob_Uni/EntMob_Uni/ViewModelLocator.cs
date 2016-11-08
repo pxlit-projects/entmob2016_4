@@ -1,4 +1,6 @@
-﻿using EntMob_Uni.ViewModel;
+﻿using EntMob_Uni.Services;
+using EntMob_Uni.ViewModel;
+using Jogging.DAL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +11,9 @@ namespace EntMob_Uni
 {
     public class ViewModelLocator
     {
+
+        private static IUserService userService = new UserService(new UserRepository());
+
         private static LoginViewModel loginViewModel;
         private static DetailViewModel detailViewModel;
         private static ValuesViewModel valuesViewModel;
@@ -20,7 +25,7 @@ namespace EntMob_Uni
         {
             get
             {
-                return loginViewModel ?? (loginViewModel = new LoginViewModel(/*parkingLotDataService, dialogService*/));
+                return loginViewModel ?? (loginViewModel = new LoginViewModel(userService));
             }
         }
 
