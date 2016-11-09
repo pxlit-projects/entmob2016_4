@@ -57,7 +57,7 @@ public class UserService {
 
     public User getUserByUsername(String username) {
         User user = userRepository.getUserByUsername(username);
-        jmsSender.sendMessage("get user by name:" + user.getName());
+        jmsSender.sendMessage("get user by name:" + username);
         return user;
     }
 

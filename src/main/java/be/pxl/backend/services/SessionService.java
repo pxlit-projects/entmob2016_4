@@ -110,8 +110,10 @@ public class SessionService {
         }
 
         List<AcceleroMeter> acceleroMeters = session.getAcceleroMeters();
-        double activity = activity(acceleroMeters);
-        dictionary.put("AverageActivity", activity);
+        if (acceleroMeters.size() > 0) {
+            double activity = activity(acceleroMeters);
+            dictionary.put("AverageActivity", activity);
+        }
 
         jmsSender.sendMessage("get averages for session with id:" + id);
         return dictionary;
