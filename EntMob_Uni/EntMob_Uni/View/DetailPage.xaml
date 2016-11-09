@@ -9,8 +9,6 @@
     xmlns:core="using:Microsoft.Xaml.Interactions.Core"
     mc:Ignorable="d"
     DataContext="{Binding Source={StaticResource mainViewModelLocator}, Path=DetailViewModel}">
-
-    <RelativePanel>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" x:Name="MainGrid">
 
         <Grid.ColumnDefinitions>
@@ -24,39 +22,42 @@
         </Grid.RowDefinitions>
 
         <Grid x:Name="FirstGrid" Grid.Column="0" Grid.Row="0" Background="CadetBlue">
-            <Image Source="../Images/weather-icon.png" Stretch="None" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-            <TextBlock Text="27°" FontSize="70" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"></TextBlock>
+            <!--<Image Source="../Images/weather-icon.png" Stretch="None" HorizontalAlignment="Right" VerticalAlignment="Center"/> -->
+            <TextBlock Text="{Binding SelectedSession.AverageTemperature, Converter={ StaticResource localValueToDegreesConverter}}" FontSize="70" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"></TextBlock>
         </Grid>
-        <Grid x:Name="SecondGrid" Grid.Column="1" Grid.Row="0" Background="White" >
-            <Image Source="../Images/time.png" Stretch="Fill"/>
-            <TextBlock Text="01:02:55 MIN" FontSize="20" HorizontalAlignment="Center" Foreground="White" VerticalAlignment="Bottom"></TextBlock>
+        <Grid x:Name="SecondGrid" Grid.Column="1" Grid.Row="0" Background="Black" >
+            <!--<Image Source="../Images/time.jpg" Stretch="UniformToFill"/> -->
+            <TextBlock Text="{Binding SelectedSession.AveragePressure}" FontSize="70" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"></TextBlock>
         </Grid>
-        <Grid x:Name="ThirdGrid" Grid.Column="0" Grid.Row="1" Background="WhiteSmoke">
-            <Image Source="../Images/steps.jpg" Stretch="None" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            <TextBlock Text="3451 steps" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"></TextBlock>
+        <Grid x:Name="ThirdGrid" Grid.Column="0" Grid.Row="1" Background="Bisque">
+            <!--<Image Source="../Images/steps.jpg" Stretch="None" HorizontalAlignment="Center" VerticalAlignment="Center"/> -->
+            <TextBlock Text="{Binding SelectedSession.AverageActivity}" FontSize="70" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Gray" Grid.ColumnSpan="2" Margin="55,33,54,33"></TextBlock>
         </Grid>
-        <Grid x:Name="FourthGrid" Grid.Column="1" Grid.Row="1" Background="White">
-            <Image Source="../Images/distance.jpeg" Stretch="Fill"/>
-            <TextBlock Text="9.8 km" FontSize="40" HorizontalAlignment="Right" VerticalAlignment="Bottom" Foreground="White"></TextBlock>
+        <Grid x:Name="FourthGrid" Grid.Column="1" Grid.Row="1" Background="Linen">
+            <!--<Image Source="../Images/distance.jpeg" Stretch="Fill"/> -->
+            <TextBlock Text="{Binding SelectedSession.AverageHumidity}" FontSize="70" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Gray"></TextBlock>
         </Grid>
-        <Grid x:Name="FifthGrid" Grid.Column="0" Grid.Row="2" Background="White">
-            <Image Source="../Images/humidity.jpg" Stretch="Fill"/>
-            <TextBlock Text="83 %" FontSize="30" HorizontalAlignment="Right" VerticalAlignment="Bottom" Foreground="Black"></TextBlock>
-        </Grid>
-        <Grid x:Name="sixthGrid" Grid.Column="1" Grid.Row="2" Background="White">
-            <Image Source="../Images/baro.jpg" Stretch="None" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            <TextBlock Text="96" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"></TextBlock>
-        </Grid>
-
-        <Button x:Name="BackButton" Content="BACK">
+        <Button Grid.Row="1" Grid.Column="0" x:Name="BackButton" Content="BACK">
             <interactivity:Interaction.Behaviors>
                 <core:EventTriggerBehavior EventName="Click">
                     <core:InvokeCommandAction Command="{Binding BackCommand}"/>
                 </core:EventTriggerBehavior>
             </interactivity:Interaction.Behaviors>
         </Button>
-        
+        <Grid x:Name="FifthGrid" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Background="RosyBrown">
+            <!--<Image Source="../Images/humidity.jpg" Stretch="Fill"/>-->
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Row="0" Grid.Column="0" Text="{Binding SelectedSession.Name}" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"></TextBlock>
+            <TextBlock Grid.Row="1" Grid.Column="0" Text="{Binding SelectedSession.Start, Converter= {StaticResource localDateTimeConverter}}" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"></TextBlock>
+            <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding SelectedSession.End, Converter= {StaticResource localDateTimeConverter}}" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"></TextBlock>
+            <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding SelectedSession.Duration, Converter={StaticResource localTimeSpanConverter}}" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"></TextBlock>
+        </Grid>
     </Grid>
-    </RelativePanel>
-
 </Page>

@@ -25,5 +25,22 @@ namespace Jogging.Model
         [JsonProperty("user")]
         public User User { get; set; }
 
+        [JsonIgnore]
+        public double AverageTemperature { get; set; }
+        [JsonIgnore]
+        public double AverageHumidity { get; set; }
+        [JsonIgnore]
+        public double AverageActivity { get; set; }
+        [JsonIgnore]
+        public double AveragePressure { get; set; }
+
+        public TimeSpan Duration
+        {
+            get
+            {
+                return End - Start;
+            }
+        }
+
     }
 }

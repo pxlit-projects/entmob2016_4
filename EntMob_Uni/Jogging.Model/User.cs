@@ -9,6 +9,7 @@ namespace Jogging.Model
 {
     public class User
     {
+        [JsonProperty("id")]
         public int Id { get; set; }
         [JsonProperty("name")]
         public string Name { get; set; }
@@ -23,6 +24,10 @@ namespace Jogging.Model
         [JsonProperty("enabled")]
         public bool Enabled { get; set; }
 
+        [JsonProperty("sessions")]
         public HashSet<Session> Sessions { get; set; }
+
+        [JsonIgnore]
+        public static User DefaultUser = new User() { Name = "User", Password = "user" };
     }
 }

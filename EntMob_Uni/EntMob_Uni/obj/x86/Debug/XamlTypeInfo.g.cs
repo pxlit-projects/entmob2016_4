@@ -132,47 +132,51 @@ namespace EntMob_Uni.EntMob_Uni_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[19];
+            _typeNameTable = new string[21];
             _typeNameTable[0] = "EntMob_Uni.Converter.ValueToDegreesConverter";
             _typeNameTable[1] = "Object";
             _typeNameTable[2] = "EntMob_Uni.Converter.ValueToKmConverter";
-            _typeNameTable[3] = "EntMob_Uni.ViewModelLocator";
-            _typeNameTable[4] = "Microsoft.Xaml.Interactivity.Interaction";
-            _typeNameTable[5] = "Microsoft.Xaml.Interactivity.BehaviorCollection";
-            _typeNameTable[6] = "Windows.UI.Xaml.DependencyObjectCollection";
-            _typeNameTable[7] = "Windows.UI.Xaml.DependencyObject";
-            _typeNameTable[8] = "Microsoft.Xaml.Interactions.Core.EventTriggerBehavior";
-            _typeNameTable[9] = "Microsoft.Xaml.Interactivity.ActionCollection";
-            _typeNameTable[10] = "String";
-            _typeNameTable[11] = "Microsoft.Xaml.Interactions.Core.InvokeCommandAction";
-            _typeNameTable[12] = "System.Windows.Input.ICommand";
-            _typeNameTable[13] = "Windows.UI.Xaml.Data.IValueConverter";
-            _typeNameTable[14] = "EntMob_Uni.View.DetailPage";
-            _typeNameTable[15] = "Windows.UI.Xaml.Controls.Page";
-            _typeNameTable[16] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[17] = "EntMob_Uni.View.LoginPage";
-            _typeNameTable[18] = "EntMob_Uni.View.ValuesPage";
+            _typeNameTable[3] = "EntMob_Uni.Converter.TimeSpanConverter";
+            _typeNameTable[4] = "EntMob_Uni.Converter.DateTimeConverter";
+            _typeNameTable[5] = "EntMob_Uni.ViewModelLocator";
+            _typeNameTable[6] = "Microsoft.Xaml.Interactivity.Interaction";
+            _typeNameTable[7] = "Microsoft.Xaml.Interactivity.BehaviorCollection";
+            _typeNameTable[8] = "Windows.UI.Xaml.DependencyObjectCollection";
+            _typeNameTable[9] = "Windows.UI.Xaml.DependencyObject";
+            _typeNameTable[10] = "Microsoft.Xaml.Interactions.Core.EventTriggerBehavior";
+            _typeNameTable[11] = "Microsoft.Xaml.Interactivity.ActionCollection";
+            _typeNameTable[12] = "String";
+            _typeNameTable[13] = "Microsoft.Xaml.Interactions.Core.InvokeCommandAction";
+            _typeNameTable[14] = "System.Windows.Input.ICommand";
+            _typeNameTable[15] = "Windows.UI.Xaml.Data.IValueConverter";
+            _typeNameTable[16] = "EntMob_Uni.View.DetailPage";
+            _typeNameTable[17] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[18] = "Windows.UI.Xaml.Controls.UserControl";
+            _typeNameTable[19] = "EntMob_Uni.View.LoginPage";
+            _typeNameTable[20] = "EntMob_Uni.View.ValuesPage";
 
-            _typeTable = new global::System.Type[19];
+            _typeTable = new global::System.Type[21];
             _typeTable[0] = typeof(global::EntMob_Uni.Converter.ValueToDegreesConverter);
             _typeTable[1] = typeof(global::System.Object);
             _typeTable[2] = typeof(global::EntMob_Uni.Converter.ValueToKmConverter);
-            _typeTable[3] = typeof(global::EntMob_Uni.ViewModelLocator);
-            _typeTable[4] = typeof(global::Microsoft.Xaml.Interactivity.Interaction);
-            _typeTable[5] = typeof(global::Microsoft.Xaml.Interactivity.BehaviorCollection);
-            _typeTable[6] = typeof(global::Windows.UI.Xaml.DependencyObjectCollection);
-            _typeTable[7] = typeof(global::Windows.UI.Xaml.DependencyObject);
-            _typeTable[8] = typeof(global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior);
-            _typeTable[9] = typeof(global::Microsoft.Xaml.Interactivity.ActionCollection);
-            _typeTable[10] = typeof(global::System.String);
-            _typeTable[11] = typeof(global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction);
-            _typeTable[12] = typeof(global::System.Windows.Input.ICommand);
-            _typeTable[13] = typeof(global::Windows.UI.Xaml.Data.IValueConverter);
-            _typeTable[14] = typeof(global::EntMob_Uni.View.DetailPage);
-            _typeTable[15] = typeof(global::Windows.UI.Xaml.Controls.Page);
-            _typeTable[16] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[17] = typeof(global::EntMob_Uni.View.LoginPage);
-            _typeTable[18] = typeof(global::EntMob_Uni.View.ValuesPage);
+            _typeTable[3] = typeof(global::EntMob_Uni.Converter.TimeSpanConverter);
+            _typeTable[4] = typeof(global::EntMob_Uni.Converter.DateTimeConverter);
+            _typeTable[5] = typeof(global::EntMob_Uni.ViewModelLocator);
+            _typeTable[6] = typeof(global::Microsoft.Xaml.Interactivity.Interaction);
+            _typeTable[7] = typeof(global::Microsoft.Xaml.Interactivity.BehaviorCollection);
+            _typeTable[8] = typeof(global::Windows.UI.Xaml.DependencyObjectCollection);
+            _typeTable[9] = typeof(global::Windows.UI.Xaml.DependencyObject);
+            _typeTable[10] = typeof(global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior);
+            _typeTable[11] = typeof(global::Microsoft.Xaml.Interactivity.ActionCollection);
+            _typeTable[12] = typeof(global::System.String);
+            _typeTable[13] = typeof(global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction);
+            _typeTable[14] = typeof(global::System.Windows.Input.ICommand);
+            _typeTable[15] = typeof(global::Windows.UI.Xaml.Data.IValueConverter);
+            _typeTable[16] = typeof(global::EntMob_Uni.View.DetailPage);
+            _typeTable[17] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[18] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
+            _typeTable[19] = typeof(global::EntMob_Uni.View.LoginPage);
+            _typeTable[20] = typeof(global::EntMob_Uni.View.ValuesPage);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -209,21 +213,23 @@ namespace EntMob_Uni.EntMob_Uni_XamlTypeInfo
 
         private object Activate_0_ValueToDegreesConverter() { return new global::EntMob_Uni.Converter.ValueToDegreesConverter(); }
         private object Activate_2_ValueToKmConverter() { return new global::EntMob_Uni.Converter.ValueToKmConverter(); }
-        private object Activate_3_ViewModelLocator() { return new global::EntMob_Uni.ViewModelLocator(); }
-        private object Activate_5_BehaviorCollection() { return new global::Microsoft.Xaml.Interactivity.BehaviorCollection(); }
-        private object Activate_8_EventTriggerBehavior() { return new global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior(); }
-        private object Activate_9_ActionCollection() { return new global::Microsoft.Xaml.Interactivity.ActionCollection(); }
-        private object Activate_11_InvokeCommandAction() { return new global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction(); }
-        private object Activate_14_DetailPage() { return new global::EntMob_Uni.View.DetailPage(); }
-        private object Activate_17_LoginPage() { return new global::EntMob_Uni.View.LoginPage(); }
-        private object Activate_18_ValuesPage() { return new global::EntMob_Uni.View.ValuesPage(); }
-        private void VectorAdd_5_BehaviorCollection(object instance, object item)
+        private object Activate_3_TimeSpanConverter() { return new global::EntMob_Uni.Converter.TimeSpanConverter(); }
+        private object Activate_4_DateTimeConverter() { return new global::EntMob_Uni.Converter.DateTimeConverter(); }
+        private object Activate_5_ViewModelLocator() { return new global::EntMob_Uni.ViewModelLocator(); }
+        private object Activate_7_BehaviorCollection() { return new global::Microsoft.Xaml.Interactivity.BehaviorCollection(); }
+        private object Activate_10_EventTriggerBehavior() { return new global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior(); }
+        private object Activate_11_ActionCollection() { return new global::Microsoft.Xaml.Interactivity.ActionCollection(); }
+        private object Activate_13_InvokeCommandAction() { return new global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction(); }
+        private object Activate_16_DetailPage() { return new global::EntMob_Uni.View.DetailPage(); }
+        private object Activate_19_LoginPage() { return new global::EntMob_Uni.View.LoginPage(); }
+        private object Activate_20_ValuesPage() { return new global::EntMob_Uni.View.ValuesPage(); }
+        private void VectorAdd_7_BehaviorCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Windows.UI.Xaml.DependencyObject>)instance;
             var newItem = (global::Windows.UI.Xaml.DependencyObject)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_9_ActionCollection(object instance, object item)
+        private void VectorAdd_11_ActionCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Windows.UI.Xaml.DependencyObject>)instance;
             var newItem = (global::Windows.UI.Xaml.DependencyObject)item;
@@ -258,37 +264,51 @@ namespace EntMob_Uni.EntMob_Uni_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 3:   //  EntMob_Uni.ViewModelLocator
+            case 3:   //  EntMob_Uni.Converter.TimeSpanConverter
                 userType = new global::EntMob_Uni.EntMob_Uni_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_3_ViewModelLocator;
+                userType.Activator = Activate_3_TimeSpanConverter;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 4:   //  Microsoft.Xaml.Interactivity.Interaction
+            case 4:   //  EntMob_Uni.Converter.DateTimeConverter
+                userType = new global::EntMob_Uni.EntMob_Uni_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_4_DateTimeConverter;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 5:   //  EntMob_Uni.ViewModelLocator
+                userType = new global::EntMob_Uni.EntMob_Uni_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_5_ViewModelLocator;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 6:   //  Microsoft.Xaml.Interactivity.Interaction
                 userType = new global::EntMob_Uni.EntMob_Uni_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.AddMemberName("Behaviors");
                 xamlType = userType;
                 break;
 
-            case 5:   //  Microsoft.Xaml.Interactivity.BehaviorCollection
+            case 7:   //  Microsoft.Xaml.Interactivity.BehaviorCollection
                 userType = new global::EntMob_Uni.EntMob_Uni_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObjectCollection"));
-                userType.CollectionAdd = VectorAdd_5_BehaviorCollection;
+                userType.CollectionAdd = VectorAdd_7_BehaviorCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 6:   //  Windows.UI.Xaml.DependencyObjectCollection
+            case 8:   //  Windows.UI.Xaml.DependencyObjectCollection
                 xamlType = new global::EntMob_Uni.EntMob_Uni_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 7:   //  Windows.UI.Xaml.DependencyObject
+            case 9:   //  Windows.UI.Xaml.DependencyObject
                 xamlType = new global::EntMob_Uni.EntMob_Uni_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 8:   //  Microsoft.Xaml.Interactions.Core.EventTriggerBehavior
+            case 10:   //  Microsoft.Xaml.Interactions.Core.EventTriggerBehavior
                 userType = new global::EntMob_Uni.EntMob_Uni_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_8_EventTriggerBehavior;
+                userType.Activator = Activate_10_EventTriggerBehavior;
                 userType.SetContentPropertyName("Microsoft.Xaml.Interactions.Core.EventTriggerBehavior.Actions");
                 userType.AddMemberName("Actions");
                 userType.AddMemberName("EventName");
@@ -297,20 +317,20 @@ namespace EntMob_Uni.EntMob_Uni_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 9:   //  Microsoft.Xaml.Interactivity.ActionCollection
+            case 11:   //  Microsoft.Xaml.Interactivity.ActionCollection
                 userType = new global::EntMob_Uni.EntMob_Uni_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObjectCollection"));
-                userType.CollectionAdd = VectorAdd_9_ActionCollection;
+                userType.CollectionAdd = VectorAdd_11_ActionCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 10:   //  String
+            case 12:   //  String
                 xamlType = new global::EntMob_Uni.EntMob_Uni_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 11:   //  Microsoft.Xaml.Interactions.Core.InvokeCommandAction
+            case 13:   //  Microsoft.Xaml.Interactions.Core.InvokeCommandAction
                 userType = new global::EntMob_Uni.EntMob_Uni_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_11_InvokeCommandAction;
+                userType.Activator = Activate_13_InvokeCommandAction;
                 userType.AddMemberName("Command");
                 userType.AddMemberName("CommandParameter");
                 userType.AddMemberName("InputConverter");
@@ -319,41 +339,41 @@ namespace EntMob_Uni.EntMob_Uni_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 12:   //  System.Windows.Input.ICommand
+            case 14:   //  System.Windows.Input.ICommand
                 userType = new global::EntMob_Uni.EntMob_Uni_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 13:   //  Windows.UI.Xaml.Data.IValueConverter
+            case 15:   //  Windows.UI.Xaml.Data.IValueConverter
                 xamlType = new global::EntMob_Uni.EntMob_Uni_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 14:   //  EntMob_Uni.View.DetailPage
+            case 16:   //  EntMob_Uni.View.DetailPage
                 userType = new global::EntMob_Uni.EntMob_Uni_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_14_DetailPage;
+                userType.Activator = Activate_16_DetailPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 15:   //  Windows.UI.Xaml.Controls.Page
+            case 17:   //  Windows.UI.Xaml.Controls.Page
                 xamlType = new global::EntMob_Uni.EntMob_Uni_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 16:   //  Windows.UI.Xaml.Controls.UserControl
+            case 18:   //  Windows.UI.Xaml.Controls.UserControl
                 xamlType = new global::EntMob_Uni.EntMob_Uni_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 17:   //  EntMob_Uni.View.LoginPage
+            case 19:   //  EntMob_Uni.View.LoginPage
                 userType = new global::EntMob_Uni.EntMob_Uni_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_17_LoginPage;
+                userType.Activator = Activate_19_LoginPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 18:   //  EntMob_Uni.View.ValuesPage
+            case 20:   //  EntMob_Uni.View.ValuesPage
                 userType = new global::EntMob_Uni.EntMob_Uni_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_18_ValuesPage;
+                userType.Activator = Activate_20_ValuesPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

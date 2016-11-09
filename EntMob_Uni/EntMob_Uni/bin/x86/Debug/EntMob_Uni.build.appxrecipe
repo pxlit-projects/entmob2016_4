@@ -379,8 +379,8 @@
     <AppxPackagedFile Include="C:\Users\Jonas Beckers\Documents\GitHub\entmob2016_4\EntMob_Uni\EntMob_Uni\Images\steps.jpg">
       <PackagePath>Images\steps.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jonas Beckers\Documents\GitHub\entmob2016_4\EntMob_Uni\EntMob_Uni\Images\time.png">
-      <PackagePath>Images\time.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Jonas Beckers\Documents\GitHub\entmob2016_4\EntMob_Uni\EntMob_Uni\Images\time.jpg">
+      <PackagePath>Images\time.jpg</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jonas Beckers\Documents\GitHub\entmob2016_4\EntMob_Uni\EntMob_Uni\Images\weather-icon.png">
       <PackagePath>Images\weather-icon.png</PackagePath>

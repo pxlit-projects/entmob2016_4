@@ -35,7 +35,7 @@ namespace EntMob_Uni
         {
             get
             {
-                return detailViewModel ?? (detailViewModel = new DetailViewModel(/*parkingLotDataService, dialogService*/));
+                return detailViewModel ?? (detailViewModel = new DetailViewModel(sessionService));
             }
         }
 

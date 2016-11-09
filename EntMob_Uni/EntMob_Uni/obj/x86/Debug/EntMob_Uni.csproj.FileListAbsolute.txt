@@ -429,6 +429,7 @@ C:\Users\Gebruiker\Documents\entmob2016_4\EntMob_Uni\EntMob_Uni\obj\x86\Debug\qu
 C:\Users\Gebruiker\Documents\entmob2016_4\EntMob_Uni\EntMob_Uni\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Gebruiker\Documents\entmob2016_4\EntMob_Uni\EntMob_Uni\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\Gebruiker\Documents\entmob2016_4\EntMob_Uni\EntMob_Uni\bin\x86\Debug\Newtonsoft.Json.dll
+C:\Users\Jonas Beckers\Documents\GitHub\entmob2016_4\EntMob_Uni\EntMob_Uni\obj\x86\Debug\EntMob_Uni.csprojResolveAssemblyReference.cache
 C:\Users\Jonas Beckers\Documents\GitHub\entmob2016_4\EntMob_Uni\EntMob_Uni\obj\x86\Debug\App.g.i.cs
 C:\Users\Jonas Beckers\Documents\GitHub\entmob2016_4\EntMob_Uni\EntMob_Uni\obj\x86\Debug\App.g.cs
 C:\Users\Jonas Beckers\Documents\GitHub\entmob2016_4\EntMob_Uni\EntMob_Uni\obj\x86\Debug\View\DetailPage.g.i.cs
@@ -437,7 +438,6 @@ C:\Users\Jonas Beckers\Documents\GitHub\entmob2016_4\EntMob_Uni\EntMob_Uni\obj\x
 C:\Users\Jonas Beckers\Documents\GitHub\entmob2016_4\EntMob_Uni\EntMob_Uni\obj\x86\Debug\View\LoginPage.g.cs
 C:\Users\Jonas Beckers\Documents\GitHub\entmob2016_4\EntMob_Uni\EntMob_Uni\obj\x86\Debug\View\ValuesPage.g.i.cs
 C:\Users\Jonas Beckers\Documents\GitHub\entmob2016_4\EntMob_Uni\EntMob_Uni\obj\x86\Debug\View\ValuesPage.g.cs
-C:\Users\Jonas Beckers\Documents\GitHub\entmob2016_4\EntMob_Uni\EntMob_Uni\obj\x86\Debug\XamlTypeInfo.g.cs
 C:\Users\Jonas Beckers\Documents\GitHub\entmob2016_4\EntMob_Uni\EntMob_Uni\obj\x86\Debug\App.xaml
 C:\Users\Jonas Beckers\Documents\GitHub\entmob2016_4\EntMob_Uni\EntMob_Uni\obj\x86\Debug\View\DetailPage.xaml
 C:\Users\Jonas Beckers\Documents\GitHub\entmob2016_4\EntMob_Uni\EntMob_Uni\obj\x86\Debug\View\LoginPage.xaml
@@ -446,7 +446,6 @@ C:\Users\Jonas Beckers\Documents\GitHub\entmob2016_4\EntMob_Uni\EntMob_Uni\obj\x
 C:\Users\Jonas Beckers\Documents\GitHub\entmob2016_4\EntMob_Uni\EntMob_Uni\obj\x86\Debug\View\DetailPage.xbf
 C:\Users\Jonas Beckers\Documents\GitHub\entmob2016_4\EntMob_Uni\EntMob_Uni\obj\x86\Debug\View\LoginPage.xbf
 C:\Users\Jonas Beckers\Documents\GitHub\entmob2016_4\EntMob_Uni\EntMob_Uni\obj\x86\Debug\View\ValuesPage.xbf
-C:\Users\Jonas Beckers\Documents\GitHub\entmob2016_4\EntMob_Uni\EntMob_Uni\obj\x86\Debug\XamlSaveStateFile.xml
 C:\Users\Jonas Beckers\Documents\GitHub\entmob2016_4\EntMob_Uni\EntMob_Uni\bin\x86\Debug\ApplicationInsights.config
 C:\Users\Jonas Beckers\Documents\GitHub\entmob2016_4\EntMob_Uni\EntMob_Uni\bin\x86\Debug\App.xbf
 C:\Users\Jonas Beckers\Documents\GitHub\entmob2016_4\EntMob_Uni\EntMob_Uni\bin\x86\Debug\View\DetailPage.xbf
@@ -576,7 +575,8 @@ C:\Users\Jonas Beckers\Documents\GitHub\entmob2016_4\EntMob_Uni\EntMob_Uni\bin\x
 C:\Users\Jonas Beckers\Documents\GitHub\entmob2016_4\EntMob_Uni\EntMob_Uni\bin\x86\Debug\Jogging.DAL.pri
 C:\Users\Jonas Beckers\Documents\GitHub\entmob2016_4\EntMob_Uni\EntMob_Uni\bin\x86\Debug\Jogging.Model.pdb
 C:\Users\Jonas Beckers\Documents\GitHub\entmob2016_4\EntMob_Uni\EntMob_Uni\bin\x86\Debug\Jogging.Model.pri
-C:\Users\Jonas Beckers\Documents\GitHub\entmob2016_4\EntMob_Uni\EntMob_Uni\obj\x86\Debug\EntMob_Uni.csprojResolveAssemblyReference.cache
+C:\Users\Jonas Beckers\Documents\GitHub\entmob2016_4\EntMob_Uni\EntMob_Uni\obj\x86\Debug\XamlTypeInfo.g.cs
+C:\Users\Jonas Beckers\Documents\GitHub\entmob2016_4\EntMob_Uni\EntMob_Uni\obj\x86\Debug\XamlSaveStateFile.xml
 C:\Users\Jonas Beckers\Documents\GitHub\entmob2016_4\EntMob_Uni\EntMob_Uni\obj\x86\Debug\EntMob_Uni.exe
 C:\Users\Jonas Beckers\Documents\GitHub\entmob2016_4\EntMob_Uni\EntMob_Uni\obj\x86\Debug\EntMob_Uni.pdb
 C:\Users\Jonas Beckers\Documents\GitHub\entmob2016_4\EntMob_Uni\EntMob_Uni\obj\x86\Debug\ResourceHandlingTask.state

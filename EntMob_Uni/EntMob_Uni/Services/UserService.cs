@@ -24,22 +24,22 @@ namespace EntMob_Uni.Services
             return userRepository.PostUser(user);
         }
 
-        public bool CheckCredentials(ref User user)
+        public User CheckCredentials(User user)
         {
             try
             {
                 User userByName = userRepository.GetUserByName(user.Name);
                 if (BCrypt.Net.BCrypt.CheckPassword(user.Password, userByName.Password))
                 {
-                    user = userByName;
-                    return true;
+                    return userByName;
                 }
-            } catch(Exception ex)
-            {
-                Debug.WriteLine(ex.Message);
             }
-           
-            return false;
+            catch (Exception ex)
+            {
+                Debug.WriteLine( "Test" + ex.Message);
+            }
+
+            return null;
         }
     }
 }

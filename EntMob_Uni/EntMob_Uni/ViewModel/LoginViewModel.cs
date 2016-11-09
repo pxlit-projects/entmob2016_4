@@ -62,30 +62,28 @@ namespace EntMob_Uni.ViewModel
 
         private void LoadCommands()
         {
-            LoginCommand = new CustomCommand(Login, CanLogin);
-        }
+            LoginCommand = new CustomCommand(Login, null);
+        }     
 
-        private bool CanLogin(object o)
-        {
-            if (password != null && userName != null)
-            {
-                return true;
-            }  
-            return false;
-        }
-
-        private void Login(object o)
+        private async void Login(object o)
         {
             User user = new User();
             user.Name = userName;
             user.Password = password;
 
-           if(userService.CheckCredentials(ref user))
+            var result = await Task.Run(() =>
+            {
+                user = userService.CheckCredentials(user);
+                return user;
+            });
+
+            if (result != null)
             {
                 NavigationService.Default.Navigate(typeof(ValuesPage));
-                user.Password = password;
-                Messenger.Default.Send<User>(user);
-            } else
+                result.Password = password;
+                Messenger.Default.Send<User>(result);
+            }
+            else
             {
                 UserName = "";
                 Password = "";

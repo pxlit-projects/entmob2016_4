@@ -1,5 +1,4 @@
-﻿using EntMob_Uni.Messages;
-using EntMob_Uni.Services;
+﻿using EntMob_Uni.Services;
 using EntMob_Uni.Utility;
 using EntMob_Uni.View;
 using Jogging.Model;
@@ -19,7 +18,7 @@ namespace EntMob_Uni.ViewModel
         
         public ICommand BackCommand { get; set; }
 
-        private ISessionService sessionDataService;
+        private ISessionService sessionService;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -34,33 +33,41 @@ namespace EntMob_Uni.ViewModel
             set
             {
                 selectedSession = value;
+                RaisePropertyChanged("SelectedSession");
             }
         }
 
-        public DetailViewModel()
+        private void RaisePropertyChanged(string propertyName)
         {
-            LoadCommands();
-            RegisterForMessages();
-
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
         }
 
-        public DetailViewModel(ISessionService sessionDataService)
+        public DetailViewModel(ISessionService sessionService)
         {
-            this.sessionDataService = sessionDataService;
+            this.sessionService = sessionService;
+            LoadCommands();
+            RegisterForMessages();
         }
 
         private void RegisterForMessages()
         {
-            Messenger.Default.Register<SessionSelectedMessage>(this, OnSessionReceived);
+            Messenger.Default.Register<Session>(this, OnSessionReceived);
         }
 
-        private void OnSessionReceived(SessionSelectedMessage m)
+        private void OnSessionReceived(Session session)
         {
-            selectedSession = m.SelectedSession;
-
-            Messenger.Default.Send<DrawSessionMessage>(new DrawSessionMessage() { SelectedSession = selectedSession });
+            SelectedSession = session;
+            LoadSessionAverages();
         }
 
+        private async void LoadSessionAverages()
+        {
+            var result = await Task.Run(() => sessionService.GetAverageForSession(selectedSession));
+            SelectedSession = result;
+        }
 
         private void LoadCommands()
         {
@@ -70,7 +77,6 @@ namespace EntMob_Uni.ViewModel
         private void Back(object o)
         {
             NavigationService.Default.Navigate(typeof(ValuesPage));
-            //Messenger.Default.Send<ParkingsCollectedMessage>(new ParkingsCollectedMessage() { ParkingLots = lots, MyLocation = myLocation });
         }
 
     }

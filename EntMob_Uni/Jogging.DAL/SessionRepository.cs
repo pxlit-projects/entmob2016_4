@@ -51,6 +51,7 @@ namespace Jogging.DAL
             string allSessions = BASE_URL + "/session/start";
             var uri = new Uri(allSessions);
             var client = new HttpClient();
+            var defaultUser = User.DefaultUser;
             client.DefaultRequestHeaders.Authorization = BasicAuthenticationHelper.CreateBasicHeader(defaultUser.Name, defaultUser.Password);
             string sessionObject = JsonConvert.SerializeObject(session);
             StringContent content = new StringContent(sessionObject.ToString(), Encoding.UTF8, "application/json");
@@ -65,6 +66,7 @@ namespace Jogging.DAL
             string stopSession = BASE_URL + "/session/stop";
             var uri = new Uri(stopSession);
             var client = new HttpClient();
+            var defaultUser = User.DefaultUser;
             client.DefaultRequestHeaders.Authorization = BasicAuthenticationHelper.CreateBasicHeader(defaultUser.Name, defaultUser.Password);
             string sessionObject = JsonConvert.SerializeObject(session);
             StringContent content = new StringContent(sessionObject.ToString(), Encoding.UTF8, "application/json");

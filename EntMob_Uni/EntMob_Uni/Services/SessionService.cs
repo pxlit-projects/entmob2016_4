@@ -27,9 +27,14 @@ namespace EntMob_Uni.Services
             return sessionRepository.GetAllSessions(user);
         }
 
-        public Dictionary<string, double> GetAverageForSession(User user, int id)
+        public Session GetAverageForSession(Session session)
         {
-            return sessionRepository.GetAveragesForSession(user, id);
+            Dictionary<String, Double> averages = sessionRepository.GetAveragesForSession(session.User, session.Id);
+            session.AverageActivity =  averages.ContainsKey("AverageActivity") ? averages["AverageActivity"]: 0;
+            session.AverageHumidity = averages.ContainsKey("AverageHumidity") ? averages["AverageHumidity"]: 0;
+            session.AveragePressure = averages.ContainsKey("Averagepressure") ? averages["AveragePressure"]: 0;
+            session.AverageTemperature = averages.ContainsKey("AverageTemperature")?  averages["AverageTemperature"]: 0;
+            return session;
         }
 
         public Session GetSessionById(User user, int id)

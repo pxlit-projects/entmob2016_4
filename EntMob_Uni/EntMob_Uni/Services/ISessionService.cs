@@ -12,7 +12,7 @@ namespace EntMob_Uni.Services
 
         List<Session> GetAllSessions(User user);
         Session GetSessionById(User user, int id);
-        Dictionary<String, Double> GetAverageForSession(User user, int id);
+        Session GetAverageForSession(Session session);
         void DeleteSessionForSession(User user, int id);
 
     }

@@ -10,6 +10,8 @@
         <ResourceDictionary>
             <converter:ValueToDegreesConverter x:Key="localValueToDegreesConverter"></converter:ValueToDegreesConverter>
             <converter:ValueToKmConverter x:Key="localValueToKmConverter"></converter:ValueToKmConverter>
+            <converter:TimeSpanConverter x:Key="localTimeSpanConverter"></converter:TimeSpanConverter>
+            <converter:DateTimeConverter x:Key="localDateTimeConverter"></converter:DateTimeConverter>
             <local:ViewModelLocator x:Key="mainViewModelLocator"></local:ViewModelLocator>
         </ResourceDictionary>
     </Application.Resources>

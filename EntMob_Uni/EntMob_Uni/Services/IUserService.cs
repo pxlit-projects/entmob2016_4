@@ -11,7 +11,7 @@ namespace EntMob_Uni.Services
     public interface IUserService
     {
 
-        bool CheckCredentials(ref User user);
+        User CheckCredentials(User user);
         User AddUser(User user);
 
     }

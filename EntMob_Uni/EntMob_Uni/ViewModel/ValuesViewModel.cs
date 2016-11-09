@@ -36,11 +36,7 @@ namespace EntMob_Uni.ViewModel
 
         private void RegisterForMessages()
         {
-            Messenger.Default.Register<User>
-            (
-                 this,
-                 (action) => ReceiveMessage(action)
-            );
+            Messenger.Default.Register<User>(this, ReceiveMessage);
         }
 
         private void ReceiveMessage(User user)
@@ -83,35 +79,38 @@ namespace EntMob_Uni.ViewModel
             }
         }
 
-
-        private void LoadSessions()
+        private async void LoadSessions()
         {
-            Sessions = new ObservableCollection<Session>(sessionService.GetAllSessions(user));
-            ItemClickedCommand = new DelegateCommand<ItemClickEventArgs>(OnItemClicked);
+            var result = await Task.Run(() =>
+            {
+                return sessionService.GetAllSessions(user);
+            });
+            Sessions = new ObservableCollection<Session>(result);
         }
 
         private void OnItemClicked(ItemClickEventArgs args)
         {
             Session session = args.ClickedItem as Session;
+            session.User = user;
             NavigationService.Default.Navigate(typeof(DetailPage));
+            Messenger.Default.Send<Session>(session);
         }
 
         private void LoadCommands()
         {
             NextCommand = new CustomCommand(Next, null);
             BackCommand = new CustomCommand(Back, null);
+            ItemClickedCommand = new DelegateCommand<ItemClickEventArgs>(OnItemClicked);
         }
 
         private void Back(object o)
         {
             NavigationService.Default.Navigate(typeof(LoginPage));
-            //Messenger.Default.Send<ParkingsCollectedMessage>(new ParkingsCollectedMessage() { ParkingLots = lots, MyLocation = myLocation });
         }
 
         private void Next(object o)
         {
             NavigationService.Default.Navigate(typeof(DetailPage));
-            //Messenger.Default.Send<ParkingsCollectedMessage>(new ParkingsCollectedMessage() { ParkingLots = lots, MyLocation = myLocation });
         }
 
 
