@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		x:Class="EntMob_Xamarin.RegisterPage"
+		BindingContext="{Binding Register, Source={StaticResource Locator}}">
+	<ContentPage.Content>
+		<StackLayout>
+			<Label Text="Create Account" HorizontalOptions="Center" FontSize="30"/>
+			<Entry Text="{Binding Path=User.FirstName}" Placeholder="FirstName" />
+			<Entry Text="{Binding Path=User.LastName}" Placeholder="LastName" />
+			<Entry Text="{Binding Path=User.Name}" Placeholder="Username" />
+			<Entry Text="{Binding Path=User.Password}" Placeholder="Password" />
+			<Button Text="Register" Command="{Binding RegisterCommand}"/>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

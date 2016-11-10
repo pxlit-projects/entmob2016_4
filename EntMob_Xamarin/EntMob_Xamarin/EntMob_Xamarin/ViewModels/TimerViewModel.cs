@@ -62,6 +62,7 @@ namespace EntMob_Xamarin.ViewModels
                     {
                         button.Text = "Start";
                         navigation.PushAsync(new ValuesPage());
+
                     }
                     else
                     {

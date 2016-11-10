@@ -8,7 +8,6 @@ using EntMob_Xamarin.ViewModels;
 
 
 using Xamarin.Forms;
-using Java.Util;
 
 namespace EntMob_Xamarin
 {

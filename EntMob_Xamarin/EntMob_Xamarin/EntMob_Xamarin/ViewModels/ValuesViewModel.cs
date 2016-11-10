@@ -1,11 +1,10 @@
-﻿using Android.Content;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
-using EntMob_Xamarin.Models;
+using EntMob.Models;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
@@ -35,12 +34,12 @@ namespace EntMob_Xamarin.ViewModels
             }
             set
             {
-                users.Add(new User() { Username = "Jonas", Password = "Allard" });
-                users.Add(new User() { Username = "Jonas", Password = "Allard" });
-                users.Add(new User() { Username = "Jonas", Password = "Allard" });
-                users.Add(new User() { Username = "Jonas", Password = "Allard" });
-                users.Add(new User() { Username = "Jonas", Password = "Allard" });
-                users.Add(new User() { Username = "Jonas", Password = "Allard" });
+                users.Add(new User() { Name = "Jonas", Password = "Allard" });
+                users.Add(new User() { Name = "Jonas", Password = "Allard" });
+                users.Add(new User() { Name = "Jonas", Password = "Allard" });
+                users.Add(new User() { Name = "Jonas", Password = "Allard" });
+                users.Add(new User() { Name = "Jonas", Password = "Allard" });
+                users.Add(new User() { Name = "Jonas", Password = "Allard" });
                 RaisePropertyChanged("Users");
             }
         }

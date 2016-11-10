@@ -4,9 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using EntMob_Xamarin.ViewModels;
-
 using Xamarin.Forms;
-using EntMob_Xamarin.Models;
 
 namespace EntMob_Xamarin
 {

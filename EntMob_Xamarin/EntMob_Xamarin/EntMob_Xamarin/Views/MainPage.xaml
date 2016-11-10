@@ -1,20 +1,19 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:EntMob_Xamarin"
              x:Class="EntMob_Xamarin.MainPage"
              BackgroundImage="Joggings.jpg"
              BindingContext="{Binding Main, Source={StaticResource Locator}}">
-    
-
   <ContentPage.Content>
 
         <StackLayout VerticalOptions="End">
-          <Label Text="WELCOME!" HorizontalOptions="Center" FontSize="30"></Label>
-          <Label Text="Enter your username and password below" HorizontalOptions="Center" FontSize="16"></Label>
-          <Entry StyleId="UserId" Text="{Binding Path=Username}" Placeholder="Username" />
-          <Entry StyleId="PasswordId" Text="{Binding Path=Password}" Placeholder="Password" IsPassword="true" />
-          <Button x:Name="loginButtonAndroid" Text="Login" Command="{Binding LoginCommand}"/>
+        	<Label Text="WELCOME!" HorizontalOptions="Center" FontSize="30"></Label>
+         	<Label Text="Enter your username and password below" HorizontalOptions="Center" FontSize="16"></Label>
+          	<Entry StyleId="UserId" Text="{Binding Path=Username}" Placeholder="Username" />
+          	<Entry StyleId="PasswordId" Text="{Binding Path=Password}" Placeholder="Password" IsPassword="true" />
+          	<Button x:Name="loginButtonAndroid" Text="Login" Command="{Binding LoginCommand}"/>
+	 		<Button Text="Create Account" Command="{Binding RegisterCommand}"/>
         </StackLayout>
 
   </ContentPage.Content>
