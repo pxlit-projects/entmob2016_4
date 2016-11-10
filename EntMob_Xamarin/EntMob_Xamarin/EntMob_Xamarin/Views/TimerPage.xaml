@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              BackgroundColor="Silver"
@@ -23,7 +23,7 @@
     </Grid.ColumnDefinitions>
     <Label Text="Ingelogd als" Grid.Row="0" Grid.Column="2" />
     <Label Text="test" Grid.Row="0" Grid.Column="3" />
-    <Label Text="{Binding TimerContent}" FontSize="40" TextColor="Green" HorizontalTextAlignment="Center" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="4"/>
+    <Label Text="{Binding Timer}" FontSize="40" TextColor="Green" HorizontalTextAlignment="Center" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="4"/>
     <Button x:Name="btnStop" Text="Start" Command="{Binding StartStopCommand}" CommandParameter="{x:Reference btnStop}" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4">
     </Button>
   </Grid>

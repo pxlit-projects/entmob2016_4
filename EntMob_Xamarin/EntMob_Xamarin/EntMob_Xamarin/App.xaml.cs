@@ -17,10 +17,10 @@ namespace EntMob_Xamarin
         {
             InitializeComponent();
 
-            Resources = new ResourceDictionary();
+            /*Resources = new ResourceDictionary();
             Resources.Add("Locator", new ViewModelLocator());
             Resources.Add("ValueToDegreesConverter", new ValueToDegreesConverter());
-            Resources.Add("ValueToKmConverter", new ValueToKmConverter());
+            Resources.Add("ValueToKmConverter", new ValueToKmConverter());*/
 
             MainPage = new NavigationPage(new MainPage());
         }

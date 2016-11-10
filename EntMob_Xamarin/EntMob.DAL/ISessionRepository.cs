@@ -11,8 +11,8 @@ namespace EntMob.DAL
     {
         List<Session> GetAllSessions(User user);
         Session GetSessionById(User user, int id);
-        Session StartSession(User user, Session session);
-        Session StopSession(User user, Session session);
+        Session StartSession(Session session);
+        Session StopSession(Session session);
         void DeleteSessionForId(User user, int id);
         Dictionary<String, Double> GetAveragesForSession(User user, int id);
 

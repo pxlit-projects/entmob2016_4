@@ -9,6 +9,8 @@ using System.Text;
 using EntMob_Xamarin.Services;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using EntMob.Models;
+using EntMob_Xamarin.Messages;
 using Xamarin.Forms;
 
 namespace EntMob_Xamarin.ViewModels
@@ -22,11 +24,24 @@ namespace EntMob_Xamarin.ViewModels
         public ICommand StartStopCommand { get; set; }
 
         private bool Run = true;
-        int Min, Sec, Hours, Tenth;
-        private DateTime localDate;
+		private Session session;
+		private DateTime timer { get; set; }
 
-        public String _timerContent;
-        public String TimerContent { get { return _timerContent; }  set { _timerContent = value; OnPropertyChanged("TimerContent"); } }
+
+		public DateTime Timer
+		{
+			get
+			{
+				return timer;
+			}
+			set
+			{
+				this.timer = value;
+				OnPropertyChanged("Timer");
+			}
+		}
+        /*public String _timerContent;
+        public String TimerContent { get { return _timerContent; }  set { _timerContent = value; OnPropertyChanged("TimerContent"); } }*/
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -44,9 +59,23 @@ namespace EntMob_Xamarin.ViewModels
 		public TimerViewModel(INavigation navigation, ISessionService sessionService)
         {
             LoadCommands();
-            localDate = DateTime.Now;
+			SubscribeToMessages();
             this.navigation = navigation;
         }
+
+		private void SubscribeToMessages()
+		{
+			Messenger.Default.Register<LoggedInUser>(this, OnUserReceived);
+		}
+
+		private void OnUserReceived(LoggedInUser user)
+		{
+			if (session == null)
+			{
+				session = new Session();
+			}
+			session.User = user.user;
+		}
 
         private void LoadCommands()
         {
@@ -59,10 +88,16 @@ namespace EntMob_Xamarin.ViewModels
                     if (button.Text == "Stop")
                     {
                         button.Text = "Start";
+						session.End = DateTime.Now;
                         navigation.PushAsync(new ValuesPage());
                     }
                     else
                     {
+						timer = DateTime.Now;
+						if (session == null) {
+							session = new Session();
+						}
+						session.Start = DateTime.Now;
                         StartTimer();
                         button.Text = "Stop";
                     }
@@ -77,67 +112,34 @@ namespace EntMob_Xamarin.ViewModels
                     {
                     // Do the actual request and wait for it to finish.
                     await Task.Delay(0);
+					timer.AddMilliseconds(1);
                     // Switch back to the UI thread to update the UI
                     Device.BeginInvokeOnMainThread(() =>
                         {
                         // Update the UI
                         // ...
-                        // Now repeat by scheduling a new request
-                        addTime();
+                        // Now repeat by scheduling a new reques
                         });
                     });
 
                 // Don't repeat the timer (we will start a new timer when the request is finished)
                 return true;
                 });
-
         }
 
-        public void addTime()
-{
-            if (Tenth < 99)
-            {
-                Tenth++;
-            }
-            else
-            {
-                Tenth = 0;
-                if (Sec < 59)
-                {
-                    Sec++;
-                }
-                else
-                {
-                    Sec = 0;
-                    if (Min < 59)
-                    {
-                        Min++;
-                    }
-                    else
-                    {
-                        Min = 0;
-                        Hours++;
-                    }
-                }
-            }
-    if(Min<10&&Sec<10&&Tenth<10)
-    TimerContent = string.Format("0{0}" + ":" + "0{1}" + ":" + "0{2}" + ":0{3}", Hours, Min, Sec, Tenth);
-    else if (Min < 10 && Tenth < 10)
-    TimerContent = string.Format("0{0}" + ":" + "0{1}" + ":" + "{2}" + ":0{3}", Hours, Min, Sec, Tenth);
-    else if (Sec < 10 && Tenth < 10)
-    TimerContent = string.Format("0{0}" + ":" + "{1}" + ":" + "0{2}" + ":0{3}", Hours, Min, Sec, Tenth);
-    else if (Sec < 10 && Min < 10)
-    TimerContent = string.Format("0{0}" + ":" + "0{1}" + ":" + "0{2}" + ":{3}", Hours, Min, Sec, Tenth);
-    else if(Min<10)
-    TimerContent = string.Format("0{0}" + ":" + "0{1}" + ":" + "{2}" + ":{3}", Hours, Min, Sec, Tenth);
-    else if (Sec<10)
-    TimerContent = string.Format("0{0}" + ":" + "{1}" + ":" + "{2}" + ":0{3}", Hours, Min, Sec, Tenth);
-    else if(Tenth<10)
-    TimerContent = string.Format("0{0}" + ":" + "{1}" + ":" + "{2}"+ ":0{3}", Hours, Min, Sec, Tenth);
-    
-
-
-        }
-
+		private async void startSession()
+		{
+			var result = Task.Run(() =>
+			{
+				try
+				{
+					return sessionService.StartSession(session);
+				}
+				catch {
+					return null;
+				}
+			});
+		}
+        
     }
 }

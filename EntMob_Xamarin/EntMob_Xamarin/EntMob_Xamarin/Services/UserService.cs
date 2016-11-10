@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using EntMob.DAL;
 using EntMob.Models;
 using System.Diagnostics;
-using BCrypt.Net;
+
 
 namespace EntMob_Xamarin.Services
 {
@@ -30,10 +30,10 @@ namespace EntMob_Xamarin.Services
             try
             {
                 User userByName = userRepository.GetUserByName(user.Name);
-				if (Equals(user.Password, userByName.Password))
-                {
-                    return userByName;
-                }
+				if(BCrypt.Net.BCrypt.CheckPassword(user.Password, userByName.Password)){
+					userByName.Password = user.Password;
+					return userByName;
+				}
             }
             catch (Exception ex)
             {

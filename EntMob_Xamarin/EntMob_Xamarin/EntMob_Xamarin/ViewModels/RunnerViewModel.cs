@@ -10,6 +10,7 @@ using System.Runtime.CompilerServices;
 using System.Windows.Input;
 using EntMob_Xamarin.Utility;
 using System.Diagnostics;
+using EntMob_Xamarin.Messages;
 using EntMob_Xamarin.Services;
 
 namespace EntMob_Xamarin.ViewModels
@@ -79,7 +80,7 @@ namespace EntMob_Xamarin.ViewModels
 				user.Password = password;
 				user.Name = username;
 
-				var result = Task.Run(() =>
+				var result = await Task.Run(() =>
 				{
 					try
 					{
@@ -93,6 +94,7 @@ namespace EntMob_Xamarin.ViewModels
 
 				if (result != null)
 				{
+					Messenger.Default.Send<LoggedInUser>(new LoggedInUser() { user = result });
 					await navigation.PushAsync(new TimerPage());
 				}
 				else {

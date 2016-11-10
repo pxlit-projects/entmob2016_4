@@ -41,5 +41,15 @@ namespace EntMob_Xamarin.Services
         {
             return sessionRepository.GetSessionById(user, id);
         }
-    }
+
+		public Session StartSession(Session session)
+		{
+			return sessionRepository.StartSession(session);
+		}
+
+		public Session StopSession(Session session)
+		{
+			return sessionRepository.StopSession(session);
+		}
+	}
 }

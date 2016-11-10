@@ -14,6 +14,8 @@ namespace EntMob_Xamarin.Services
         List<Session> GetAllSessions(User user);
         Session GetSessionById(User user, int id);
         Session GetAverageForSession(Session session);
+		Session StartSession(Session session);
+		Session StopSession(Session session);
         void DeleteSessionForSession(User user, int id);
 
     }

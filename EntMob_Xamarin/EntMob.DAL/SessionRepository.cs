@@ -46,12 +46,12 @@ namespace EntMob.DAL
             response.EnsureSuccessStatusCode();
         }
 
-        public Session StartSession(User user, Session session)
+        public Session StartSession(Session session)
         {
             string allSessions = BASE_URL + "/session/start";
             var uri = new Uri(allSessions);
             var client = new HttpClient();
-            var defaultUser = User.DefaultUser;
+			var defaultUser = session.User;
             client.DefaultRequestHeaders.Authorization = BasicAuthenticationHelper.CreateBasicHeader(defaultUser.Name, defaultUser.Password);
             string sessionObject = JsonConvert.SerializeObject(session);
             StringContent content = new StringContent(sessionObject.ToString(), Encoding.UTF8, "application/json");
@@ -61,12 +61,12 @@ namespace EntMob.DAL
             return JsonConvert.DeserializeObject<Session>(result);
         }
 
-        public Session StopSession(User user, Session session)
+        public Session StopSession(Session session)
         {
             string stopSession = BASE_URL + "/session/stop";
             var uri = new Uri(stopSession);
             var client = new HttpClient();
-            var defaultUser = User.DefaultUser;
+			var defaultUser = session.User;
             client.DefaultRequestHeaders.Authorization = BasicAuthenticationHelper.CreateBasicHeader(defaultUser.Name, defaultUser.Password);
             string sessionObject = JsonConvert.SerializeObject(session);
             StringContent content = new StringContent(sessionObject.ToString(), Encoding.UTF8, "application/json");
