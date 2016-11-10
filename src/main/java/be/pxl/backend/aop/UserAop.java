@@ -23,14 +23,12 @@ public class UserAop {
 
     @Before(value = "execution(* be.pxl.backend.services.UserService.addUser(..))")
     public void before() {
-        System.out.println("addUser wil be called");
         creation = new Creation();
         creation.setDate(new Date());
     }
 
     @AfterReturning(value = "execution(* be.pxl.backend.services.UserService.addUser(..)))", returning = "user")
     public void afterReturning(User user) {
-        System.out.println("addUser returned: " + user.getId());
         creation.setUserId(user.getId());
         creation.setSucces(true);
         creationRepository.save(creation);
@@ -39,16 +37,10 @@ public class UserAop {
 
     @AfterThrowing(value = "execution(* be.pxl.backend.services.UserService.addUser(..))", throwing = "ex")
     public void afterThrowing(Exception ex) {
-        System.out.println("addUser threw error: " + ex.getMessage());
         creation.setErrorMessage(ex.getMessage());
         creation.setSucces(false);
         creationRepository.save(creation);
         creation = null;
-    }
-
-    @After(value = "execution(* be.pxl.backend.services.UserService.addUser(..))")
-    public void after() {
-        System.out.println("addUser has been called");
     }
 
 }
