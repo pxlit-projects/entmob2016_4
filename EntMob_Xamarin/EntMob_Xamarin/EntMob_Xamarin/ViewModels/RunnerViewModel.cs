@@ -16,43 +16,106 @@ namespace EntMob_Xamarin.ViewModels
 {
 	public class RunnerViewModel : INotifyPropertyChanged
 	{
+		private IUserService userService;
 		private INavigation navigation;
 
-		public RunnerViewModel()
+		public RunnerViewModel(INavigation navi, IUserService userService)
 		{
-			loadCommands();
-		}
-
-		public RunnerViewModel(INavigation navi)
-		{
-			loadCommands();
+			LoadCommands();
+			RegisterForMessages();
 			navigation = navi;
+			this.userService = userService;
 		}
 
-		private void loadCommands()
+		private void LoadCommands()
 		{
-			RegisterCommand = new Command((obj) =>
-			{
-				Register(obj);
-			});
+			RegisterCommand = new Command((obj) => Register(obj));
+			LoginCommand = new Command((obj) => Login(obj));
 		}
 
-		public ICommand LoginCommand
+		private string password { get; set; }
+		private string username { get; set; }
+
+		public string Password
 		{
 			get
 			{
-				return new Command(async () =>
-				{
-					await navigation.PushAsync(new TimerPage());
-				});
+				return password;
+			}
+			set
+			{
+				password = value;
+				RaisePropertyChanged("Password");
 			}
 		}
 
+		public string Username
+		{
+			get
+			{
+				return username;
+			}
+			set
+			{
+				username = value;
+				RaisePropertyChanged("Username");
+			}
+		}
+
+		public ICommand LoginCommand { get; set; }
+
 		public ICommand RegisterCommand { get; set; }
 
-		public void Register(object o)
+		private void Register(object o)
 		{
 			navigation.PushAsync(new RegisterPage());
+		}
+
+		private async void Login(object o)
+		{
+			if (Check())
+			{
+				User user = new User();
+				user.Password = password;
+				user.Name = username;
+
+				var result = Task.Run(() =>
+				{
+					try
+					{
+						return userService.CheckCredentials(user);
+					}
+					catch
+					{
+						return null;
+					}
+				});
+
+				if (result != null)
+				{
+					await navigation.PushAsync(new TimerPage());
+				}
+				else {
+					Username = "";
+					Password = "";
+				}
+			}
+		}
+
+		private bool Check()
+		{
+			return !(String.IsNullOrEmpty(Username) || String.IsNullOrEmpty(Password));
+		}
+
+		private void RegisterForMessages()
+		{
+			Messenger.Default.Register<User>(this, UserReceived);
+		}
+
+		private void UserReceived(User user)
+		{
+			Username = user.Name;
+			Password = user.Password;	
 		}
 
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -64,11 +127,5 @@ namespace EntMob_Xamarin.ViewModels
 				PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
-
-		protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
-		{
-			PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-		}
-
 	}
 }

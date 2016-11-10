@@ -13,7 +13,7 @@ namespace EntMob_Xamarin
         public ValuesPage()
         {
             InitializeComponent();
-            BindingContext = new ViewModelLocator().Values(this.Navigation);
+            BindingContext = ViewModelLocator.Values(this.Navigation);
         }
     }
 }

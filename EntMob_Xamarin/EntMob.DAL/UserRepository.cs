@@ -28,17 +28,24 @@ namespace EntMob.DAL
 
         public User PostUser(User user)
         {
-            string allSessions = BASE_URL + "/user";
-            var uri = new Uri(allSessions);
-            var client = new HttpClient();
-            var defaultUser = User.DefaultUser;
-            client.DefaultRequestHeaders.Authorization = BasicAuthenticationHelper.CreateBasicHeader(defaultUser.Name, defaultUser.Password);
-            string userObject = JsonConvert.SerializeObject(user);
-            StringContent content = new StringContent(userObject.ToString(), Encoding.UTF8, "application/json");
-            var response = Task.Run(() => client.PostAsync(uri, content)).Result;
-            response.EnsureSuccessStatusCode();
-            var result = Task.Run(() => response.Content.ReadAsStringAsync()).Result;
-            return JsonConvert.DeserializeObject<User>(result);
+			try { 
+				string allSessions = BASE_URL + "/user";
+				var uri = new Uri(allSessions);
+				var client = new HttpClient();
+				var defaultUser = User.DefaultUser;
+				client.DefaultRequestHeaders.Authorization = BasicAuthenticationHelper.CreateBasicHeader(defaultUser.Name, defaultUser.Password);
+				string userObject = JsonConvert.SerializeObject(user);
+				StringContent content = new StringContent(userObject.ToString(), Encoding.UTF8, "application/json");
+				var response = Task.Run(() => client.PostAsync(uri, content)).Result;
+				response.EnsureSuccessStatusCode();
+				var result = Task.Run(() => response.Content.ReadAsStringAsync()).Result;
+				return JsonConvert.DeserializeObject<User>(result);
+			}
+			catch(Exception ex)
+			{
+				Debug.WriteLine(ex.Message + ex.InnerException.Message);
+			}
+			return null;
         }
 
     }

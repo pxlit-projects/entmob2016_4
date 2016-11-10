@@ -6,12 +6,70 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using EntMob.Models;
 using EntMob_Xamarin.Services;
+using EntMob_Xamarin.Utility;
 using Xamarin.Forms;
 
 namespace EntMob_Xamarin
 {
 	public class RegisterViewModel: INotifyPropertyChanged
 	{
+
+		private string name { get; set;}
+		private string lastName { get; set; }
+		private string firstName { get; set; }
+		private string password { get; set; }
+
+		public string Name
+		{
+			get
+			{
+				return name;
+			}
+			set
+			{
+				name = value;
+				RaisePropertyChanged("Name");
+			}
+		}
+
+		public string LastName
+		{
+			get
+			{
+				return lastName;
+			}
+			set
+			{
+				lastName = value;
+				RaisePropertyChanged("LastName");
+			}
+		}
+
+		public string FirstName
+		{
+			get
+			{
+				return firstName;
+			}
+			set
+			{
+				firstName = value;
+				RaisePropertyChanged("FirstName");
+			}
+		}
+
+		public string Password
+		{
+			get 
+			{
+				return password;
+			}
+			set
+			{
+				password = value;
+				RaisePropertyChanged("Password");
+			}
+		}
 
 		private IUserService userService;
 		private INavigation navigation;
@@ -25,9 +83,12 @@ namespace EntMob_Xamarin
 
 		public event PropertyChangedEventHandler PropertyChanged;
 
-		protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+		protected virtual void RaisePropertyChanged([CallerMemberName] string propertyName = null)
 		{
-			PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+			if (PropertyChanged != null)
+			{
+				PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
 		}
 
 		private void loadCommands()
@@ -35,38 +96,54 @@ namespace EntMob_Xamarin
 			RegisterCommand = new Command((obj) => Register(obj));
 		}
 
-		private User user { get; set; }
+		public ICommand RegisterCommand { get; set; }
 
-		public User User
+		private async void Register(object o)
 		{
-			get
+			if (Check())
 			{
-				return user;
-			}
-			set
-			{
-				user = value;
-				OnPropertyChanged("User");
+				User user = CreateUser();
+				var result = await Task.Run(() =>
+				{
+					try
+					{
+						return userService.AddUser(user);
+					}
+					catch
+					{
+						return null;
+					}
+				});
+
+				if (result != null)
+				{
+					result.Password = password;
+					Messenger.Default.Send<User>(result);
+					await navigation.PopAsync(true);
+				}
+				else {
+					FirstName = "";
+					LastName = "";
+					Name = "";
+					Password = "";
+				}
 			}
 		}
 
-		public ICommand RegisterCommand { get; set; }
-
-		private void Register(object o)
+		private User CreateUser()
 		{
-			var result = Task.Run(() =>
-			{
-				try
-				{
-					return userService.AddUser(user);
-				}
-				catch (Exception ex)
-				{
-					Debug.WriteLine("Test" + ex.Message);
-					return null;
-				}
-			});
-			//navigation.PopAsync(true);
+			User user = new User();
+			user.Password = password;
+			user.Name = name;
+			user.FirstName = firstName;
+			user.LastName = lastName;
+			return user;
+		}
+
+		private bool Check()
+		{
+			return !(String.IsNullOrEmpty(lastName) || String.IsNullOrEmpty(firstName) || 
+			        String.IsNullOrEmpty(name) || String.IsNullOrEmpty(password));
 		}
 
 	}

@@ -17,7 +17,7 @@ namespace EntMob_Xamarin
         public TimerPage()
         {
             InitializeComponent();
-            BindingContext = new ViewModelLocator().Timer(this.Navigation);    
+            BindingContext = ViewModelLocator.Timer(this.Navigation);    
         }     
     }
 }

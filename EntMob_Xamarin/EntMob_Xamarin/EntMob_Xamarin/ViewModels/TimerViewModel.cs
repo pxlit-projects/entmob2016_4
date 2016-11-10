@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
 using System.Text;
+using EntMob_Xamarin.Services;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
@@ -14,12 +15,16 @@ namespace EntMob_Xamarin.ViewModels
 {
     public class TimerViewModel : INotifyPropertyChanged
     {
+
+		private ISessionService sessionService;
         private INavigation navigation;
+
         public ICommand StartStopCommand { get; set; }
 
         private bool Run = true;
         int Min, Sec, Hours, Tenth;
         private DateTime localDate;
+
         public String _timerContent;
         public String TimerContent { get { return _timerContent; }  set { _timerContent = value; OnPropertyChanged("TimerContent"); } }
 
@@ -36,13 +41,7 @@ namespace EntMob_Xamarin.ViewModels
             }
         }
 
-        public TimerViewModel()
-        {
-            LoadCommands();
-            localDate = DateTime.Now;
-        }
-
-        public TimerViewModel(INavigation navigation)
+		public TimerViewModel(INavigation navigation, ISessionService sessionService)
         {
             LoadCommands();
             localDate = DateTime.Now;
@@ -51,7 +50,6 @@ namespace EntMob_Xamarin.ViewModels
 
         private void LoadCommands()
         {
-            Debug.WriteLine("loading commands");
             StartStopCommand = new Command(
             (parameter) =>
             {
@@ -62,7 +60,6 @@ namespace EntMob_Xamarin.ViewModels
                     {
                         button.Text = "Start";
                         navigation.PushAsync(new ValuesPage());
-
                     }
                     else
                     {

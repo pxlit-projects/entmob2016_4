@@ -14,29 +14,30 @@ namespace EntMob_Xamarin
     {
 
 		private static IUserService userService = new UserService(new UserRepository());
+		private static ISessionService sessionService = new SessionService(new SessionRepository());
 
-        private RunnerViewModel runnerViewModel;
-		private RegisterViewModel registerViewModel;
-        private TimerViewModel timerViewModel;
-        private ValuesViewModel valuesViewModel;
+		private static RunnerViewModel runnerViewModel;
+		private static RegisterViewModel registerViewModel;
+		private static TimerViewModel timerViewModel;
+		private static ValuesViewModel valuesViewModel;
 
-        public RunnerViewModel Main(INavigation navigation)
+		public static RunnerViewModel Main(INavigation navigation)
         {
-            return runnerViewModel ?? (runnerViewModel = new RunnerViewModel(navigation));
+			return runnerViewModel ?? (runnerViewModel = new RunnerViewModel(navigation, userService));
         }
 
-		public RegisterViewModel Register(INavigation navigation)
+		public static RegisterViewModel Register(INavigation navigation)
 		{
 			return registerViewModel ?? (registerViewModel = new RegisterViewModel(navigation, userService));
 		}
 
-        public TimerViewModel Timer(INavigation navigation)
+		public static TimerViewModel Timer(INavigation navigation)
         {
-                return timerViewModel ?? (timerViewModel = new TimerViewModel(navigation));
+			return timerViewModel ?? (timerViewModel = new TimerViewModel(navigation, sessionService));
         }
 
 
-        public ValuesViewModel Values(INavigation navigation)
+		public static ValuesViewModel Values(INavigation navigation)
         {
                 return valuesViewModel ?? (valuesViewModel = new ValuesViewModel(navigation));
         }
