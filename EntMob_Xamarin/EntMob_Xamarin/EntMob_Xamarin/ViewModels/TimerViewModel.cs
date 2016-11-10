@@ -15,18 +15,32 @@ using Xamarin.Forms;
 
 namespace EntMob_Xamarin.ViewModels
 {
-    public class TimerViewModel : INotifyPropertyChanged
-    {
+	public class TimerViewModel : INotifyPropertyChanged
+	{
 
 		private ISessionService sessionService;
-        private INavigation navigation;
+		private INavigation navigation;
 
-        public ICommand StartStopCommand { get; set; }
+		public ICommand StartStopCommand { get; set; }
 
-        private bool Run = true;
-		private Session session;
+		private bool Run = true;
+		private Session session { get; set; }
 		private DateTime timer { get; set; }
 
+		private string name { get; set; }
+
+		public string Name
+		{
+			get
+			{
+				return name;
+			}
+			set
+			{
+				name = value;
+				RaisePropertyChanged("Name");
+			}
+		}
 
 		public DateTime Timer
 		{
@@ -37,24 +51,19 @@ namespace EntMob_Xamarin.ViewModels
 			set
 			{
 				this.timer = value;
-				OnPropertyChanged("Timer");
+				RaisePropertyChanged("Timer");
 			}
 		}
-        /*public String _timerContent;
-        public String TimerContent { get { return _timerContent; }  set { _timerContent = value; OnPropertyChanged("TimerContent"); } }*/
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-         private void OnPropertyChanged(string prop)
-        {
-            PropertyChangedEventHandler handler = this.PropertyChanged;
-
-            if (handler != null)
-            {
-                var e = new PropertyChangedEventArgs(prop);
-                handler(this, e);
-            }
-        }
+         private void RaisePropertyChanged(string propertyName)
+		{
+			if (PropertyChanged != null)
+			{
+				PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
 
 		public TimerViewModel(INavigation navigation, ISessionService sessionService)
         {
@@ -89,16 +98,18 @@ namespace EntMob_Xamarin.ViewModels
                     {
                         button.Text = "Start";
 						session.End = DateTime.Now;
+						StopSession();
                         navigation.PushAsync(new ValuesPage());
                     }
                     else
                     {
-						timer = DateTime.Now;
+						Timer = DateTime.Now;
 						if (session == null) {
 							session = new Session();
 						}
 						session.Start = DateTime.Now;
                         StartTimer();
+						StartSession();
                         button.Text = "Stop";
                     }
                 }
@@ -112,7 +123,7 @@ namespace EntMob_Xamarin.ViewModels
                     {
                     // Do the actual request and wait for it to finish.
                     await Task.Delay(0);
-					timer.AddMilliseconds(1);
+					Timer.AddMilliseconds(1);
                     // Switch back to the UI thread to update the UI
                     Device.BeginInvokeOnMainThread(() =>
                         {
@@ -127,15 +138,30 @@ namespace EntMob_Xamarin.ViewModels
                 });
         }
 
-		private async void startSession()
+		private async void StartSession()
 		{
-			var result = Task.Run(() =>
+			var result = await Task.Run(() =>
 			{
 				try
 				{
 					return sessionService.StartSession(session);
 				}
 				catch {
+					return null;
+				}
+			});
+		}
+
+		private async void StopSession()
+		{
+			var result = await Task.Run(() =>
+			{
+				try
+				{
+					return sessionService.StopSession(session);
+				}
+				catch
+				{
 					return null;
 				}
 			});
