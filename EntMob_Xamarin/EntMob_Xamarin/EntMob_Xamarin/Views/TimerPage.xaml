@@ -21,8 +21,9 @@
       <ColumnDefinition Width="2.5*" />
 
     </Grid.ColumnDefinitions>
+	<Entry Text="{Binding Name}" Grid.Row="1"/>
     <Label Text="Ingelogd als" Grid.Row="0" Grid.Column="2" />
-    <Label Text="test" Grid.Row="0" Grid.Column="3" />
+    <Label Text="{Binding Session.User.Name}" Grid.Row="0" Grid.Column="3" />
     <Label Text="{Binding Timer}" FontSize="40" TextColor="Green" HorizontalTextAlignment="Center" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="4"/>
     <Button x:Name="btnStop" Text="Start" Command="{Binding StartStopCommand}" CommandParameter="{x:Reference btnStop}" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4">
     </Button>

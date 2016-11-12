@@ -150,6 +150,11 @@ namespace EntMob_Xamarin.ViewModels
 					return null;
 				}
 			});
+
+			if (result != null)
+			{
+				session = result;
+			}
 		}
 
 		private async void StopSession()
@@ -165,6 +170,12 @@ namespace EntMob_Xamarin.ViewModels
 					return null;
 				}
 			});
+
+			if (result != null)
+			{
+				session = result;
+			}
+
 		}
         
     }
