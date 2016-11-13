@@ -27,15 +27,15 @@
         </Grid>
         <Grid x:ConnectionId='3' x:Name="SecondGrid" Grid.Column="1" Grid.Row="0" Background="Black" >
             <!--<Image Source="../Images/time.jpg" Stretch="UniformToFill"/> -->
-            <TextBlock Text="{Binding SelectedSession.AveragePressure}" FontSize="70" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"></TextBlock>
+            <TextBlock Text="{Binding SelectedSession.AveragePressure, Converter={StaticResource localPressureConverter}}" FontSize="70" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"></TextBlock>
         </Grid>
         <Grid x:ConnectionId='4' x:Name="ThirdGrid" Grid.Column="0" Grid.Row="1" Background="Bisque">
             <!--<Image Source="../Images/steps.jpg" Stretch="None" HorizontalAlignment="Center" VerticalAlignment="Center"/> -->
-            <TextBlock Text="{Binding SelectedSession.AverageActivity}" FontSize="70" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Gray" Grid.ColumnSpan="2" Margin="55,33,54,33"></TextBlock>
+            <TextBlock Text="{Binding SelectedSession.AverageActivity, Converter={StaticResource localActivityConverter}}" FontSize="70" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Gray" Grid.ColumnSpan="2" Margin="55,33,54,33"></TextBlock>
         </Grid>
         <Grid x:ConnectionId='5' x:Name="FourthGrid" Grid.Column="1" Grid.Row="1" Background="Linen">
             <!--<Image Source="../Images/distance.jpeg" Stretch="Fill"/> -->
-            <TextBlock Text="{Binding SelectedSession.AverageHumidity}" FontSize="70" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Gray"></TextBlock>
+            <TextBlock Text="{Binding SelectedSession.AverageHumidity, Converter={StaticResource localHumidityConverter}}" FontSize="70" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Gray"></TextBlock>
         </Grid>
         <Button x:ConnectionId='6' Grid.Row="1" Grid.Column="0" x:Name="BackButton" Content="BACK">
             <interactivity:Interaction.Behaviors>

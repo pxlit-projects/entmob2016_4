@@ -9,9 +9,11 @@
     <Application.Resources>
         <ResourceDictionary>
             <converter:ValueToDegreesConverter x:Key="localValueToDegreesConverter"></converter:ValueToDegreesConverter>
-            <converter:ValueToKmConverter x:Key="localValueToKmConverter"></converter:ValueToKmConverter>
             <converter:TimeSpanConverter x:Key="localTimeSpanConverter"></converter:TimeSpanConverter>
             <converter:DateTimeConverter x:Key="localDateTimeConverter"></converter:DateTimeConverter>
+            <converter:HumidityConverter x:Key="localHumidityConverter"></converter:HumidityConverter>
+            <converter:PressureConverter x:Key="localPressureConverter"></converter:PressureConverter>
+            <converter:ActivityConverter x:Key="localActivityConverter"></converter:ActivityConverter>
             <local:ViewModelLocator x:Key="mainViewModelLocator"></local:ViewModelLocator>
         </ResourceDictionary>
     </Application.Resources>

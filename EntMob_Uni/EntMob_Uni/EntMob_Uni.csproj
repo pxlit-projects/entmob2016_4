@@ -98,14 +98,14 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Converter\ActivityConverter.cs" />
     <Compile Include="Converter\DateTimeConverter.cs" />
+    <Compile Include="Converter\HumidityConverter.cs" />
+    <Compile Include="Converter\PressureConverter.cs" />
     <Compile Include="Converter\TimeSpanConverter.cs" />
     <Compile Include="Converter\ValueToDegreesConverter.cs" />
-    <Compile Include="Converter\ValueToKmConverter.cs" />
     <Compile Include="Extensions\ListExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\DialogService.cs" />
-    <Compile Include="Services\IDialogService.cs" />
     <Compile Include="Services\ISessionService.cs" />
     <Compile Include="Services\IUserService.cs" />
     <Compile Include="Services\NavigationService.cs" />

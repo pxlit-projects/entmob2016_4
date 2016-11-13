@@ -31,9 +31,11 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.ResourceDictionary" />
     <RootType FullName="EntMob_Uni.Converter.ValueToDegreesConverter" />
-    <RootType FullName="EntMob_Uni.Converter.ValueToKmConverter" />
     <RootType FullName="EntMob_Uni.Converter.TimeSpanConverter" />
     <RootType FullName="EntMob_Uni.Converter.DateTimeConverter" />
+    <RootType FullName="EntMob_Uni.Converter.HumidityConverter" />
+    <RootType FullName="EntMob_Uni.Converter.PressureConverter" />
+    <RootType FullName="EntMob_Uni.Converter.ActivityConverter" />
     <RootType FullName="EntMob_Uni.ViewModelLocator" />
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
       <RootProperty Name="DataContext" />

@@ -7,14 +7,13 @@ using Windows.UI.Xaml.Data;
 
 namespace EntMob_Uni.Converter
 {
-    public class DateTimeConverter : IValueConverter
+    class ActivityConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, string language)
         {
             if(value != null)
             {
-                DateTime dateTime = (DateTime)value;
-                return dateTime.ToString("dd/MM/yyyy hh:mm");
+                return value + "% activity";
             }
             return value;
         }

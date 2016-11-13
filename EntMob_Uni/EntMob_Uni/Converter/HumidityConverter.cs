@@ -7,15 +7,13 @@ using Windows.UI.Xaml.Data;
 
 namespace EntMob_Uni.Converter
 {
-    public class ValueToKmConverter : IValueConverter
+    class HumidityConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, string language)
         {
-            if (value != null)
+            if(value != null)
             {
-                var text = value.ToString();
-                text = text + " km";
-                return text;
+                return value + "% rH";
             }
             return value;
         }
