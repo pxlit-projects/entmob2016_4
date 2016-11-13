@@ -5,8 +5,6 @@
     xmlns:local="using:EntMob_Uni.View"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
-    xmlns:core="using:Microsoft.Xaml.Interactions.Core"
     mc:Ignorable="d"
     Background="Blue"
     DataContext="{Binding Source={StaticResource mainViewModelLocator}, Path=LoginViewModel}">
@@ -23,13 +21,8 @@
             <TextBox x:Name="UsernameTextBox" Text="{Binding UserName, Mode=TwoWay}"  Margin="4" Width="250" RelativePanel.Below="Info" PlaceholderText="Username" RelativePanel.AlignHorizontalCenterWith="Info"></TextBox>
             <PasswordBox x:Name="PasswordBox" Password="{Binding Password, Mode=TwoWay}" Margin="4" Width="250" RelativePanel.Below="UsernameTextBox" PlaceholderText="Password" RelativePanel.AlignHorizontalCenterWith="UsernameTextBox"></PasswordBox>
 
-            <Button x:Name="SignInButton" Content="Login" Background="DodgerBlue" Foreground="White" Width="80" HorizontalAlignment="Center" Margin="0.20" 
+            <Button x:Name="SignInButton" Content="Login" Background="DodgerBlue" Foreground="White" Command="{Binding LoginCommand}" Width="80" HorizontalAlignment="Center" Margin="0.20" 
                     RelativePanel.Below="PasswordBox" RelativePanel.AlignHorizontalCenterWith="PasswordBox">
-                <interactivity:Interaction.Behaviors>
-                    <core:EventTriggerBehavior EventName="Click">
-                        <core:InvokeCommandAction Command="{Binding LoginCommand}"/>
-                    </core:EventTriggerBehavior>
-                </interactivity:Interaction.Behaviors>
             </Button>
         </RelativePanel>
     </Grid>

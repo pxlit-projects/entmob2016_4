@@ -33,6 +33,7 @@ namespace EntMob_Uni.ViewModel
             {
                 userName = value;
                 RaisePropertyChanged("UserName");
+                RaisePropertyChanged("LoginCommand");
             }
         }
 
@@ -43,6 +44,7 @@ namespace EntMob_Uni.ViewModel
             {
                 password = value;
                 RaisePropertyChanged("Password");
+                RaisePropertyChanged("LoginCommand");
             }
         }
 
@@ -62,8 +64,17 @@ namespace EntMob_Uni.ViewModel
 
         private void LoadCommands()
         {
-            LoginCommand = new CustomCommand(Login, null);
+            LoginCommand = new CustomCommand(Login, CanLogin);
         }    
+
+        private bool CanLogin(object o)
+        {
+            if(password != null && password.Count() > 5 &&  userName != null && userName.Count() > 0)
+            {
+                return true;
+            }
+            return false;
+        }
 
         private async void Login(object o)
         {
