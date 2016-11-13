@@ -1,90 +1,50 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Xamarin.Forms;
-
-namespace EntMob_Xamarin.Services
+namespace EntMob_Xamarin
 {
-    public class NavigationService : INavigation
-    {
-        public INavigation Navi { get; internal set; }
+	public class NavigationService : INavigationService
+	{
 
-        public IReadOnlyList<Page> ModalStack
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
+		private static readonly object CreationLock = new Object();
+		private static NavigationService _instance;
 
-        public IReadOnlyList<Page> NavigationStack
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
+		public static NavigationService Default
+		{
+			get
+			{
+				if (_instance == null)
+				{
+					lock(CreationLock)
+					{
+						if (_instance == null)
+						{
+							_instance = new NavigationService();
+						}
+					}
+				}
+				return _instance;
+			}
+		}
 
-        public void InsertPageBefore(Page page, Page before)
-        {
-            throw new NotImplementedException();
-        }
+		private NavigationService() { }
 
-        public Task<Page> PopAsync()
-        {
-            return Navi.PopAsync();
-        }
-
-        public Task<Page> PopAsync(bool animated)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<Page> PopModalAsync()
-        {
-            return Navi.PopModalAsync();
-        }
-
-        public Task<Page> PopModalAsync(bool animated)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task PopToRootAsync()
-        {
-            return Navi.PopToRootAsync();
-        }
-
-        public Task PopToRootAsync(bool animated)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task PushAsync(Page page)
-        {
-            return Navi.PushAsync(page);
-        }
-
-        public Task PushAsync(Page page, bool animated)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task PushModalAsync(Page page)
-        {
-            return Navi.PushModalAsync(page);
-        }
-
-        public Task PushModalAsync(Page page, bool animated)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void RemovePage(Page page)
-        {
-            throw new NotImplementedException();
-        }
-    }
+		public void NavigateTo(string pageKey)
+		{
+			if (pageKey == "Login")
+			{
+				App.Current.MainPage = new MainPage();
+			}
+			else if (pageKey == "Register")
+			{
+				App.Current.MainPage = new RegisterPage();
+			}
+			else if (pageKey == "Timer")
+			{
+				App.Current.MainPage = new TimerPage();
+			}
+			else if (pageKey == "Values")
+			{
+				App.Current.MainPage = new ValuesPage();
+			}
+		}
+	}
 }

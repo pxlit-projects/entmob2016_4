@@ -10,7 +10,7 @@ namespace EntMob.DAL
     public abstract class Repository
     {
 
-        protected const string BASE_URL = "http://10.0.2.2:8080/";
+		protected const string BASE_URL = "http://10.0.2.2:8080/";
 
     }
 }

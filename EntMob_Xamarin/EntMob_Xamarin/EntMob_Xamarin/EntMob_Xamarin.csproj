@@ -67,6 +67,8 @@
     <Compile Include="Services\UserService.cs" />
     <Compile Include="Converters\TimeConverter.cs" />
     <Compile Include="Messages\LoggedInUser.cs" />
+    <Compile Include="Services\NavigationService.cs" />
+    <Compile Include="Services\INavigationService.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\MainPage.xaml">

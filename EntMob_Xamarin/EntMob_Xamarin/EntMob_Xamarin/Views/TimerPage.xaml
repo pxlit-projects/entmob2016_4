@@ -12,14 +12,12 @@
       <RowDefinition Height="4*"/>
       <RowDefinition Height="3*"/>
       <RowDefinition Height="3*"/>
-
     </Grid.RowDefinitions>
     <Grid.ColumnDefinitions>
       <ColumnDefinition Width="2.5*" />
       <ColumnDefinition Width="2.5*"/>
       <ColumnDefinition Width="2.5*" />
       <ColumnDefinition Width="2.5*" />
-
     </Grid.ColumnDefinitions>
 	<Entry Text="{Binding Name}" Grid.Row="1"/>
     <Label Text="Ingelogd als" Grid.Row="0" Grid.Column="2" />

@@ -20,11 +20,11 @@ namespace EntMob_Xamarin.ViewModels
 		private IUserService userService;
 		private INavigation navigation;
 
-		public RunnerViewModel(INavigation navi, IUserService userService)
+		public RunnerViewModel(IUserService userService)
 		{
 			LoadCommands();
 			RegisterForMessages();
-			navigation = navi;
+			//navigation = navi;
 			this.userService = userService;
 		}
 
@@ -69,7 +69,8 @@ namespace EntMob_Xamarin.ViewModels
 
 		private void Register(object o)
 		{
-			navigation.PushAsync(new RegisterPage());
+			//navigation.PushAsync(new RegisterPage());
+			NavigationService.Default.NavigateTo("Register");
 		}
 
 		private async void Login(object o)
@@ -95,7 +96,8 @@ namespace EntMob_Xamarin.ViewModels
 				if (result != null)
 				{
 					Messenger.Default.Send<LoggedInUser>(new LoggedInUser() { user = result });
-					await navigation.PushAsync(new TimerPage());
+					//await navigation.PushAsync(new TimerPage());
+					NavigationService.Default.NavigateTo("Timer");
 				}
 				else {
 					Username = "";

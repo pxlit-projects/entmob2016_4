@@ -65,11 +65,11 @@ namespace EntMob_Xamarin.ViewModels
 			}
 		}
 
-		public TimerViewModel(INavigation navigation, ISessionService sessionService)
+		public TimerViewModel(ISessionService sessionService)
         {
             LoadCommands();
 			SubscribeToMessages();
-            this.navigation = navigation;
+            //this.navigation = navigation;
         }
 
 		private void SubscribeToMessages()
@@ -99,7 +99,8 @@ namespace EntMob_Xamarin.ViewModels
                         button.Text = "Start";
 						session.End = DateTime.Now;
 						StopSession();
-                        navigation.PushAsync(new ValuesPage());
+						//navigation.PushAsync(new ValuesPage());
+						NavigationService.Default.NavigateTo("values");
                     }
                     else
                     {
