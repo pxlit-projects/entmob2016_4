@@ -6,6 +6,8 @@ import org.springframework.stereotype.Service;
 
 import javax.jms.JMSException;
 import javax.jms.TextMessage;
+import java.sql.Time;
+import java.util.Date;
 
 /**
  * Created by Jonas on 28/10/16.
@@ -19,7 +21,7 @@ public class JmsReceiver {
         try {
             if(msg instanceof TextMessage) {
                 String text = ((TextMessage)msg).getText();
-                System.out.println(text);
+                System.out.println(new Date() + ":" + text);
             }
         } catch (JMSException ex) {
             ex.printStackTrace();
