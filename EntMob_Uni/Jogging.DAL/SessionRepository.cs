@@ -12,41 +12,41 @@ namespace Jogging.DAL
     public class SessionRepository : Repository, ISessionRepository
     {
 
-        public List<Session> GetAllSessions(User user)
+        public async Task<List<Session>> GetAllSessions(User user)
         {
             string allSessions = BASE_URL + "/session/all";
             var uri = new Uri(allSessions);
             var client = new HttpClient();
             client.DefaultRequestHeaders.Authorization = BasicAuthenticationHelper.CreateBasicHeader(user.Name, user.Password);
-            var response = Task.Run(() => client.GetAsync(uri)).Result;
+            var response = await client.GetAsync(uri);
             response.EnsureSuccessStatusCode();
-            var result = Task.Run(() => response.Content.ReadAsStringAsync()).Result;
+            var result = await response.Content.ReadAsStringAsync();
             return JsonConvert.DeserializeObject<List<Session>>(result);
         }
 
-        public Session GetSessionById(User user, int id)
+        public async Task<Session> GetSessionById(User user, int id)
         {
             string sessionsId = BASE_URL + "/session?id=" + id;
             var uri = new Uri(sessionsId);
             var client = new HttpClient();
             client.DefaultRequestHeaders.Authorization = BasicAuthenticationHelper.CreateBasicHeader(user.Name, user.Password);
-            var response = Task.Run(() => client.GetAsync(uri)).Result;
+            var response = await client.GetAsync(uri);
             response.EnsureSuccessStatusCode();
-            var result = Task.Run(() => response.Content.ReadAsStringAsync()).Result;
+            var result = await response.Content.ReadAsStringAsync();
             return JsonConvert.DeserializeObject<Session>(result);
         }
 
-        public void DeleteSessionForId(User user, int id)
+        public async Task DeleteSessionForId(User user, int id)
         {
             string deleteSession = BASE_URL + "/session/delete?id=" + id;
             var uri = new Uri(deleteSession);
             var client = new HttpClient();
             client.DefaultRequestHeaders.Authorization = BasicAuthenticationHelper.CreateBasicHeader(user.Name, user.Password);
-            var response = Task.Run(() => client.GetAsync(uri)).Result;
+            var response = await client.GetAsync(uri);
             response.EnsureSuccessStatusCode();
         }
 
-        public Session StartSession(User user, Session session)
+        public async Task<Session> StartSession(User user, Session session)
         {
             string allSessions = BASE_URL + "/session/start";
             var uri = new Uri(allSessions);
@@ -55,13 +55,13 @@ namespace Jogging.DAL
             client.DefaultRequestHeaders.Authorization = BasicAuthenticationHelper.CreateBasicHeader(defaultUser.Name, defaultUser.Password);
             string sessionObject = JsonConvert.SerializeObject(session);
             StringContent content = new StringContent(sessionObject.ToString(), Encoding.UTF8, "application/json");
-            var response = Task.Run(() => client.PostAsync(uri, content)).Result;
+            var response = await client.PostAsync(uri, content);
             response.EnsureSuccessStatusCode();
-            var result = Task.Run(() => response.Content.ReadAsStringAsync()).Result;
+            var result = await response.Content.ReadAsStringAsync();
             return JsonConvert.DeserializeObject<Session>(result);
         }
 
-        public Session StopSession(User user, Session session)
+        public async Task<Session> StopSession(User user, Session session)
         {
             string stopSession = BASE_URL + "/session/stop";
             var uri = new Uri(stopSession);
@@ -70,21 +70,21 @@ namespace Jogging.DAL
             client.DefaultRequestHeaders.Authorization = BasicAuthenticationHelper.CreateBasicHeader(defaultUser.Name, defaultUser.Password);
             string sessionObject = JsonConvert.SerializeObject(session);
             StringContent content = new StringContent(sessionObject.ToString(), Encoding.UTF8, "application/json");
-            var response = Task.Run(() => client.PutAsync(uri, content)).Result;
+            var response = await client.PutAsync(uri, content);
             response.EnsureSuccessStatusCode();
-            var result = Task.Run(() => response.Content.ReadAsStringAsync()).Result;
+            var result = await response.Content.ReadAsStringAsync();
             return JsonConvert.DeserializeObject<Session>(result);
         }
 
-        public Dictionary<string, double> GetAveragesForSession(User user, int id)
+        public async Task<Dictionary<string, double>> GetAveragesForSession(User user, int id)
         {
             string averageSession = BASE_URL + "/session/average?id=" + id;
             var uri = new Uri(averageSession);
             var client = new HttpClient();
             client.DefaultRequestHeaders.Authorization = BasicAuthenticationHelper.CreateBasicHeader(user.Name, user.Password);
-            var response = Task.Run(() => client.GetAsync(uri)).Result;
+            var response = await client.GetAsync(uri);
             response.EnsureSuccessStatusCode();
-            var result = Task.Run(() => response.Content.ReadAsStringAsync()).Result;
+            var result = await response.Content.ReadAsStringAsync();
             return JsonConvert.DeserializeObject<Dictionary<string, double>>(result);
         }
 

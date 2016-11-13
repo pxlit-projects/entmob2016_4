@@ -10,10 +10,10 @@ namespace EntMob_Uni.Services
     public interface ISessionService
     {
 
-        List<Session> GetAllSessions(User user);
-        Session GetSessionById(User user, int id);
-        Session GetAverageForSession(Session session);
-        void DeleteSessionForSession(User user, int id);
+        Task<List<Session>> GetAllSessions(User user);
+        Task<Session> GetSessionById(User user, int id);
+        Task<Session> GetAverageForSession(Session session);
+        Task DeleteSessionForSession(User user, int id);
 
     }
 }

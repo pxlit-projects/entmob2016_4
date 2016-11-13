@@ -63,7 +63,7 @@ namespace EntMob_Uni.ViewModel
         private void LoadCommands()
         {
             LoginCommand = new CustomCommand(Login, null);
-        }     
+        }    
 
         private async void Login(object o)
         {
@@ -71,16 +71,12 @@ namespace EntMob_Uni.ViewModel
             user.Name = userName;
             user.Password = password;
 
-            var result = await Task.Run(() =>
-            {
-                user = userService.CheckCredentials(user);
-                return user;
-            });
+            User result = await userService.CheckCredentials(user);
 
             if (result != null)
             {
                 NavigationService.Default.Navigate(typeof(ValuesPage));
-                result.Password = password;
+                result.Password =  user.Password;
                 Messenger.Default.Send<User>(result);
             }
             else

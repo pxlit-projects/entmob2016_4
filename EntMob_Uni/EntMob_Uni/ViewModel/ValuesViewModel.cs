@@ -81,10 +81,7 @@ namespace EntMob_Uni.ViewModel
 
         private async void LoadSessions()
         {
-            var result = await Task.Run(() =>
-            {
-                return sessionService.GetAllSessions(user);
-            });
+            var result = await sessionService.GetAllSessions(user);
             Sessions = new ObservableCollection<Session>(result);
         }
 

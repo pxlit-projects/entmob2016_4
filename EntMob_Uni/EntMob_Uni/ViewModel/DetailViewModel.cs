@@ -65,7 +65,7 @@ namespace EntMob_Uni.ViewModel
 
         private async void LoadSessionAverages()
         {
-            var result = await Task.Run(() => sessionService.GetAverageForSession(selectedSession));
+            var result = await sessionService.GetAverageForSession(selectedSession);
             SelectedSession = result;
         }
 

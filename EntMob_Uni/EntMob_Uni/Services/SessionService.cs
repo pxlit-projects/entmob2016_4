@@ -17,19 +17,19 @@ namespace EntMob_Uni.Services
             this.sessionRepository = sessionRepository;
         }
 
-        public void DeleteSessionForSession(User user, int id)
+        public Task DeleteSessionForSession(User user, int id)
         {
-            sessionRepository.DeleteSessionForId(user, id);
+            return sessionRepository.DeleteSessionForId(user, id);
         }
 
-        public List<Session> GetAllSessions(User user)
+        public Task<List<Session>> GetAllSessions(User user)
         {
             return sessionRepository.GetAllSessions(user);
         }
 
-        public Session GetAverageForSession(Session session)
+        public async Task<Session> GetAverageForSession(Session session)
         {
-            Dictionary<String, Double> averages = sessionRepository.GetAveragesForSession(session.User, session.Id);
+            Dictionary<String, Double> averages = await sessionRepository.GetAveragesForSession(session.User, session.Id);
             session.AverageActivity =  averages.ContainsKey("AverageActivity") ? averages["AverageActivity"]: 0;
             session.AverageHumidity = averages.ContainsKey("AverageHumidity") ? averages["AverageHumidity"]: 0;
             session.AveragePressure = averages.ContainsKey("Averagepressure") ? averages["AveragePressure"]: 0;
@@ -37,7 +37,7 @@ namespace EntMob_Uni.Services
             return session;
         }
 
-        public Session GetSessionById(User user, int id)
+        public Task<Session> GetSessionById(User user, int id)
         {
             return sessionRepository.GetSessionById(user, id);
         }

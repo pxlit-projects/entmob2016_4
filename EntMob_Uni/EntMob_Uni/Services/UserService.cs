@@ -19,16 +19,16 @@ namespace EntMob_Uni.Services
             this.userRepository = userRepository;
         }
 
-        public User AddUser(User user)
+        public async Task<User> AddUser(User user)
         {
-            return userRepository.PostUser(user);
+            return await userRepository.PostUser(user);
         }
 
-        public User CheckCredentials(User user)
+        public async Task<User> CheckCredentials(User user)
         {
             try
             {
-                User userByName = userRepository.GetUserByName(user.Name);
+                User userByName = await userRepository.GetUserByName(user.Name);
                 if (BCrypt.Net.BCrypt.CheckPassword(user.Password, userByName.Password))
                 {
                     return userByName;
@@ -36,7 +36,7 @@ namespace EntMob_Uni.Services
             }
             catch (Exception ex)
             {
-                Debug.WriteLine( "Test" + ex.Message);
+                Debug.WriteLine(ex.Message);
             }
 
             return null;
