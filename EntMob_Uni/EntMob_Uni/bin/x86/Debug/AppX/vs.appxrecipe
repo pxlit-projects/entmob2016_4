@@ -28,13 +28,13 @@
     <AppXManifest Include="C:\Users\Jonas Beckers\Documents\GitHub\entmob2016_4\EntMob_Uni\EntMob_Uni\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-11-09T20:01:20.898</Modified>
+      <Modified>2016-11-13T09:39:42.041</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Jonas Beckers\Documents\GitHub\entmob2016_4\EntMob_Uni\EntMob_Uni\bin\x86\Debug\EntMob_Uni.exe">
       <PackagePath>entrypoint\EntMob_Uni.exe</PackagePath>
-      <Modified>2016-11-09T20:01:19.353</Modified>
+      <Modified>2016-11-13T09:39:41.225</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\BehaviorsXamlSDKManaged\12.0\References\CommonConfiguration\Neutral\Microsoft.Xaml.Interactions.dll">
       <PackagePath>Microsoft.Xaml.Interactions.dll</PackagePath>
@@ -556,7 +556,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jonas Beckers\Documents\GitHub\entmob2016_4\EntMob_Uni\EntMob_Uni\bin\x86\Debug\EntMob_Uni.xr.xml">
       <PackagePath>EntMob_Uni.xr.xml</PackagePath>
-      <Modified>2016-11-09T20:01:19.153</Modified>
+      <Modified>2016-11-13T09:37:50.305</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.14393.0\\redist\Debug\x86\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -569,11 +569,11 @@
     <AppxPackagedFile Include="C:\Users\Jonas Beckers\Documents\GitHub\entmob2016_4\EntMob_Uni\EntMob_Uni\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-11-09T20:01:20.508</Modified>
+      <Modified>2016-11-13T09:37:51.592</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jonas Beckers\Documents\GitHub\entmob2016_4\EntMob_Uni\EntMob_Uni\bin\x86\Debug\Core\EntMob_Uni.exe">
       <PackagePath>EntMob_Uni.exe</PackagePath>
-      <Modified>2016-11-09T20:01:20.888</Modified>
+      <Modified>2016-11-13T09:39:42.038</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
