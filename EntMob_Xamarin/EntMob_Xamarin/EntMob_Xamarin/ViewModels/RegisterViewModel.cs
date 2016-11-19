@@ -72,7 +72,6 @@ namespace EntMob_Xamarin
 		}
 
 		private IUserService userService;
-		private INavigation navigation;
 
 		public RegisterViewModel(IUserService userService)
 		{
@@ -103,23 +102,12 @@ namespace EntMob_Xamarin
 			if (Check())
 			{
 				User user = CreateUser();
-				var result = await Task.Run(() =>
-				{
-					try
-					{
-						return userService.AddUser(user);
-					}
-					catch
-					{
-						return null;
-					}
-				});
+				User result = await userService.AddUser(user);
 
 				if (result != null)
 				{
 					result.Password = user.Password;
 					Messenger.Default.Send<User>(result);
-					//await navigation.PopAsync(true);
 					NavigationService.Default.NavigateTo("Login");
 				}
 				else {

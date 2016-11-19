@@ -19,39 +19,31 @@ namespace EntMob_Xamarin.ViewModels
 	{
 
 		private ISessionService sessionService;
-		private INavigation navigation;
 
 		public ICommand StartStopCommand { get; set; }
 
 		private bool Run = true;
-		private Session session { get; set; }
-		private DateTime timer { get; set; }
-
-		private string name { get; set; }
+		private Session session;
+		private DateTime time;
 
 		public string Name
 		{
 			get
 			{
-				return name;
+				return session.Name;
 			}
 			set
 			{
-				name = value;
+				session.Name = value;
 				RaisePropertyChanged("Name");
 			}
 		}
 
-		public DateTime Timer
+		public string UserName
 		{
 			get
 			{
-				return timer;
-			}
-			set
-			{
-				this.timer = value;
-				RaisePropertyChanged("Timer");
+				return session.User.Name;
 			}
 		}
 
@@ -69,7 +61,10 @@ namespace EntMob_Xamarin.ViewModels
         {
             LoadCommands();
 			SubscribeToMessages();
-            //this.navigation = navigation;
+			if (session == null)
+			{
+				session = new Session();
+			}
         }
 
 		private void SubscribeToMessages()
@@ -99,15 +94,11 @@ namespace EntMob_Xamarin.ViewModels
                         button.Text = "Start";
 						session.End = DateTime.Now;
 						StopSession();
-						//navigation.PushAsync(new ValuesPage());
-						NavigationService.Default.NavigateTo("values");
+						NavigationService.Default.NavigateTo("Values");
                     }
                     else
                     {
-						Timer = DateTime.Now;
-						if (session == null) {
-							session = new Session();
-						}
+						time = DateTime.Now;
 						session.Start = DateTime.Now;
                         StartTimer();
 						StartSession();
@@ -123,8 +114,10 @@ namespace EntMob_Xamarin.ViewModels
                     Task.Factory.StartNew(async () =>
                     {
                     // Do the actual request and wait for it to finish.
-                    await Task.Delay(0);
-					Timer.AddMilliseconds(1);
+                    await Task.Delay(1);
+					time.AddMilliseconds(1);
+					RaisePropertyChanged("Timer");
+
                     // Switch back to the UI thread to update the UI
                     Device.BeginInvokeOnMainThread(() =>
                         {

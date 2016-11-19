@@ -39,7 +39,7 @@ namespace EntMob_Xamarin
 
 		public static ValuesViewModel Values()
         {
-                return valuesViewModel ?? (valuesViewModel = new ValuesViewModel());
+        	return valuesViewModel ?? (valuesViewModel = new ValuesViewModel());
         }
     }
 }

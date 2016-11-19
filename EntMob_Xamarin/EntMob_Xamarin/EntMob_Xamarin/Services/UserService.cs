@@ -20,16 +20,23 @@ namespace EntMob_Xamarin.Services
             this.userRepository = userRepository;
         }
 
-		public User AddUser(User user)
+		public Task<User> AddUser(User user)
         {
-            return userRepository.PostUser(user);
+			try
+			{
+				 return userRepository.PostUser(user);
+			}
+			catch
+			{
+				return null;
+			}
         }
 
-		public User CheckCredentials(User user)
+		public async Task<User> CheckCredentials(User user)
         {
             try
             {
-                User userByName = userRepository.GetUserByName(user.Name);
+				User userByName = await userRepository.GetUserByName(user.Name);
 				if(BCrypt.Net.BCrypt.CheckPassword(user.Password, userByName.Password)){
 					userByName.Password = user.Password;
 					return userByName;

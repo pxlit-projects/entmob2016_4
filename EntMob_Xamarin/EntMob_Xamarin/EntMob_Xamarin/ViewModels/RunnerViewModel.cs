@@ -18,13 +18,11 @@ namespace EntMob_Xamarin.ViewModels
 	public class RunnerViewModel : INotifyPropertyChanged
 	{
 		private IUserService userService;
-		private INavigation navigation;
 
 		public RunnerViewModel(IUserService userService)
 		{
 			LoadCommands();
 			RegisterForMessages();
-			//navigation = navi;
 			this.userService = userService;
 		}
 
@@ -69,7 +67,6 @@ namespace EntMob_Xamarin.ViewModels
 
 		private void Register(object o)
 		{
-			//navigation.PushAsync(new RegisterPage());
 			NavigationService.Default.NavigateTo("Register");
 		}
 
@@ -81,22 +78,11 @@ namespace EntMob_Xamarin.ViewModels
 				user.Password = password;
 				user.Name = username;
 
-				var result = await Task.Run(() =>
-				{
-					try
-					{
-						return userService.CheckCredentials(user);
-					}
-					catch
-					{
-						return null;
-					}
-				});
+				User result = await userService.CheckCredentials(user);
 
 				if (result != null)
 				{
 					Messenger.Default.Send<LoggedInUser>(new LoggedInUser() { user = result });
-					//await navigation.PushAsync(new TimerPage());
 					NavigationService.Default.NavigateTo("Timer");
 				}
 				else {

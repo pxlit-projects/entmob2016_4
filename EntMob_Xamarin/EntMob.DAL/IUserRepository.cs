@@ -10,8 +10,8 @@ namespace EntMob.DAL
     public interface IUserRepository
     {
 
-        User GetUserByName(string name);
-        User PostUser(User user);
+        Task<User> GetUserByName(string name);
+		Task<User> PostUser(User user);
 
     }
 }

@@ -11,8 +11,8 @@ namespace EntMob_Xamarin.Services
     public interface IUserService
     {
 
-        User CheckCredentials(User user);
-        User AddUser(User user);
+		Task<User> CheckCredentials(User user);
+		Task<User> AddUser(User user);
 
     }
 }

@@ -3,8 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              BackgroundColor="Silver"
              x:Class="EntMob_Xamarin.TimerPage"
-             xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
-             xmlns:core="using:Microsoft.Xaml.Interactions.Core"
              BindingContext="{Binding Timer, Source={StaticResource Locator}}">
 
   <Grid x:Name="TempertureGrid" ColumnSpacing="1">
@@ -19,10 +17,9 @@
       <ColumnDefinition Width="2.5*" />
       <ColumnDefinition Width="2.5*" />
     </Grid.ColumnDefinitions>
-	<Entry Text="{Binding Name}" Grid.Row="1"/>
     <Label Text="Ingelogd als" Grid.Row="0" Grid.Column="2" />
-    <Label Text="{Binding Session.User.Name}" Grid.Row="0" Grid.Column="3" />
-    <Label Text="{Binding Timer}" FontSize="40" TextColor="Green" HorizontalTextAlignment="Center" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="4"/>
+    <Label Text="Jonas" Grid.Row="0" Grid.Column="3" />
+    <Label Text="10:00:10" FontSize="40" TextColor="Red" HorizontalTextAlignment="Center" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="4"/>
     <Button x:Name="btnStop" Text="Start" Command="{Binding StartStopCommand}" CommandParameter="{x:Reference btnStop}" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4">
     </Button>
   </Grid>

@@ -11,12 +11,10 @@ namespace EntMob_Xamarin.Services
     public interface ISessionService
     {
 
-        List<Session> GetAllSessions(User user);
-        Session GetSessionById(User user, int id);
-        Session GetAverageForSession(Session session);
-		Session StartSession(Session session);
-		Session StopSession(Session session);
-        void DeleteSessionForSession(User user, int id);
+        Task<List<Session>> GetAllSessions(User user);
+		Task<Session> StartSession(Session session);
+		Task<Session> StopSession(Session session);
+		Task DeleteSessionForSession(User user, int id);
 
     }
 }
