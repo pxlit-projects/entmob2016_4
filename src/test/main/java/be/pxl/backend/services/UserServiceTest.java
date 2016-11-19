@@ -3,6 +3,7 @@ package be.pxl.backend.services;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.when;
 
+import be.pxl.backend.TestApplication;
 import be.pxl.backend.exceptions.UserException;
 import be.pxl.backend.jms.JmsSender;
 import be.pxl.backend.models.User;
@@ -13,6 +14,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -22,24 +24,17 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  */
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(classes = Application.class)
+@SpringApplicationConfiguration(classes = TestApplication.class)
 public class UserServiceTest {
 
-    @Mock
+    @Autowired
     private JmsSender jmsSender;
 
-    @Mock
+    @Autowired
     private UserRepository userRepository;
 
+    @Autowired
     private UserService userService;
-
-    @Before
-    public void init() {
-        MockitoAnnotations.initMocks(this);
-        userService = new UserService();
-        userService.setUserRepository(userRepository);
-        userService.setJmsSender(jmsSender);
-    }
 
     @Test(expected = UserException.class)
     public void addUserFailed() {

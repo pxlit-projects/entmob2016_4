@@ -28,7 +28,7 @@ public class AcceleroMeter implements Serializable {
     private float z;
 
     @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "Date")
+    @Column(name = "Date", nullable = false)
     private Date date;
 
     @JsonBackReference
@@ -44,6 +44,7 @@ public class AcceleroMeter implements Serializable {
         this.x = x;
         this.y = y;
         this.z = z;
+        this.date = date;
     }
 
     public Session getSession() {

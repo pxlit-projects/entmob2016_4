@@ -1,6 +1,8 @@
 package be.pxl.backend.integrationtests;
 
 import static org.junit.Assert.assertEquals;
+import static org.hamcrest.CoreMatchers.*;
+import static org.junit.Assert.assertThat;
 
 import be.pxl.backend.models.AcceleroMeter;
 import be.pxl.backend.models.Session;
@@ -16,6 +18,8 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.util.Date;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.DoubleStream;
 
 /**
  * Created by Jonas on 6/11/16.
@@ -56,7 +60,7 @@ public class AcceleroMeterTest {
 
     @Test
     public void getAcceleroMetersForSession() {
-        Session session = new Session();
+        Session session = new Session("Test", new Date());
         session = sessionRepository.save(session);
 
         AcceleroMeter acceleroMeter1 = new AcceleroMeter(12, 50, 0, new Date());
@@ -71,7 +75,12 @@ public class AcceleroMeterTest {
         List<AcceleroMeter> acceleroMeters = acceleroMeterRepository.getAcceleroMetersForSession(session.getId());
         assertEquals(2, acceleroMeters.size());
 
-
+        List<Double> xValues = acceleroMeters.stream().map(a -> (double)a.getX()).collect(Collectors.toList());
+        assertThat(xValues, hasItems(12.0, 78.0));
+        List<Double> yValues = acceleroMeters.stream().map(a -> (double)a.getY()).collect(Collectors.toList());
+        assertThat(yValues, hasItems(50.0, 50.0));
+        List<Double> zValues = acceleroMeters.stream().map(a -> (double)a.getZ()).collect(Collectors.toList());
+        assertThat(zValues, hasItems(0.0, 0.0));
     }
 
 }

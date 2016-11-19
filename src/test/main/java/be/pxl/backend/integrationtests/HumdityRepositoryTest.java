@@ -2,6 +2,8 @@ package be.pxl.backend.integrationtests;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.hamcrest.CoreMatchers.*;
+import static org.junit.Assert.assertThat;
 
 import be.pxl.backend.models.Humidity;
 import be.pxl.backend.models.Session;
@@ -17,6 +19,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.util.Date;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * Created by Jonas on 6/11/16.
@@ -60,7 +63,7 @@ public class HumdityRepositoryTest {
     public void getHumiditiesForSession(){
         deletelAll();
 
-        Session session = new Session();
+        Session session = new Session("Test", new Date());
         Session savedSession = sessionRepository.save(session);
 
         Humidity humidity = new Humidity(10, new Date());
@@ -77,6 +80,9 @@ public class HumdityRepositoryTest {
         List<Humidity> humidities = humidityRepository.getHumidityForSession(savedSession.getId());
         assertEquals(2, humidities.size());
         assertEquals(170, humidities.stream().mapToDouble(h -> h.getHumidity()).sum(), 0);
+
+        List<Double> values = humidities.stream().map(h -> (double)h.getHumidity()).collect(Collectors.toList());
+        assertThat(values, hasItems(80.0, 90.0));
     }
 
 }

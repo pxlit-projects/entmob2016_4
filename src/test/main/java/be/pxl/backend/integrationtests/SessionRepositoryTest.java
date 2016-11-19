@@ -2,7 +2,8 @@ package be.pxl.backend.integrationtests;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertThat;
+import static org.hamcrest.CoreMatchers.*;
 
 import be.pxl.backend.models.*;
 import be.pxl.backend.repositories.SessionRepository;
@@ -17,6 +18,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.util.Date;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * Created by Jonas on 4/11/16.
@@ -84,8 +86,11 @@ public class SessionRepositoryTest {
 
         List<Session> sessions = sessionRepository.getAllSessions(user.getName());
         assertEquals(2, sessions.size());
-        assertTrue(sessions.contains(s1));
-        assertTrue(sessions.contains(s2));
+
+        List<String> names = sessions.stream().map(s -> s.getName()).collect(Collectors.toList());
+
+        assertThat(names, hasItems("Test1", "Test2"));
+        assertThat(names, not(hasItem("Test3")));
     }
 
 }
