@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
+﻿using EntMob_Uni.Services;
+using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +15,7 @@ namespace Jogging.Test
         [TestMethod]
         public void Test()
         {
-            
+            IUserService userService = new MockUserService
         }
 
     }
