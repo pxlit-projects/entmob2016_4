@@ -1,6 +1,7 @@
 package be.pxl.backend;
 
 import be.pxl.backend.jms.JmsSender;
+import be.pxl.backend.repositories.SessionRepository;
 import be.pxl.backend.repositories.UserRepository;
 import be.pxl.backend.start.Application;
 import org.mockito.Mockito;
@@ -11,6 +12,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
+import org.springframework.context.annotation.Primary;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 /**
@@ -31,6 +33,11 @@ public class TestApplication {
     @Bean
     public UserRepository userRepository(){
         return Mockito.mock(UserRepository.class);
+    }
+
+    @Bean
+    public SessionRepository sessionRepository() {
+        return Mockito.mock(SessionRepository.class);
     }
 
 }

@@ -59,7 +59,7 @@ public class SessionService {
             SessionException sessionException = new SessionException("Session start cannot be null and Session end cannot be null!");
             jmsSender.sendMessage("stop session:" + sessionException.getMessage());
             throw sessionException;
-        } else if (session.getEnd().compareTo(session.getStart()) == 1) {
+        } else if (session.getEnd().before(session.getStart())) {
             SessionException sessionException = new SessionException("Session end must me after Session start");
             jmsSender.sendMessage("stop session:" + sessionException.getMessage());
             throw sessionException;

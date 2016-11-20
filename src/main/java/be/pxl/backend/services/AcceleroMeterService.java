@@ -40,7 +40,7 @@ public class AcceleroMeterService {
     }
 
     private boolean valueInRange(float value) {
-        return (value >= 0 && value <= 250);
+        return (value >= -3 && value <= 3);
     }
 
 }
