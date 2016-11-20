@@ -51,8 +51,6 @@ public class AutomatedUserControllerTest {
 
     @Test
     public void test() throws Exception {
-        String basicDigestHeaderValue = "Basic" + new String(Base64.encode(("user:user").getBytes()));
-
         User jonas = new User("Jonas");
         jonas.setPassword("123456");
         ObjectMapper mapper = new ObjectMapper();
@@ -61,11 +59,12 @@ public class AutomatedUserControllerTest {
         mockMvc.perform(post("/user").content(requestBody)
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
                 .andExpect(jsonPath("$.name").value("Jonas"));
-        mockMvc.perform(get("/user?username=Jonas").header("Authorization", basicDigestHeaderValue))
+        mockMvc.perform(get("/user?username=Jonas"))
                 .andExpect(status().isOk())
-                .andExpect(content().contentType(MediaType.APPLICATION_JSON))
-                .andExpect(jsonPath("$.name").value("Jonas"));
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
+                .andExpect(jsonPath("$.name").value("Jonas")).andExpect(jsonPath("$.role").value("ROLE_USER"));
     }
 
 }
