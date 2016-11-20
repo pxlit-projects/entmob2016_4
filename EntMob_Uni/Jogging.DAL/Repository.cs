@@ -10,7 +10,7 @@ namespace Jogging.DAL
     public abstract class Repository
     {
 
-        protected const string BASE_URL = "http://192.168.1.40:8080";
+        protected const string BASE_URL = "http://localhost:8080";
 
     }
 }

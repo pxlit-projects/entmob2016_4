@@ -10,7 +10,6 @@
     mc:Ignorable="d"
     DataContext="{Binding Source={StaticResource mainViewModelLocator}, Path=DetailViewModel}">
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" x:Name="MainGrid">
-
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -20,32 +19,38 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-
         <Grid x:Name="FirstGrid" Grid.Column="0" Grid.Row="0" Background="CadetBlue">
-            <!--<Image Source="../Images/weather-icon.png" Stretch="None" HorizontalAlignment="Right" VerticalAlignment="Center"/> -->
-            <TextBlock Text="{Binding SelectedSession.AverageTemperature, Converter={ StaticResource localValueToDegreesConverter}}" FontSize="70" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"></TextBlock>
+            <Viewbox>
+                <TextBlock Margin="20,10,20,10" Text="{Binding SelectedSession.AverageTemperature, Converter={ StaticResource localValueToDegreesConverter}}" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"></TextBlock>
+            </Viewbox>
         </Grid>
         <Grid x:Name="SecondGrid" Grid.Column="1" Grid.Row="0" Background="Black" >
-            <!--<Image Source="../Images/time.jpg" Stretch="UniformToFill"/> -->
-            <TextBlock Text="{Binding SelectedSession.AveragePressure, Converter={StaticResource localPressureConverter}}" FontSize="70" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"></TextBlock>
+            <Viewbox>
+                <TextBlock Margin="20,10,20,10"  Text="{Binding SelectedSession.AveragePressure, Converter={StaticResource localPressureConverter}}" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"></TextBlock>
+            </Viewbox>
         </Grid>
         <Grid x:Name="ThirdGrid" Grid.Column="0" Grid.Row="1" Background="Bisque">
-            <!--<Image Source="../Images/steps.jpg" Stretch="None" HorizontalAlignment="Center" VerticalAlignment="Center"/> -->
-            <TextBlock Text="{Binding SelectedSession.AverageActivity, Converter={StaticResource localActivityConverter}}" FontSize="70" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Gray" Grid.ColumnSpan="2" Margin="55,33,54,33"></TextBlock>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="55"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button  Grid.Column="0" x:Name="BackButton" Content="BACK" VerticalAlignment="Center">
+                <interactivity:Interaction.Behaviors>
+                    <core:EventTriggerBehavior EventName="Click">
+                        <core:InvokeCommandAction Command="{Binding BackCommand}"/>
+                    </core:EventTriggerBehavior>
+                </interactivity:Interaction.Behaviors>
+            </Button>
+            <Viewbox Grid.Column="1">
+                <TextBlock Margin="20,10,20,10" Text="{Binding SelectedSession.AverageActivity, Converter={StaticResource localActivityConverter}}" FontSize="70" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Gray"></TextBlock>
+            </Viewbox>
         </Grid>
         <Grid x:Name="FourthGrid" Grid.Column="1" Grid.Row="1" Background="Linen">
-            <!--<Image Source="../Images/distance.jpeg" Stretch="Fill"/> -->
-            <TextBlock Text="{Binding SelectedSession.AverageHumidity, Converter={StaticResource localHumidityConverter}}" FontSize="70" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Gray"></TextBlock>
+            <Viewbox>
+                <TextBlock Margin="20,10,20,10"  Text="{Binding SelectedSession.AverageHumidity, Converter={StaticResource localHumidityConverter}}" FontSize="70" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Gray"></TextBlock>
+            </Viewbox>
         </Grid>
-        <Button Grid.Row="1" Grid.Column="0" x:Name="BackButton" Content="BACK">
-            <interactivity:Interaction.Behaviors>
-                <core:EventTriggerBehavior EventName="Click">
-                    <core:InvokeCommandAction Command="{Binding BackCommand}"/>
-                </core:EventTriggerBehavior>
-            </interactivity:Interaction.Behaviors>
-        </Button>
         <Grid x:Name="FifthGrid" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Background="RosyBrown">
-            <!--<Image Source="../Images/humidity.jpg" Stretch="Fill"/>-->
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
@@ -54,10 +59,19 @@
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <TextBlock Grid.Row="0" Grid.Column="0" Text="{Binding SelectedSession.Name}" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"></TextBlock>
-            <TextBlock Grid.Row="1" Grid.Column="0" Text="{Binding SelectedSession.Start, Converter= {StaticResource localDateTimeConverter}}" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"></TextBlock>
-            <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding SelectedSession.End, Converter= {StaticResource localDateTimeConverter}}" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"></TextBlock>
-            <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding SelectedSession.Duration, Converter={StaticResource localTimeSpanConverter}}" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"></TextBlock>
+            <Viewbox Grid.Row="0" Grid.Column="0">
+                <TextBlock Margin="20,10,20,10" Text="{Binding SelectedSession.Name}" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"></TextBlock>
+            </Viewbox>
+            <Viewbox Grid.Row="1" Grid.Column="0">
+                <TextBlock Margin="20,10,20,10" Text="{Binding SelectedSession.Start, Converter= {StaticResource localDateTimeConverter}}" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"></TextBlock>
+            </Viewbox>
+            <Viewbox Grid.Row="1" Grid.Column="1">
+                <TextBlock Margin="20,10,20,10" Text="{Binding SelectedSession.End, Converter= {StaticResource localDateTimeConverter}}" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"></TextBlock>
+            </Viewbox>
+            <Viewbox Grid.Row="0" Grid.Column="1">
+                <TextBlock Margin="20,10,20,10" Text="{Binding SelectedSession.Duration, Converter={StaticResource localTimeSpanConverter}}" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"></TextBlock>
+            </Viewbox>
+            
         </Grid>
     </Grid>
 </Page>
