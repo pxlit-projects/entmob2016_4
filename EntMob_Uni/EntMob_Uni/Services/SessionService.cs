@@ -32,7 +32,7 @@ namespace EntMob_Uni.Services
             Dictionary<String, Double> averages = await sessionRepository.GetAveragesForSession(session.User, session.Id);
             session.AverageActivity =  averages.ContainsKey("AverageActivity") ? averages["AverageActivity"]: 0;
             session.AverageHumidity = averages.ContainsKey("AverageHumidity") ? averages["AverageHumidity"]: 0;
-            session.AveragePressure = averages.ContainsKey("Averagepressure") ? averages["AveragePressure"]: 0;
+            session.AveragePressure = averages.ContainsKey("AveragePressure") ? averages["AveragePressure"]: 0;
             session.AverageTemperature = averages.ContainsKey("AverageTemperature")?  averages["AverageTemperature"]: 0;
             return session;
         }
