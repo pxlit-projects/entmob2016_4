@@ -28,13 +28,13 @@
     <AppXManifest Include="C:\Users\Jonas Beckers\Documents\GitHub\entmob2016_4\EntMob_Uni\EntMob_Uni\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-11-21T18:16:28.773</Modified>
+      <Modified>2016-11-21T18:22:31.301</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Jonas Beckers\Documents\GitHub\entmob2016_4\EntMob_Uni\EntMob_Uni\bin\x86\Debug\EntMob_Uni.exe">
       <PackagePath>entrypoint\EntMob_Uni.exe</PackagePath>
-      <Modified>2016-11-21T18:16:27.460</Modified>
+      <Modified>2016-11-21T18:22:30.365</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\BehaviorsXamlSDKManaged\12.0\References\CommonConfiguration\Neutral\Microsoft.Xaml.Interactions.dll">
       <PackagePath>Microsoft.Xaml.Interactions.dll</PackagePath>
@@ -573,7 +573,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jonas Beckers\Documents\GitHub\entmob2016_4\EntMob_Uni\EntMob_Uni\bin\x86\Debug\Core\EntMob_Uni.exe">
       <PackagePath>EntMob_Uni.exe</PackagePath>
-      <Modified>2016-11-21T18:16:28.762</Modified>
+      <Modified>2016-11-21T18:22:31.296</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -12,9 +12,10 @@ namespace Jogging.Test
     public class DetailViewModelTest
     {
         [TestMethod]
-        public void Test()
+        public void TestCommandsLoaded()
         {
-            
+            DetailViewModel detailViewModel = new DetailViewModel(new Mocks.MockSessionService());
+            Assert.IsNotNull(detailViewModel.BackCommand);
         }
     }
 }

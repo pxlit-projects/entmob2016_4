@@ -1,4 +1,5 @@
 ﻿using EntMob_Uni.Services;
+using EntMob_Uni.ViewModel;
 using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
 using System;
 using System.Collections.Generic;
@@ -13,9 +14,11 @@ namespace Jogging.Test
     {
 
         [TestMethod]
-        public void Test()
+        public void TestCommandsLoaded()
         {
-           
+            ValuesViewModel valuesViewModel = new ValuesViewModel(new Mocks.MockSessionService());
+            Assert.IsNotNull(valuesViewModel.BackCommand);
+            Assert.IsNotNull(valuesViewModel.NextCommand);
         }
 
     }

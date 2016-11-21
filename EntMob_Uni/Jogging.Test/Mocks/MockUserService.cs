@@ -16,12 +16,12 @@ namespace Jogging.Test.Mocks
 
         public Task<User> AddUser(User user)
         {
-            throw new NotImplementedException();
+            return userRepository.PostUser(user);
         }
 
         public Task<User> CheckCredentials(User user)
         {
-            throw new NotImplementedException();
+            return userRepository.GetUserByName(user.Name);
         }
     }
 }

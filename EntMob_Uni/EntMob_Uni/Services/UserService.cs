@@ -26,20 +26,24 @@ namespace EntMob_Uni.Services
 
         public async Task<User> CheckCredentials(User user)
         {
-            try
+            return await Task.Run(async () =>
             {
-                User userByName = await userRepository.GetUserByName(user.Name);
-                if (BCrypt.Net.BCrypt.CheckPassword(user.Password, userByName.Password))
+                try
                 {
-                    return userByName;
+                    User userByName = await userRepository.GetUserByName(user.Name);
+                    if (BCrypt.Net.BCrypt.CheckPassword(user.Password, userByName.Password))
+                    {
+                        return userByName;
+                    }
                 }
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine(ex.Message);
-            }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine(ex.Message);
+                }
 
-            return null;
+                return null;
+            });
+           
         }
     }
 }
