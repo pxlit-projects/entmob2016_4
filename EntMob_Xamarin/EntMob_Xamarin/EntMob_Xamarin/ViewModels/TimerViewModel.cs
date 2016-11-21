@@ -22,7 +22,6 @@ namespace EntMob_Xamarin.ViewModels
 
 		public ICommand StartStopCommand { get; set; }
 
-		private bool Run = true;
 		private Session session;
 		private DateTime time;
 
@@ -43,7 +42,24 @@ namespace EntMob_Xamarin.ViewModels
 		{
 			get
 			{
-				return session.User.Name;
+				if (session.User != null)
+				{
+					return session.User.Name;
+				}
+				return "";
+			}
+		}
+
+		public DateTime Time
+		{
+			get
+			{
+				return time;
+			}
+			set
+			{
+				time = value;
+				RaisePropertyChanged("Time");
 			}
 		}
 
@@ -98,7 +114,7 @@ namespace EntMob_Xamarin.ViewModels
                     }
                     else
                     {
-						time = DateTime.Now;
+						Time = new DateTime(2000,1,1);
 						session.Start = DateTime.Now;
                         StartTimer();
 						StartSession();
@@ -115,7 +131,7 @@ namespace EntMob_Xamarin.ViewModels
                     {
                     // Do the actual request and wait for it to finish.
                     await Task.Delay(1);
-					time.AddMilliseconds(1);
+					Time.AddMilliseconds(1);
 					RaisePropertyChanged("Timer");
 
                     // Switch back to the UI thread to update the UI
@@ -134,21 +150,20 @@ namespace EntMob_Xamarin.ViewModels
 
 		private async void StartSession()
 		{
-			var result = await Task.Run(() =>
+			try
 			{
-				try
+				var result = await sessionService.StartSession(session);
+				if (result != null)
 				{
-					return sessionService.StartSession(session);
+					session = result;
 				}
-				catch {
-					return null;
-				}
-			});
-
-			if (result != null)
-			{
-				session = result;
 			}
+			catch(Exception ex)
+			{
+				Debug.WriteLine(ex.Message);
+			}
+
+
 		}
 
 		private async void StopSession()

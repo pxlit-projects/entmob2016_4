@@ -10,6 +10,7 @@ namespace EntMob_Xamarin
 		public RegisterPage()
 		{
 			InitializeComponent();
+			BindingContext = ViewModelLocator.Register();
 		}
 	}
 }

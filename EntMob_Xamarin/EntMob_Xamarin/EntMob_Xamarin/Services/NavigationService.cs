@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Diagnostics;
+
 namespace EntMob_Xamarin
 {
 	public class NavigationService : INavigationService

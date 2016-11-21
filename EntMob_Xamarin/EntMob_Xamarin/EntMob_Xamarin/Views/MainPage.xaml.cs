@@ -13,6 +13,7 @@ namespace EntMob_Xamarin
         public MainPage()
         {
             InitializeComponent();
+			BindingContext = ViewModelLocator.Main();
         }
     }
 }

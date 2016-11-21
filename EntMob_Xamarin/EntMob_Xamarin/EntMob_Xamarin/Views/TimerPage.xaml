@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             BackgroundColor="Silver"
-             x:Class="EntMob_Xamarin.TimerPage"
-             BindingContext="{Binding Timer, Source={StaticResource Locator}}">
-
-  <Grid x:Name="TempertureGrid" ColumnSpacing="1">
-    <Grid.RowDefinitions>
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		x:Class="EntMob_Xamarin.TimerPage"
+		>
+	<ContentPage.Content>
+	<Grid x:Name="TempertureGrid" ColumnSpacing="1">
+    	<Grid.RowDefinitions>
       <RowDefinition Height="4*"/>
       <RowDefinition Height="3*"/>
       <RowDefinition Height="3*"/>
@@ -18,9 +17,10 @@
       <ColumnDefinition Width="2.5*" />
     </Grid.ColumnDefinitions>
     <Label Text="Ingelogd als" Grid.Row="0" Grid.Column="2" />
-    <Label Text="Jonas" Grid.Row="0" Grid.Column="3" />
-    <Label Text="10:00:10" FontSize="40" TextColor="Red" HorizontalTextAlignment="Center" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="4"/>
+    <Label Text="{Binding UserName}" Grid.Row="0" Grid.Column="3" />
+    <Label Text="{Binding Time}" FontSize="40" TextColor="Red" HorizontalTextAlignment="Center" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="4"/>
     <Button x:Name="btnStop" Text="Start" Command="{Binding StartStopCommand}" CommandParameter="{x:Reference btnStop}" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4">
     </Button>
-  </Grid>
+  	</Grid>
+	</ContentPage.Content>
 </ContentPage>
