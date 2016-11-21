@@ -12,6 +12,8 @@ using System.Windows.Input;
 using EntMob.Models;
 using EntMob_Xamarin.Messages;
 using Xamarin.Forms;
+using Newtonsoft.Json;
+using System.Net.Http;
 
 namespace EntMob_Xamarin.ViewModels
 {
@@ -22,6 +24,7 @@ namespace EntMob_Xamarin.ViewModels
 
 		public ICommand StartStopCommand { get; set; }
 
+		private bool run;
 		private Session session;
 		private DateTime time;
 
@@ -34,6 +37,7 @@ namespace EntMob_Xamarin.ViewModels
 			set
 			{
 				session.Name = value;
+				RaisePropertyChanged("Name");
 			}
 		}
 
@@ -74,20 +78,22 @@ namespace EntMob_Xamarin.ViewModels
 
 		public TimerViewModel(ISessionService sessionService)
         {
+			this.sessionService = sessionService;
 			session = new Session();
 			User jonas = new User();
 			jonas.Name = "Jonas";
 			jonas.Password = "123456";
+			jonas.Id = 2;
 			session.User = jonas;
             LoadCommands();
 			SubscribeToMessages();
-			Time = new DateTime(2000, 1, 1, 0, 0, 0, DateTimeKind.Local);
+			run = false;
         }
 
 		private void SubscribeToMessages()
 		{
 			
-			//Messenger.Default.Register<LoggedInUser>(this, OnUserReceived);
+			Messenger.Default.Register<LoggedInUser>(this, OnUserReceived);
 		}
 
 		private void OnUserReceived(LoggedInUser user)
@@ -109,11 +115,14 @@ namespace EntMob_Xamarin.ViewModels
                         button.Text = "Start";
 						session.End = DateTime.Now;
 						StopSession();
+						run = false;
 						NavigationService.Default.NavigateTo("Values");
                     }
 					else if(session.Name != null)
                     {
+						Time = new DateTime(2000, 1, 1, 0, 0, 0, DateTimeKind.Local);
 						StartSession();
+						run = true;
                         StartTimer();
                         button.Text = "Stop";
                     }
@@ -140,18 +149,20 @@ namespace EntMob_Xamarin.ViewModels
                     });
 
                 // Don't repeat the timer (we will start a new timer when the request is finished)
-                return true;
+                return run;
                 });
         }
 
 		private async void StartSession()
 		{
+			session.Start = DateTime.Now;
+			var user = session.User;
+			var result = await sessionService.StartSession(session);
+			session = result;
+			session.User = user;
 			try
 			{
-				session.Start = DateTime.Now;
-				session.End = DateTime.Now;
-				var result = await sessionService.StartSession(session);
-				session = result;
+				
 			}
 			catch
 			{
@@ -161,10 +172,12 @@ namespace EntMob_Xamarin.ViewModels
 
 		private async void StopSession()
 		{
+			session.End = DateTime.Now;
+			var result = await sessionService.StopSession(session);
+			session = result;
 			try
 			{
-				var result = await sessionService.StopSession(session);
-				session = result;
+				
 			}
 			catch
 			{

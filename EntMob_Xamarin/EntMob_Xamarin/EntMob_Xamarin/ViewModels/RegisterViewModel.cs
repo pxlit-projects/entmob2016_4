@@ -117,6 +117,12 @@ namespace EntMob_Xamarin
 					Password = "";
 				}
 			}
+			else {
+				FirstName = "";
+				LastName = "";
+				Name = "";
+				Password = "";
+			}
 		}
 
 		private User CreateUser()

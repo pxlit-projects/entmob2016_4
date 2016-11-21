@@ -12,7 +12,7 @@ namespace EntMob_Xamarin.Converters
 			if (value != null)
 			{
 				DateTime time = (DateTime)value;
-				return time.ToString("hh:mm:ss");
+				return time.ToString("HH:mm:ss");
 			}
 			return value;
 		}

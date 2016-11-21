@@ -48,29 +48,34 @@ namespace EntMob.DAL
 
 		public async Task<Session> StartSession(Session session)
 		{
-			string allSessions = BASE_URL + "/session/start";
-			var uri = new Uri(allSessions);
+			string startSession = BASE_URL + "/session/start";
+			//var uri = new Uri(startSession);
 			var client = new HttpClient();
 			var defaultUser = session.User;
 			client.DefaultRequestHeaders.Authorization = BasicAuthenticationHelper.CreateBasicHeader(defaultUser.Name, defaultUser.Password);
 			string sessionObject = JsonConvert.SerializeObject(session);
 			StringContent content = new StringContent(sessionObject.ToString(), Encoding.UTF8, "application/json");
-			var response = await client.PostAsync(uri, content);
+			var response = await client.PostAsync(startSession, content);
 			response.EnsureSuccessStatusCode();
 			var result = await response.Content.ReadAsStringAsync();
-			return JsonConvert.DeserializeObject<Session>(result);
+			var settings = new JsonSerializerSettings
+			{
+				NullValueHandling = NullValueHandling.Ignore,
+				MissingMemberHandling = MissingMemberHandling.Ignore
+			};
+			return JsonConvert.DeserializeObject<Session>(result, settings);
 		}
 
 		public async Task<Session> StopSession(Session session)
 		{
 			string stopSession = BASE_URL + "/session/stop";
-			var uri = new Uri(stopSession);
+			//var uri = new Uri(stopSession);
 			var client = new HttpClient();
 			var defaultUser = session.User;
 			client.DefaultRequestHeaders.Authorization = BasicAuthenticationHelper.CreateBasicHeader(defaultUser.Name, defaultUser.Password);
 			string sessionObject = JsonConvert.SerializeObject(session);
 			StringContent content = new StringContent(sessionObject.ToString(), Encoding.UTF8, "application/json");
-			var response = await client.PutAsync(uri, content);
+			var response = await client.PutAsync(stopSession, content);
 			response.EnsureSuccessStatusCode();
 			var result = await response.Content.ReadAsStringAsync();
 			return JsonConvert.DeserializeObject<Session>(result);

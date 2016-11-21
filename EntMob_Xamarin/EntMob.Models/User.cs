@@ -24,8 +24,9 @@ namespace EntMob.Models
         [JsonProperty("enabled")]
         public bool Enabled { get; set; }
 
-        [JsonProperty("sessions")]
-		public virtual HashSet<Session> Sessions { get; set; }
+
+		[JsonIgnore]
+		public HashSet<Session> Sessions { get; set; }
 
         [JsonIgnore]
         public static User DefaultUser = new User() { Name = "User", Password = "user" };

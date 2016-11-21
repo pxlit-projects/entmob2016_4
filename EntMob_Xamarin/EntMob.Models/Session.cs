@@ -23,7 +23,7 @@ namespace EntMob.Models
         public DateTime End { get; set; }
 
         [JsonProperty("user")]
-		public virtual User User { get; set; }
+		public User User { get; set; }
 
         [JsonIgnore]
         public double AverageTemperature { get; set; }
@@ -34,6 +34,7 @@ namespace EntMob.Models
         [JsonIgnore]
         public double AveragePressure { get; set; }
 
+		[JsonIgnore]
         public TimeSpan Duration
         {
             get

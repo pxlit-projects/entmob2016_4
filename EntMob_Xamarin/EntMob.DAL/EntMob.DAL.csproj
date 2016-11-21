@@ -35,6 +35,8 @@
     <Compile Include="Repository.cs" />
     <Compile Include="SessionRepository.cs" />
     <Compile Include="UserRepository.cs" />
+    <Compile Include="ITemperatureRepository.cs" />
+    <Compile Include="TemperatureRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json">

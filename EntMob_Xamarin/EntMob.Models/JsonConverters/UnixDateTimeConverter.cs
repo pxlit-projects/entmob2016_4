@@ -19,7 +19,8 @@ namespace EntMob.Models.JsonConverters
 
         public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
         {
-            if (reader.Value == null)
+			var test = reader.Value;
+			if (reader.TokenType == JsonToken.Null)
             {
                 return null;
             }
@@ -28,7 +29,15 @@ namespace EntMob.Models.JsonConverters
 
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {
-            writer.WriteRawValue(((DateTime)value - _epoch).TotalMilliseconds + "000");
+			DateTime time = (DateTime)value;
+			if (time != new DateTime())
+			{
+				long mili = (long)(time - _epoch).TotalMilliseconds;
+				writer.WriteValue(mili);
+			}
+			else {
+				writer.WriteNull();
+			}
         }
 
     }
