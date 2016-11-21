@@ -18,6 +18,8 @@ namespace EntMob_Xamarin
             InitializeComponent();
 
             MainPage = new NavigationPage(new MainPage());
+			Resources = new ResourceDictionary();
+			Resources.Add("TimeConverter", new TimeConverter());
         }
 
         protected override void OnStart()

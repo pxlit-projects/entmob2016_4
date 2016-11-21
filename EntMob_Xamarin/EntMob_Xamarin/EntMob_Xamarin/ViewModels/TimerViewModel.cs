@@ -75,15 +75,19 @@ namespace EntMob_Xamarin.ViewModels
 		public TimerViewModel(ISessionService sessionService)
         {
 			session = new Session();
+			User jonas = new User();
+			jonas.Name = "Jonas";
+			jonas.Password = "123456";
+			session.User = jonas;
             LoadCommands();
 			SubscribeToMessages();
-			Time = new DateTime(2000, 1, 1);
+			Time = new DateTime(2000, 1, 1, 0, 0, 0, DateTimeKind.Local);
         }
 
 		private void SubscribeToMessages()
 		{
 			
-			Messenger.Default.Register<LoggedInUser>(this, OnUserReceived);
+			//Messenger.Default.Register<LoggedInUser>(this, OnUserReceived);
 		}
 
 		private void OnUserReceived(LoggedInUser user)
@@ -107,9 +111,8 @@ namespace EntMob_Xamarin.ViewModels
 						StopSession();
 						NavigationService.Default.NavigateTo("Values");
                     }
-					else if(session.User != null)
+					else if(session.Name != null)
                     {
-						session.Start = DateTime.Now;
 						StartSession();
                         StartTimer();
                         button.Text = "Stop";
@@ -121,13 +124,12 @@ namespace EntMob_Xamarin.ViewModels
         public void StartTimer() {
             Device.StartTimer(TimeSpan.FromMilliseconds(10), () =>
                 {
-                    Task.Factory.StartNew(async () =>
+                    Task.Factory.StartNew(() =>
                     {
-                    // Do the actual request and wait for it to finish.
-                    await Task.Delay(1);
-					Time.AddMilliseconds(1);
-					RaisePropertyChanged("Timer");
-
+						// Do the actual request and wait for it to finish.
+						//Time.AddSeconds(1);
+						Time = time.AddMilliseconds(20);
+						
                     // Switch back to the UI thread to update the UI
                     Device.BeginInvokeOnMainThread(() =>
                         {
@@ -144,13 +146,14 @@ namespace EntMob_Xamarin.ViewModels
 
 		private async void StartSession()
 		{
-			var result = await sessionService.StartSession(session);
-			session = result;
 			try
 			{
-				
+				session.Start = DateTime.Now;
+				session.End = DateTime.Now;
+				var result = await sessionService.StartSession(session);
+				session = result;
 			}
-			catch(Exception ex)
+			catch
 			{
 				
 			}
