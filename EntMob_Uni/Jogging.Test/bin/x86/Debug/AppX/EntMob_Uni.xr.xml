@@ -5,14 +5,24 @@
   </Roots.Interfaces>
   <Roots.PropertyPathNames>
     <RootPropertyPathName Name="DetailViewModel" />
+    <RootPropertyPathName Name="SelectedSession" />
+    <RootPropertyPathName Name="Duration" />
+    <RootPropertyPathName Name="End" />
+    <RootPropertyPathName Name="Start" />
+    <RootPropertyPathName Name="Name" />
+    <RootPropertyPathName Name="AverageHumidity" />
+    <RootPropertyPathName Name="AverageActivity" />
     <RootPropertyPathName Name="BackCommand" />
+    <RootPropertyPathName Name="AveragePressure" />
+    <RootPropertyPathName Name="AverageTemperature" />
     <RootPropertyPathName Name="LoginViewModel" />
     <RootPropertyPathName Name="LoginCommand" />
-    <RootPropertyPathName Name="Username" />
+    <RootPropertyPathName Name="Password" />
+    <RootPropertyPathName Name="UserName" />
     <RootPropertyPathName Name="ValuesViewModel" />
-    <RootPropertyPathName Name="ListOfSessions" />
+    <RootPropertyPathName Name="Sessions" />
     <RootPropertyPathName Name="ItemClickedCommand" />
-    <RootPropertyPathName Name="Start" />
+    <RootPropertyPathName Name="User" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application">
@@ -21,7 +31,11 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.ResourceDictionary" />
     <RootType FullName="EntMob_Uni.Converter.ValueToDegreesConverter" />
-    <RootType FullName="EntMob_Uni.Converter.ValueToKmConverter" />
+    <RootType FullName="EntMob_Uni.Converter.TimeSpanConverter" />
+    <RootType FullName="EntMob_Uni.Converter.DateTimeConverter" />
+    <RootType FullName="EntMob_Uni.Converter.HumidityConverter" />
+    <RootType FullName="EntMob_Uni.Converter.PressureConverter" />
+    <RootType FullName="EntMob_Uni.Converter.ActivityConverter" />
     <RootType FullName="EntMob_Uni.ViewModelLocator" />
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
       <RootProperty Name="DataContext" />
@@ -31,19 +45,10 @@
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
       <RootProperty Name="Source" />
       <RootProperty Name="Path" />
+      <RootProperty Name="Converter" />
       <RootProperty Name="Mode" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
-    <RootType FullName="Windows.UI.Xaml.Controls.RelativePanel">
-      <RootProperty Name="Children" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootMethod Name="GetAlignHorizontalCenterWithPanel" />
-      <RootMethod Name="SetAlignHorizontalCenterWithPanel" />
-      <RootMethod Name="GetBelow" />
-      <RootMethod Name="SetBelow" />
-      <RootMethod Name="GetAlignHorizontalCenterWith" />
-      <RootMethod Name="SetAlignHorizontalCenterWith" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
       <RootProperty Name="Background" />
       <RootProperty Name="ColumnDefinitions" />
@@ -53,14 +58,34 @@
       <RootMethod Name="SetColumn" />
       <RootMethod Name="GetRow" />
       <RootMethod Name="SetRow" />
+      <RootMethod Name="GetColumnSpan" />
+      <RootMethod Name="SetColumnSpan" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
-    <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
+      <RootProperty Name="Width" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Viewbox">
+      <RootProperty Name="Child" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Text" />
+      <RootProperty Name="FontSize" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Foreground" />
+      <RootProperty Name="TextAlignment" />
+      <RootProperty Name="TextWrapping" />
+      <RootProperty Name="Width" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Content" />
+      <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Background" />
       <RootProperty Name="Foreground" />
+      <RootProperty Name="Command" />
       <RootProperty Name="Width" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Margin" />
@@ -76,24 +101,21 @@
     <RootType FullName="Microsoft.Xaml.Interactions.Core.InvokeCommandAction">
       <RootProperty Name="Command" />
     </RootType>
+    <RootType FullName="EntMob_Uni.View.DetailPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
       <RootProperty Name="Source" />
       <RootProperty Name="Stretch" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="VerticalAlignment" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
-      <RootProperty Name="Text" />
-      <RootProperty Name="FontSize" />
-      <RootProperty Name="HorizontalAlignment" />
+    <RootType FullName="Windows.UI.Xaml.Controls.RelativePanel">
       <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="Foreground" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="TextAlignment" />
-      <RootProperty Name="TextWrapping" />
-      <RootProperty Name="Width" />
+      <RootProperty Name="Children" />
+      <RootMethod Name="GetAlignHorizontalCenterWithPanel" />
+      <RootMethod Name="SetAlignHorizontalCenterWithPanel" />
+      <RootMethod Name="GetBelow" />
+      <RootMethod Name="SetBelow" />
+      <RootMethod Name="GetAlignHorizontalCenterWith" />
+      <RootMethod Name="SetAlignHorizontalCenterWith" />
     </RootType>
-    <RootType FullName="EntMob_Uni.View.DetailPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
       <RootProperty Name="Text" />
       <RootProperty Name="Margin" />
@@ -101,6 +123,7 @@
       <RootProperty Name="PlaceholderText" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.PasswordBox">
+      <RootProperty Name="Password" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Width" />
       <RootProperty Name="PlaceholderText" />

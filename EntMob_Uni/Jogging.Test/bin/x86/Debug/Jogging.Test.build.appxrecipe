@@ -361,14 +361,14 @@
     <AppxPackagedFile Include="C:\Users\Jonas Beckers\.nuget\packages\System.Xml.XmlSerializer\4.0.10\lib\netcore50\System.Xml.XmlSerializer.dll">
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jonas Beckers\Documents\GitHub\entmob2016_4\EntMob_Uni\EntMob_Uni\bin\x86\Debug\Microsoft.Xaml.Interactions.dll">
-      <PackagePath>Microsoft.Xaml.Interactions.dll</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Jonas Beckers\Documents\GitHub\entmob2016_4\EntMob_Uni\Jogging.DAL\bin\x86\Debug\Jogging.DAL.dll">
+      <PackagePath>Jogging.DAL.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jonas Beckers\Documents\GitHub\entmob2016_4\EntMob_Uni\EntMob_Uni\bin\x86\Debug\Jogging.Model.dll">
+    <AppxPackagedFile Include="C:\Users\Jonas Beckers\Documents\GitHub\entmob2016_4\EntMob_Uni\Jogging.Model\bin\x86\Debug\Jogging.Model.dll">
       <PackagePath>Jogging.Model.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jonas Beckers\Documents\GitHub\entmob2016_4\EntMob_Uni\EntMob_Uni\bin\x86\Debug\Jogging.DAL.dll">
-      <PackagePath>Jogging.DAL.dll</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Jonas Beckers\Documents\GitHub\entmob2016_4\EntMob_Uni\EntMob_Uni\bin\x86\Debug\Microsoft.Xaml.Interactions.dll">
+      <PackagePath>Microsoft.Xaml.Interactions.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jonas Beckers\Documents\GitHub\entmob2016_4\EntMob_Uni\EntMob_Uni\bin\x86\Debug\Microsoft.Xaml.Interactivity.dll">
       <PackagePath>Microsoft.Xaml.Interactivity.dll</PackagePath>

@@ -82,7 +82,10 @@ namespace EntMob_Uni.ViewModel
             user.Name = userName;
             user.Password = password;
 
-            User result = await userService.CheckCredentials(user);
+            var result = await Task.Run(async () =>
+            {
+                return await userService.CheckCredentials(user);
+            });
 
             if (result != null)
             {

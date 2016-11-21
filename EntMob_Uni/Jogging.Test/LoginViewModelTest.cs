@@ -10,31 +10,10 @@ namespace Jogging.Test
     {
 
         [TestMethod]
-        public void Execute_Always_SendsYourMessageType()
+        public void TestCommandLoaded()
         {
-            // arrange
-            /*var systemUnderTest = new LoginViewModel();
-
-            // Set the action to store the message that was sent
-            string actual = systemUnderTest.Username;
-            Messenger.Default.Register<string>(this, t => actual = t);
-
-
-            // act
-            systemUnderTest.LoginCommand.Execute(null);
-
-
-            // assert
-            string expected = "Jonas"/* set up your expected message ;
-           Assert.AreEqual(actual, expected);*/
-        }
-
-        [TestMethod]
-        public void UsernameLength()
-        {
-            /*LoginViewModel loginViewModel = new LoginViewModel();
-            string count = loginViewModel.Username;
-            Assert.IsTrue(count.Length >= 3);*/
+            LoginViewModel loginViewModel = new LoginViewModel(new Mocks.MockUserService());
+            Assert.IsNotNull(loginViewModel.LoginCommand);
         }
 
     }

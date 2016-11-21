@@ -15,7 +15,7 @@ namespace Jogging.Test
         [TestMethod]
         public void Test()
         {
-            IUserService userService = new MockUserService
+           
         }
 
     }
