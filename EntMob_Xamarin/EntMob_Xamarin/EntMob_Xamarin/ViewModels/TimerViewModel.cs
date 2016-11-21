@@ -34,7 +34,6 @@ namespace EntMob_Xamarin.ViewModels
 			set
 			{
 				session.Name = value;
-				RaisePropertyChanged("Name");
 			}
 		}
 
@@ -75,26 +74,22 @@ namespace EntMob_Xamarin.ViewModels
 
 		public TimerViewModel(ISessionService sessionService)
         {
+			session = new Session();
             LoadCommands();
 			SubscribeToMessages();
-			if (session == null)
-			{
-				session = new Session();
-			}
+			Time = new DateTime(2000, 1, 1);
         }
 
 		private void SubscribeToMessages()
 		{
+			
 			Messenger.Default.Register<LoggedInUser>(this, OnUserReceived);
 		}
 
 		private void OnUserReceived(LoggedInUser user)
 		{
-			if (session == null)
-			{
-				session = new Session();
-			}
 			session.User = user.user;
+			RaisePropertyChanged("UserName");
 		}
 
         private void LoadCommands()
@@ -112,12 +107,11 @@ namespace EntMob_Xamarin.ViewModels
 						StopSession();
 						NavigationService.Default.NavigateTo("Values");
                     }
-                    else
+					else if(session.User != null)
                     {
-						Time = new DateTime(2000,1,1);
 						session.Start = DateTime.Now;
-                        StartTimer();
 						StartSession();
+                        StartTimer();
                         button.Text = "Stop";
                     }
                 }
@@ -150,41 +144,29 @@ namespace EntMob_Xamarin.ViewModels
 
 		private async void StartSession()
 		{
+			var result = await sessionService.StartSession(session);
+			session = result;
 			try
 			{
-				var result = await sessionService.StartSession(session);
-				if (result != null)
-				{
-					session = result;
-				}
+				
 			}
 			catch(Exception ex)
 			{
-				Debug.WriteLine(ex.Message);
+				
 			}
-
-
 		}
 
 		private async void StopSession()
 		{
-			var result = await Task.Run(() =>
+			try
 			{
-				try
-				{
-					return sessionService.StopSession(session);
-				}
-				catch
-				{
-					return null;
-				}
-			});
-
-			if (result != null)
-			{
+				var result = await sessionService.StopSession(session);
 				session = result;
 			}
-
+			catch
+			{
+				
+			}
 		}
         
     }

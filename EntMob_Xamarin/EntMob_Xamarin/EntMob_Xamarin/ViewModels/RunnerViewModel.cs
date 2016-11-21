@@ -82,7 +82,8 @@ namespace EntMob_Xamarin.ViewModels
 
 				if (result != null)
 				{
-					Messenger.Default.Send<LoggedInUser>(new LoggedInUser() { user = result });
+					LoggedInUser loggedInUser = new LoggedInUser() { user = result };
+					Messenger.Default.Send<LoggedInUser>(loggedInUser);
 					NavigationService.Default.NavigateTo("Timer");
 				}
 				else {

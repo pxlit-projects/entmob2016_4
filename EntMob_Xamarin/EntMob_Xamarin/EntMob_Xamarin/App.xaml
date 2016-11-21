@@ -6,7 +6,7 @@
              xmlns:converter="using:EntMob_Xamarin.Converters">
   <Application.Resources>
     <ResourceDictionary>
-      <local:ViewModelLocator x:Key="Locator"></local:ViewModelLocator>
+     	<local:ViewModelLocator x:Key="Locator"></local:ViewModelLocator>
     </ResourceDictionary>
   </Application.Resources>
 </Application>

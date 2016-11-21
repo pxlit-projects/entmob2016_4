@@ -18,7 +18,6 @@ namespace EntMob_Xamarin.ViewModels
 
         public ValuesViewModel()
         {
-
         }
 
         public ValuesViewModel(INavigation navigation)
