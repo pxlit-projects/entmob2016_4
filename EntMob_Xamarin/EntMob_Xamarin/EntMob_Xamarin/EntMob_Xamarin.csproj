@@ -40,12 +40,6 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SensorTagLib\BleButtonService.cs" />
-    <Compile Include="SensorTagLib\BleGenericGattService.cs" />
-    <Compile Include="SensorTagLib\BleTemperatureService.cs" />
-    <Compile Include="SensorTagLib\DeviceNotFoundException.cs" />
-    <Compile Include="SensorTagLib\SensorTag.cs" />
-    <Compile Include="SensorTagLib\SensorTagFactory.cs" />
     <Compile Include="Utility\CustomCommand.cs" />
     <Compile Include="Utility\DelegateCommand.cs" />
     <Compile Include="Utility\Messenger.cs" />
@@ -127,6 +121,15 @@
     </Reference>
     <Reference Include="BCrypt.Net">
       <HintPath>..\..\packages\BCrypt.Net-PCL.1.0.1\lib\portable-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10\BCrypt.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Robotics.Mobile.BtLEExplorer">
+      <HintPath>..\..\..\..\Desktop\Monkey.Robotics-0.5 2\samples\BLE Explorer\Robotics.Mobile.BtLEExplorer.Core\bin\Debug\Robotics.Mobile.BtLEExplorer.dll</HintPath>
+    </Reference>
+    <Reference Include="Robotics.Mobile.Core">
+      <HintPath>..\..\..\..\Desktop\Monkey.Robotics-0.5 2\samples\BLE Explorer\Robotics.Mobile.BtLEExplorer.Core\bin\Debug\Robotics.Mobile.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Robotics.Mobile.Core.Droid">
+      <HintPath>..\..\..\..\Desktop\Monkey.Robotics-0.5 2\samples\BLE Explorer\Robotics.Mobile.BtLEExplorer.Droid\bin\Debug\Robotics.Mobile.Core.Droid.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

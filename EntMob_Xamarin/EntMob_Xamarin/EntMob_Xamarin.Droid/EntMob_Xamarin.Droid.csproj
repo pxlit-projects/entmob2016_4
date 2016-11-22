@@ -114,6 +114,15 @@
       <HintPath>..\..\packages\Xamarin.Forms.2.0.0.6482\lib\MonoAndroid10\Xamarin.Forms.Xaml.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Robotics.Mobile.BtLEExplorer">
+      <HintPath>..\..\..\..\Desktop\Monkey.Robotics-0.5 2\samples\BLE Explorer\Robotics.Mobile.BtLEExplorer.Core\bin\Debug\Robotics.Mobile.BtLEExplorer.dll</HintPath>
+    </Reference>
+    <Reference Include="Robotics.Mobile.Core">
+      <HintPath>..\..\..\..\Desktop\Monkey.Robotics-0.5 2\samples\BLE Explorer\Robotics.Mobile.BtLEExplorer.Core\bin\Debug\Robotics.Mobile.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Robotics.Mobile.Core.Droid">
+      <HintPath>..\..\..\..\Desktop\Monkey.Robotics-0.5 2\samples\BLE Explorer\Robotics.Mobile.BtLEExplorer.Droid\bin\Debug\Robotics.Mobile.Core.Droid.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
