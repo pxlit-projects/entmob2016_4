@@ -21,8 +21,11 @@ namespace EntMob_Xamarin
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new MainPage());
-			Resources = new ResourceDictionary();
+            //MainPage = new NavigationPage(new MainPage());
+
+            MainPage = new NavigationPage(new DevicePage());//Adapter));
+
+            Resources = new ResourceDictionary();
 			Resources.Add("TimeConverter", new TimeConverter());
 			Resources.Add("HumidityConverter", new HumidityConverter());
         }
@@ -30,6 +33,10 @@ namespace EntMob_Xamarin
         public static void SetAdapter(IAdapter adapter)
         {
             Adapter = adapter;
+        }
+        public static Page GetMainPage()
+        {
+            return new NavigationPage(new DevicePage());//Adapter));
         }
 
         protected override void OnStart()
