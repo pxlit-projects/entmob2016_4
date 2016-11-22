@@ -67,6 +67,11 @@
     <Compile Include="Views\TimerPage.xaml.cs">
       <DependentUpon>TimerPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Services\ITemperatureService.cs" />
+    <Compile Include="Services\TemperatureService.cs" />
+    <Compile Include="Services\IHumidityService.cs" />
+    <Compile Include="Services\HumidityService.cs" />
+    <Compile Include="Converters\HumidityConverter.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\MainPage.xaml">

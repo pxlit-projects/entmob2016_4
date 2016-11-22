@@ -37,10 +37,16 @@ namespace EntMob_Xamarin.Services
             try
             {
 				User userByName = await userRepository.GetUserByName(user.Name);
-				if(BCrypt.Net.BCrypt.CheckPassword(user.Password, userByName.Password)){
-					userByName.Password = user.Password;
-					return userByName;
-				}
+				return await Task.Run(() =>
+				{if (BCrypt.Net.BCrypt.CheckPassword(user.Password, userByName.Password))
+					{
+						userByName.Password = user.Password;
+						return userByName;
+					}
+					else {
+						return null;
+					}
+				});
             }
             catch (Exception ex)
             {

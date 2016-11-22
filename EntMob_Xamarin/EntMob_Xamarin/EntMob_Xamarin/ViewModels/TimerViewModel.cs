@@ -14,6 +14,7 @@ using EntMob_Xamarin.Messages;
 using Xamarin.Forms;
 using Newtonsoft.Json;
 using System.Net.Http;
+using EntMob.DAL;
 
 namespace EntMob_Xamarin.ViewModels
 {
@@ -21,6 +22,8 @@ namespace EntMob_Xamarin.ViewModels
 	{
 
 		private ISessionService sessionService;
+		private ITemperatureService temperatureService;
+		private IHumidityService humidityService;
 
 		public ICommand StartStopCommand { get; set; }
 
@@ -76,18 +79,21 @@ namespace EntMob_Xamarin.ViewModels
 			}
 		}
 
-		public TimerViewModel(ISessionService sessionService)
+		public TimerViewModel(ISessionService sessionService, ITemperatureService temperatureService, IHumidityService humdityService)
         {
 			this.sessionService = sessionService;
+			this.temperatureService = temperatureService;
+			this.humidityService = humdityService;
 			session = new Session();
+			LoadCommands();
+			SubscribeToMessages();
+			run = false;
+
 			User jonas = new User();
 			jonas.Name = "Jonas";
 			jonas.Password = "123456";
 			jonas.Id = 2;
 			session.User = jonas;
-            LoadCommands();
-			SubscribeToMessages();
-			run = false;
         }
 
 		private void SubscribeToMessages()
@@ -112,15 +118,16 @@ namespace EntMob_Xamarin.ViewModels
                 {
                     if (button.Text == "Stop")
                     {
+						run = false;
                         button.Text = "Start";
 						session.End = DateTime.Now;
 						StopSession();
-						run = false;
 						NavigationService.Default.NavigateTo("Values");
+						Messenger.Default.Send<Session>(session);
+						ResetSession();
                     }
 					else if(session.Name != null)
                     {
-						Time = new DateTime(2000, 1, 1, 0, 0, 0, DateTimeKind.Local);
 						StartSession();
 						run = true;
                         StartTimer();
@@ -130,39 +137,41 @@ namespace EntMob_Xamarin.ViewModels
             });
         }
 
-        public void StartTimer() {
-            Device.StartTimer(TimeSpan.FromMilliseconds(10), () =>
+		private void ResetSession()
+		{
+			var user = session.User;
+			session = new Session();
+			session.Name = null;
+			session.User = user;
+			Time = new DateTime(2000, 1, 1, 0, 0, 0, DateTimeKind.Local);
+			RaisePropertyChanged("Name");
+		}
+
+        private void StartTimer() {
+			Device.StartTimer(TimeSpan.FromSeconds(1), () =>
                 {
                     Task.Factory.StartNew(() =>
                     {
-						// Do the actual request and wait for it to finish.
-						//Time.AddSeconds(1);
-						Time = time.AddMilliseconds(20);
-						
-                    // Switch back to the UI thread to update the UI
-                    Device.BeginInvokeOnMainThread(() =>
+						SaveHumidity();
+                    	Device.BeginInvokeOnMainThread(() =>
                         {
-                        // Update the UI
-                        // ...
-                        // Now repeat by scheduling a new reques
+							Time = time.AddSeconds(1);
                         });
                     });
-
-                // Don't repeat the timer (we will start a new timer when the request is finished)
+               
                 return run;
                 });
         }
 
 		private async void StartSession()
 		{
-			session.Start = DateTime.Now;
-			var user = session.User;
-			var result = await sessionService.StartSession(session);
-			session = result;
-			session.User = user;
 			try
 			{
-				
+				session.Start = DateTime.Now;
+				var user = session.User;
+				var result = await sessionService.StartSession(session);
+				session = result;
+				session.User = user;
 			}
 			catch
 			{
@@ -172,16 +181,50 @@ namespace EntMob_Xamarin.ViewModels
 
 		private async void StopSession()
 		{
-			session.End = DateTime.Now;
-			var result = await sessionService.StopSession(session);
-			session = result;
+			try
+			{
+				session.End = DateTime.Now;
+				var user = session.User;
+				var result = await sessionService.StopSession(session);
+				session = result;
+				session.User = user;
+			}
+			catch
+			{
+				
+			}
+		}
+
+		private async void SaveHumidity()
+		{
+			try
+			{
+				Random random = new Random();
+				Humidity humdity = new Humidity();
+				humdity.Amount = random.Next(0,100);
+				humdity.Date = DateTime.Now;
+				humdity.Session = session;
+				await humidityService.AddHumidity(humdity);
+			}
+			catch
+			{
+			}
+		}
+
+		private async void SaveTemperature()
+		{
+			Random random = new Random();
+			Temperature temperature = new Temperature();
+			temperature.Date = DateTime.Now;
+			temperature.Amount = random.Next(-20, 20);
+			temperature.Session = session;
+			await temperatureService.AddTemperature(temperature);
 			try
 			{
 				
 			}
 			catch
 			{
-				
 			}
 		}
         

@@ -15,6 +15,8 @@ namespace EntMob_Xamarin
 
 		private static IUserService userService = new UserService(new UserRepository());
 		private static ISessionService sessionService = new SessionService(new SessionRepository());
+		private static ITemperatureService temperatureService = new TemperatureService(new TemperatureRepository());
+		private static IHumidityService humidityService = new HumidityService(new HumidityRepository());
 
 		private static RunnerViewModel runnerViewModel;
 		private static RegisterViewModel registerViewModel;
@@ -33,13 +35,13 @@ namespace EntMob_Xamarin
 
 		public static TimerViewModel Timer()
         {
-			return timerViewModel ?? (timerViewModel = new TimerViewModel(sessionService));
+			return timerViewModel ?? (timerViewModel = new TimerViewModel(sessionService, temperatureService, humidityService));
         }
 
 
 		public static ValuesViewModel Values()
         {
-        	return valuesViewModel ?? (valuesViewModel = new ValuesViewModel());
+			return valuesViewModel ?? (valuesViewModel = new ValuesViewModel(humidityService));
         }
     }
 }

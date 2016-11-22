@@ -20,6 +20,7 @@ namespace EntMob_Xamarin
             MainPage = new NavigationPage(new MainPage());
 			Resources = new ResourceDictionary();
 			Resources.Add("TimeConverter", new TimeConverter());
+			Resources.Add("HumidityConverter", new HumidityConverter());
         }
 
         protected override void OnStart()

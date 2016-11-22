@@ -14,7 +14,7 @@ namespace EntMob.Models
         public int Id { get; set; }
 
 		[JsonProperty("temperature")]
-        public string Amount { get; set; }
+        public double Amount { get; set; }
 		[JsonConverter(typeof(UnixDateTimeConverter))]
 		[JsonProperty("date")]
         public DateTime Date { get; set; }
