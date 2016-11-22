@@ -8,6 +8,7 @@ using Xamarin.Forms;
 using EntMob_Xamarin.Converters;
 using EntMob_Xamarin.Services;
 using EntMob_Xamarin.ViewModels;
+using Robotics.Mobile.Core.Bluetooth.LE;
 
 namespace EntMob_Xamarin
 {

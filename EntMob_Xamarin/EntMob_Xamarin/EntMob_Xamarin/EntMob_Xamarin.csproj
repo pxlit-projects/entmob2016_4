@@ -101,6 +101,15 @@
     <Reference Include="Mono.Android">
       <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\MonoAndroid\v6.0\Mono.Android.dll</HintPath>
     </Reference>
+    <Reference Include="Robotics.Mobile.BtLEExplorer">
+      <HintPath>..\..\..\..\..\Desktop\Robotics.Mobile.BtLEExplorer.dll</HintPath>
+    </Reference>
+    <Reference Include="Robotics.Mobile.Core">
+      <HintPath>..\..\..\..\..\Desktop\Robotics.Mobile.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Robotics.Mobile.Core.Droid">
+      <HintPath>..\..\..\..\..\Desktop\Robotics.Mobile.Core.Droid.dll</HintPath>
+    </Reference>
     <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xamarin.Forms.2.0.0.6482\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
       <Private>True</Private>

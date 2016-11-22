@@ -1,10 +1,6 @@
-﻿using GalaSoft.MvvmLight;
-using Robotics.Mobile.Core.Bluetooth.LE;
+﻿using Robotics.Mobile.Core.Bluetooth.LE;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace SensorTagLib
@@ -16,7 +12,7 @@ namespace SensorTagLib
     /// for details on GATT services.
     /// Under the covers we will use https://github.com/xamarin/Monkey.Robotics
     /// </summary>
-    public class SensorTag : ObservableObject
+    public class SensorTag //: ObservableObject
     {
         private IDevice _device;
         private IAdapter _adapter;
@@ -44,7 +40,7 @@ namespace SensorTagLib
             }
             set
             {
-                Set<ButtonStatus>(ref _buttonStatus, value);
+                //Set<ButtonStatus>(ref _buttonStatus, value);
             }
         }
 
@@ -57,7 +53,7 @@ namespace SensorTagLib
             }
             set
             {
-                Set<double>(ref _infraredTemperature, value);
+                //Set<double>(ref _infraredTemperature, value);
             }
         }
 
