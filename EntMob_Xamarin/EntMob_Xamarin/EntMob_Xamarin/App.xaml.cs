@@ -23,7 +23,7 @@ namespace EntMob_Xamarin
 
             //MainPage = new NavigationPage(new MainPage());
 
-            MainPage = new NavigationPage(new DevicePage());//Adapter));
+            MainPage = new NavigationPage(new DevicePage(Adapter));
 
             Resources = new ResourceDictionary();
 			Resources.Add("TimeConverter", new TimeConverter());
@@ -36,7 +36,7 @@ namespace EntMob_Xamarin
         }
         public static Page GetMainPage()
         {
-            return new NavigationPage(new DevicePage());//Adapter));
+            return new NavigationPage(new DevicePage(Adapter));
         }
 
         protected override void OnStart()

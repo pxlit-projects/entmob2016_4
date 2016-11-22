@@ -11,10 +11,6 @@ namespace EntMob_Xamarin
 {
 	public partial class DevicePage : ContentPage
 	{
-		public DevicePage()
-		{
-			InitializeComponent();
-		}
 
 		IAdapter adapter;
 		ObservableCollection<IDevice> devices;
