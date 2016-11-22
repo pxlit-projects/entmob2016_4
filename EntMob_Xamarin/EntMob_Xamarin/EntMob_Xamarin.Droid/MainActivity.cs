@@ -28,6 +28,7 @@ namespace EntMob_Xamarin.Droid
             App.SetAdapter(a);
 
             SetPage(App.GetMainPage());
+
         }
     }
 }

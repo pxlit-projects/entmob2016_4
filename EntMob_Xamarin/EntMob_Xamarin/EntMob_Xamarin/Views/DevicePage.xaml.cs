@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Threading.Tasks;
@@ -41,7 +40,36 @@ namespace EntMob_Xamarin
 
 			ScanAllButton.Activated += (sender, e) =>
 			{
-				StartScanning();
+                try
+                {
+                    var status = await CrossPermissions.Current.CheckPermissionStatus(Permission.Location);
+                    if (status != PermissionStatus.Granted)
+                    {
+                        if (await CrossPermissions.Current.ShouldShowRequestPermissionRationale(Permission.Location))
+                        {
+                            await DisplayAlert("Need location", "Gunna need that location", "OK");
+                        }
+
+                        var results = await CrossPermissions.Current.RequestPermissions(new[] { Permission.Location });
+                        status = results[Permission.Location];
+                    }
+
+                    if (status == PermissionStatus.Granted)
+                    {
+                        var results = await CrossGeolocator.Current.GetPositionAsync(10000);
+                        LabelGeolocation.Text = "Lat: " + results.Latitude + " Long: " + results.Longitude;
+                        StartScanning();
+                    }
+                    else if (status != PermissionStatus.Unknown)
+                    {
+                        await DisplayAlert("Location Denied", "Can not continue, try again.", "OK");
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                    LabelGeolocation.Text = "Error: " + ex;
+                }
 			};
 
 		}
