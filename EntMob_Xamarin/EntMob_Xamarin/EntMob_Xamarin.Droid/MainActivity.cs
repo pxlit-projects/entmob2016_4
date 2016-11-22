@@ -7,19 +7,19 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 
-namespace EntMob_Xamarin.Droid
+namespace SensorTagDemo.Droid
 {
-    [Activity(Label = "EntMob_Xamarin", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-    public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
+    [Activity(Label = "SensorTagDemo", Icon = "@drawable/icon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicationActivity
     {
         protected override void OnCreate(Bundle bundle)
         {
-            TabLayoutResource = Resource.Layout.Tabbar;
-            ToolbarResource = Resource.Layout.Toolbar;
-
             base.OnCreate(bundle);
-
             global::Xamarin.Forms.Forms.Init(this, bundle);
+
+            var a = new Robotics.Mobile.Core.Bluetooth.LE.Adapter();
+            App.SetAdapter(a);
+
             LoadApplication(new App());
         }
     }

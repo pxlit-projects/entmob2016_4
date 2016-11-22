@@ -13,6 +13,9 @@ namespace EntMob_Xamarin
 {
     public partial class App : Application
     {
+
+        static IAdapter Adapter;
+
         public App()
         {
             InitializeComponent();
@@ -21,6 +24,11 @@ namespace EntMob_Xamarin
 			Resources = new ResourceDictionary();
 			Resources.Add("TimeConverter", new TimeConverter());
 			Resources.Add("HumidityConverter", new HumidityConverter());
+        }
+
+        public static void SetAdapter(IAdapter adapter)
+        {
+            Adapter = adapter;
         }
 
         protected override void OnStart()
