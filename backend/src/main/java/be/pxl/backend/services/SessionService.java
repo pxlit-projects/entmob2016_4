@@ -65,6 +65,7 @@ public class SessionService {
             throw sessionException;
         } else {
             session = sessionRepository.save(session);
+            jmsSender.sendMessage("stop session:" + session.getId());
             return session;
         }
     }

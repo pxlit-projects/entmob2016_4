@@ -30,14 +30,4 @@ public class TestApplication {
         //Stream.of(ctx.getBeanDefinitionNames()).sorted().forEach(System.out::println);
     }
 
-    @Bean
-    public UserRepository userRepository(){
-        return Mockito.mock(UserRepository.class);
-    }
-
-    @Bean
-    public SessionRepository sessionRepository() {
-        return Mockito.mock(SessionRepository.class);
-    }
-
 }

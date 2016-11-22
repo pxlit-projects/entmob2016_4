@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		x:Class="EntMob_Xamarin.TimerPage"
+		>
+	<ContentPage.Content>
+	<Grid x:Name="TempertureGrid" ColumnSpacing="1">
+    	<Grid.RowDefinitions>
+		<RowDefinition Height="3*"></RowDefinition>
+      	<RowDefinition Height="30"/>
+      	<RowDefinition Height="5*"/>
+      	<RowDefinition Height="3*"/>
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="2.5*" />
+      <ColumnDefinition Width="2.5*"/>
+      <ColumnDefinition Width="2.5*" />
+      <ColumnDefinition Width="2.5*" />
+    </Grid.ColumnDefinitions>
+		<Entry Text="{Binding Name}" Placeholder="Session name" VerticalOptions="Center" Grid.Row="1"></Entry>
+    	<Label Text="Ingelogd als" Grid.Row="0" Grid.Column="2" />
+    	<Label Text="{Binding UserName}" Grid.Row="0" Grid.Column="3" />
+   		<Label Text="{Binding Time, Converter={StaticResource TimeConverter}}" FontSize="40" TextColor="Red" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="4"/>
+    	<Button x:Name="btnStop" Text="Start" Command="{Binding StartStopCommand}" CommandParameter="{x:Reference btnStop}" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4">
+    	</Button>
+  	</Grid>
+	</ContentPage.Content>
+</ContentPage>
